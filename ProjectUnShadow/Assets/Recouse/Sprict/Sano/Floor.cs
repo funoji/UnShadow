@@ -16,6 +16,7 @@ public class Floor : MonoBehaviour
         SecondHeight,
         ThirdHeight, 
         SolarPanel,
+        EnemySponer
     }
     [SerializeField] FloorRoles Roles;
 
@@ -48,6 +49,7 @@ public class Floor : MonoBehaviour
             EditorGUILayout.PropertyField(RoleProperty);
             currentRole = (FloorRoles) RoleProperty.enumValueIndex;
             GameObject NewFloor;
+
             if (EditorGUI.EndChangeCheck())
             {
                 switch (currentRole)
@@ -85,6 +87,11 @@ public class Floor : MonoBehaviour
                         break;
                     case FloorRoles.SolarPanel:
                         NewFloor = GameObject.Instantiate(floor.floorPrefabs.SolarPanel, floor.gameObject.transform.position, Quaternion.identity);
+                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
+                        DestroyImmediate(floor.gameObject);
+                        break;
+                    case FloorRoles.EnemySponer:
+                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.EnemySponar, floor.gameObject.transform.position, Quaternion.identity);
                         if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
                         DestroyImmediate(floor.gameObject);
                         break;
