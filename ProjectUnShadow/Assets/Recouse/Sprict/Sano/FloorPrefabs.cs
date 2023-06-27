@@ -20,4 +20,5 @@ public class FloorPrefabs : MonoBehaviour
     public GameObject SolarPanel => _SolarPanel;
     [SerializeField] GameObject _Sponar;
     public GameObject EnemySponar => _Sponar;
-}
+    [SerializeField] GameObject _ShadowCreat;
+    public GameObject ShadowCreat => _ShadowCreat;}
