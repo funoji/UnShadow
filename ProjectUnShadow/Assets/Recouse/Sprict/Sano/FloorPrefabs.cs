@@ -18,4 +18,6 @@ public class FloorPrefabs : MonoBehaviour
     public GameObject ThirdHeight => _ThirdHeight;
     [SerializeField] GameObject _SolarPanel;
     public GameObject SolarPanel => _SolarPanel;
+    [SerializeField] GameObject _Sponar;
+    public GameObject EnemySponar => _Sponar;
 }
