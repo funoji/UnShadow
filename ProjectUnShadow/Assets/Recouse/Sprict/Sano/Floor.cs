@@ -16,6 +16,11 @@ public class Floor : MonoBehaviour
         SecondHeight,
         ThirdHeight, 
         SolarPanel,
+<<<<<<< Updated upstream
+=======
+        EnemySponer,
+        ShadowCreat
+>>>>>>> Stashed changes
     }
     [SerializeField] FloorRoles Roles;
 
@@ -88,6 +93,19 @@ public class Floor : MonoBehaviour
                         if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
                         DestroyImmediate(floor.gameObject);
                         break;
+<<<<<<< Updated upstream
+=======
+                    case FloorRoles.EnemySponer:
+                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.EnemySponar, floor.gameObject.transform.position, Quaternion.identity);
+                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
+                        DestroyImmediate(floor.gameObject);
+                        break;
+                    case FloorRoles.ShadowCreat:
+                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.ShadowCreat, floor.gameObject.transform.position, Quaternion.identity);
+                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
+                        DestroyImmediate(floor.gameObject);
+                        break;
+>>>>>>> Stashed changes
                 }
             }
         }

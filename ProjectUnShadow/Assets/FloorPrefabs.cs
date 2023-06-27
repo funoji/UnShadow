@@ -18,4 +18,11 @@ public class FloorPrefabs : MonoBehaviour
     public GameObject ThirdHeight => _ThirdHeight;
     [SerializeField] GameObject _SolarPanel;
     public GameObject SolarPanel => _SolarPanel;
+<<<<<<< Updated upstream:ProjectUnShadow/Assets/FloorPrefabs.cs
+=======
+    [SerializeField] GameObject _Sponar;
+    public GameObject EnemySponar => _Sponar;
+    [SerializeField] GameObject _ShadowCreat;
+    public GameObject ShadowCreat => _ShadowCreat;
+>>>>>>> Stashed changes:ProjectUnShadow/Assets/Recouse/Sprict/Sano/FloorPrefabs.cs
 }
