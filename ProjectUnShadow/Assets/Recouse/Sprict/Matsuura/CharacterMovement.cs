@@ -14,10 +14,12 @@ public class CharacterMovement : MonoBehaviour
     private float _input_z;
     bool isrun;
     public int PlayerHP = 100;
-
+    FloorController floorController;
     void Start()
     {
         animator = GetComponent<Animator>();
+        floorController = GetComponent<FloorController>();
+        floorController.StratPos();
     }
     void Update()
     {
