@@ -7,7 +7,7 @@ public class Floor : MonoBehaviour
 {
     [SerializeField] FloorPrefabs floorPrefabs;
     
-    enum FloorRoles
+    public enum FloorRoles
     {
         Normal,
         Start,
@@ -19,14 +19,16 @@ public class Floor : MonoBehaviour
         EnemySponer,
         ShadowCreat
     }
-    [SerializeField] FloorRoles Roles;
+    [SerializeField] private FloorRoles Roles;
 
     private void Reset()
     {
         floorPrefabs = GameObject.Find("CreateStage").GetComponent<FloorPrefabs>();
     }
-
-
+    public FloorRoles GetRoles()
+    {
+        return Roles;
+    }
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(Floor))]
@@ -35,12 +37,25 @@ public class Floor : MonoBehaviour
         FloorRoles currentRole;
         Floor floor;
         [SerializeField] GameObject CreateObj;
+        private Dictionary<FloorRoles, GameObject> prefabDictionary = new Dictionary<FloorRoles, GameObject>();
 
         private void OnEnable()
         {
             floor = (Floor)target;
             floor.floorPrefabs = GameObject.Find("CreateStage").GetComponent<FloorPrefabs>();
             CreateObj = GameObject.Find("CreateStage");
+
+            // ï¿½vï¿½ï¿½ï¿½nï¿½uï¿½ï¿½ï¿½fï¿½Bï¿½Nï¿½Vï¿½ï¿½ï¿½iï¿½ï¿½ï¿½É’Ç‰ï¿½
+            //ï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½ï¿½ê‡ prefabDictionary.Add(FloorRoles.ï¿½Zï¿½Z, floor.floorPrefabs.ï¿½Zï¿½Z);ï¿½Æ‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½B
+            prefabDictionary.Clear();
+            prefabDictionary.Add(FloorRoles.Normal, floor.floorPrefabs.NormalFloorObj);
+            prefabDictionary.Add(FloorRoles.Start, floor.floorPrefabs.StartFloorObj);
+            prefabDictionary.Add(FloorRoles.Goal, floor.floorPrefabs.GoalFloorObj);
+            prefabDictionary.Add(FloorRoles.FirstHeight, floor.floorPrefabs.FirstHeight);
+            prefabDictionary.Add(FloorRoles.SecondHeight, floor.floorPrefabs.SecondHeight);
+            prefabDictionary.Add(FloorRoles.ThirdHeight, floor.floorPrefabs.ThirdHeight);
+            prefabDictionary.Add(FloorRoles.SolarPanel, floor.floorPrefabs.SolarPanel);
+            prefabDictionary.Add(FloorRoles.EnemySponer, floor.floorPrefabs.EnemySponar);
         }
 
         void ChangeShape()
@@ -48,60 +63,31 @@ public class Floor : MonoBehaviour
             EditorGUI.BeginChangeCheck();
             UnityEditor.SerializedProperty RoleProperty = serializedObject.FindProperty("Roles");
             EditorGUILayout.PropertyField(RoleProperty);
-            currentRole = (FloorRoles) RoleProperty.enumValueIndex;
+            currentRole = (FloorRoles)RoleProperty.enumValueIndex;
             GameObject NewFloor;
-
-            if (EditorGUI.EndChangeCheck())
+            //Roleï¿½ï¿½prefabï¿½ï¿½ï¿½æ“¾ï¿½Å‚ï¿½ï¿½Ä‚ï¿½ï¿½é‚©ï¿½mï¿½F
+            if (prefabDictionary.TryGetValue(currentRole, out GameObject create))
             {
-                switch (currentRole)
+                //ï¿½æ“¾ï¿½Å‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ê‡
+                if (EditorGUI.EndChangeCheck())
                 {
-                    case FloorRoles.Normal:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.NormalFloorObj, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//qƒIƒuƒWƒFƒNƒg‚ÉŠi”[
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.Start:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.StartFloorObj, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//qƒIƒuƒWƒFƒNƒg‚ÉŠi”[
-                        //Undo.RegisterCreatedObjectUndo(floor.floorPrefabs.StartObj, "Roles");//unityã‚Å‚ÌŠª‚«–ß‚µ‚ğÀŒ»
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.Goal:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.GoalFloorObj, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//qƒIƒuƒWƒFƒNƒg‚ÉŠi”[
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.FirstHeight:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.FirstHeight, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//qƒIƒuƒWƒFƒNƒg‚ÉŠi”[
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.SecondHeight:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.SecondHeight, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//qƒIƒuƒWƒFƒNƒg‚ÉŠi”[
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.ThirdHeight:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.ThirdHeight, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//qƒIƒuƒWƒFƒNƒg‚ÉŠi”[
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.SolarPanel:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.SolarPanel, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//qƒIƒuƒWƒFƒNƒg‚ÉŠi”[
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.EnemySponer:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.EnemySponar, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//qƒIƒuƒWƒFƒNƒg‚ÉŠi”[
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.ShadowCreat:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.ShadowCreat, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//qƒIƒuƒWƒFƒNƒg‚ÉŠi”[
-                        DestroyImmediate(floor.gameObject);
-                        break;
+                    //ï¿½Cï¿½ï¿½ï¿½Xï¿½^ï¿½ï¿½ï¿½Xï¿½ï¿½
+                    NewFloor = GameObject.Instantiate(create, floor.transform.position, Quaternion.identity);
+                    if (CreateObj)
+                    {
+                        //ï¿½qï¿½Iï¿½uï¿½Wï¿½Fï¿½Nï¿½gï¿½ÉŠiï¿½[
+                        NewFloor.transform.parent = CreateObj.transform;
+                        //ï¿½wï¿½ï¿½ÌŠKï¿½wï¿½É‘}ï¿½ï¿½
+                        NewFloor.transform.SetSiblingIndex(floor.transform.GetSiblingIndex());
+                    }
+                    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½objectï¿½ï¿½jï¿½ï¿½
+                    DestroyImmediate(floor.gameObject);
                 }
+            }
+            //ï¿½æ“¾ï¿½Å‚ï¿½ï¿½Ä‚ï¿½ï¿½È‚ï¿½ï¿½ê‡ï¿½ï¿½ERROR
+            else
+            {
+                EditorGUILayout.HelpBox("No prefab assigned for the selected role.", MessageType.Warning);
             }
         }
 
