@@ -16,7 +16,8 @@ public class Floor : MonoBehaviour
         SecondHeight,
         ThirdHeight, 
         SolarPanel,
-        EnemySponer
+        EnemySponer,
+        NULL
     }
     [SerializeField] private FloorRoles Roles;
 

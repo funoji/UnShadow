@@ -20,6 +20,7 @@ public class CreateFromEdtor : EditorWindow
     void OnEnable()
     {
         if (Selection.gameObjects.Length > 0) FristInstancePos = Selection.gameObjects[0];
+        FristInstancePos = GameObject.Find("CreateStage");
     }
 
     //UI内の表示とデータの取得
