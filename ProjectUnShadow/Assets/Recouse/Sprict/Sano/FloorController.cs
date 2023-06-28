@@ -55,11 +55,13 @@ public class FloorController : MonoBehaviour
         {
             for (int Vi = 1; Vi <= ver; Vi++)
             {
-                floorObj[Hi][Vi] = transform.GetChild(countOfChilds).gameObject;
+                //floorObj[Hi][Vi] = transform.GetChild(countOfChilds).gameObject;
                 floorComponent[Hi][Vi] = transform.GetChild(countOfChilds).GetComponent<Floor>().GetRoles();
                 countOfChilds++;
             }
         }
+
+        StratPos();
     }
 
     static readonly Dictionary<PlayerMovable, Vector2Int> MoveVector = new Dictionary<PlayerMovable, Vector2Int>()
@@ -86,6 +88,26 @@ public class FloorController : MonoBehaviour
         else return false;
     }
 
+    public int[][] StratPos()
+    {
+        List<int[]> stratPosition = new List<int[]>();
+
+        for (int Hi = 1; Hi <= Hori; Hi++)
+        {
+            for (int Vi = 1; Vi <= ver; Vi++)
+            {
+                if (floorComponent[Hi][Vi] == Floor.FloorRoles.Start)
+                {
+                    int[] position = new int[] { Hi, Vi };
+                    stratPosition.Add(position);
+                    Debug.Log(Hi);
+                    Debug.Log(Vi);
+                    break;
+                }
+            }
+        }
+        return stratPosition.ToArray();
+    }
     public Floor.FloorRoles GetCurrentRole(int playerHori, int playerVer)
     {
         return floorComponent[playerHori][playerVer];
