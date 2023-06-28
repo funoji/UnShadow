@@ -7020,6 +7020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Hori: 7
   ver: 7
+  NULLObj: {fileID: 3379117187654520980, guid: c38cadd9e34999b41beffff74747c0fa, type: 3}
 --- !u!1 &2119529752
 GameObject:
   m_ObjectHideFlags: 0
