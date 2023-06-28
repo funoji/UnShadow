@@ -15,7 +15,9 @@ public class FloorController : MonoBehaviour
 
     [SerializeField] int Hori;
     [SerializeField] int ver;
+    [SerializeField] GameObject NULLObj;
     Floor.FloorRoles[][] floorComponent;
+    GameObject[][] floorObj;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class FloorController : MonoBehaviour
 
         // 番兵生成のため、サイズを拡張して初期化
         floorComponent = new Floor.FloorRoles[Hori + 2][];
+        floorObj = new GameObject[Hori][];
         for (int i = 0; i < Hori + 2; i++)
         {
             floorComponent[i] = new Floor.FloorRoles[ver + 2];
@@ -34,6 +37,8 @@ public class FloorController : MonoBehaviour
         {
             floorComponent[i][0] = Floor.FloorRoles.NULL;
             floorComponent[i][ver + 1] = Floor.FloorRoles.NULL;
+           // floorObj[i][0] = GameObject.Instantiate(NULLObj);
+           // floorObj[i][ver + 1] = GameObject.Instantiate(NULLObj);
         }
 
         //上下の番兵
@@ -41,6 +46,8 @@ public class FloorController : MonoBehaviour
         {
             floorComponent[0][i] = Floor.FloorRoles.NULL;
             floorComponent[Hori + 1][i] = Floor.FloorRoles.NULL;
+            //floorObj[0][i] = GameObject.Instantiate(NULLObj);
+            //floorObj[Hori][i] = GameObject.Instantiate(NULLObj);
         }
 
         // 各Floorのロールを取得し配列に格納
@@ -48,6 +55,7 @@ public class FloorController : MonoBehaviour
         {
             for (int Vi = 1; Vi <= ver; Vi++)
             {
+                floorObj[Hi][Vi] = transform.GetChild(countOfChilds).gameObject;
                 floorComponent[Hi][Vi] = transform.GetChild(countOfChilds).GetComponent<Floor>().GetRoles();
                 countOfChilds++;
             }
@@ -72,7 +80,10 @@ public class FloorController : MonoBehaviour
         int targetHori = playerHori + offset.x;
         int targetVer = playerVer + offset.y;
 
-        return floorComponent[targetHori][targetVer] == Floor.FloorRoles.Normal;
+        //if (floorObj[targetHori][targetVer].CompareTag("CanStep")) return true;
+        if (floorComponent[targetHori][targetVer] == Floor.FloorRoles.Normal) return true;
+
+        else return false;
     }
 
     public Floor.FloorRoles GetCurrentRole(int playerHori, int playerVer)

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2753719838353757449}
   m_Layer: 0
   m_Name: NormalFloor
-  m_TagString: Untagged
+  m_TagString: CanStep
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,3 +118,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce2880f4a4508f439dfed201bf378f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floorPrefabs: {fileID: 0}
+  Roles: 0
