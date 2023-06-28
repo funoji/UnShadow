@@ -7,7 +7,7 @@ public class Floor : MonoBehaviour
 {
     [SerializeField] FloorPrefabs floorPrefabs;
     
-    enum FloorRoles
+    public enum FloorRoles
     {
         Normal,
         Start,
@@ -18,14 +18,16 @@ public class Floor : MonoBehaviour
         SolarPanel,
         EnemySponer
     }
-    [SerializeField] FloorRoles Roles;
+    [SerializeField] private FloorRoles Roles;
 
     private void Reset()
     {
         floorPrefabs = GameObject.Find("CreateStage").GetComponent<FloorPrefabs>();
     }
-
-
+    public FloorRoles GetRoles()
+    {
+        return Roles;
+    }
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(Floor))]
@@ -34,12 +36,25 @@ public class Floor : MonoBehaviour
         FloorRoles currentRole;
         Floor floor;
         [SerializeField] GameObject CreateObj;
+        private Dictionary<FloorRoles, GameObject> prefabDictionary = new Dictionary<FloorRoles, GameObject>();
 
         private void OnEnable()
         {
             floor = (Floor)target;
             floor.floorPrefabs = GameObject.Find("CreateStage").GetComponent<FloorPrefabs>();
             CreateObj = GameObject.Find("CreateStage");
+
+            // プレハブをディクショナリに追加
+            //新しいオブジェクトを追加する場合 prefabDictionary.Add(FloorRoles.〇〇, floor.floorPrefabs.〇〇);としてください。
+            prefabDictionary.Clear();
+            prefabDictionary.Add(FloorRoles.Normal, floor.floorPrefabs.NormalFloorObj);
+            prefabDictionary.Add(FloorRoles.Start, floor.floorPrefabs.StartFloorObj);
+            prefabDictionary.Add(FloorRoles.Goal, floor.floorPrefabs.GoalFloorObj);
+            prefabDictionary.Add(FloorRoles.FirstHeight, floor.floorPrefabs.FirstHeight);
+            prefabDictionary.Add(FloorRoles.SecondHeight, floor.floorPrefabs.SecondHeight);
+            prefabDictionary.Add(FloorRoles.ThirdHeight, floor.floorPrefabs.ThirdHeight);
+            prefabDictionary.Add(FloorRoles.SolarPanel, floor.floorPrefabs.SolarPanel);
+            prefabDictionary.Add(FloorRoles.EnemySponer, floor.floorPrefabs.EnemySponar);
         }
 
         void ChangeShape()
@@ -47,55 +62,31 @@ public class Floor : MonoBehaviour
             EditorGUI.BeginChangeCheck();
             UnityEditor.SerializedProperty RoleProperty = serializedObject.FindProperty("Roles");
             EditorGUILayout.PropertyField(RoleProperty);
-            currentRole = (FloorRoles) RoleProperty.enumValueIndex;
+            currentRole = (FloorRoles)RoleProperty.enumValueIndex;
             GameObject NewFloor;
-
-            if (EditorGUI.EndChangeCheck())
+            //Roleでprefabが取得できているか確認
+            if (prefabDictionary.TryGetValue(currentRole, out GameObject create))
             {
-                switch (currentRole)
+                //取得できていた場合
+                if (EditorGUI.EndChangeCheck())
                 {
-                    case FloorRoles.Normal:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.NormalFloorObj, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.Start:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.StartFloorObj, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
-                        //Undo.RegisterCreatedObjectUndo(floor.floorPrefabs.StartObj, "Roles");//unity上での巻き戻しを実現
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.Goal:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.GoalFloorObj, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.FirstHeight:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.FirstHeight, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.SecondHeight:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.SecondHeight, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.ThirdHeight:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.ThirdHeight, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.SolarPanel:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.SolarPanel, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
-                        DestroyImmediate(floor.gameObject);
-                        break;
-                    case FloorRoles.EnemySponer:
-                        NewFloor = GameObject.Instantiate(floor.floorPrefabs.EnemySponar, floor.gameObject.transform.position, Quaternion.identity);
-                        if (CreateObj) NewFloor.transform.parent = CreateObj.transform;//子オブジェクトに格納
-                        DestroyImmediate(floor.gameObject);
-                        break;
+                    //インスタンス化
+                    NewFloor = GameObject.Instantiate(create, floor.transform.position, Quaternion.identity);
+                    if (CreateObj)
+                    {
+                        //子オブジェクトに格納
+                        NewFloor.transform.parent = CreateObj.transform;
+                        //指定の階層に挿入
+                        NewFloor.transform.SetSiblingIndex(floor.transform.GetSiblingIndex());
+                    }
+                    //元あるobjectを破壊
+                    DestroyImmediate(floor.gameObject);
                 }
+            }
+            //取得できていない場合はERROR
+            else
+            {
+                EditorGUILayout.HelpBox("No prefab assigned for the selected role.", MessageType.Warning);
             }
         }
 
