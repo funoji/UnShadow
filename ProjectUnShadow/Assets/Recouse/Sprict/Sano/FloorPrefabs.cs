@@ -21,4 +21,5 @@ public class FloorPrefabs : MonoBehaviour
     [SerializeField] GameObject _Sponar;
     public GameObject EnemySponar => _Sponar;
     [SerializeField] GameObject _ShadowCreat;
-    public GameObject ShadowCreat => _ShadowCreat;}
+    public GameObject ShadowCreat => _ShadowCreat;
+}

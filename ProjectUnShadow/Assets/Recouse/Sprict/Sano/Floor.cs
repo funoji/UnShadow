@@ -14,7 +14,7 @@ public class Floor : MonoBehaviour
         Goal,
         FirstHeight,
         SecondHeight,
-        ThirdHeight, 
+        ThirdHeight,
         SolarPanel,
         EnemySponer,
         ShadowCreat
