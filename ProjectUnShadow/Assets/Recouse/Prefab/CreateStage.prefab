@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7635487270851373797}
   - component: {fileID: 3272386413551491091}
+  - component: {fileID: 8018487808184738768}
   m_Layer: 0
   m_Name: CreateStage
   m_TagString: Untagged
@@ -44,5 +45,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae70adad37aacd41b9253d1cc7e0872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floor: {fileID: 8728953557178584487, guid: 9eca0aebd92933a46acb0a7baccf343c, type: 3}
-  startObj: {fileID: 4703122746737835752, guid: ab2fcb4747729e94ea279a79d792592f, type: 3}
+  _Normalfloor: {fileID: 0}
+  _StartObj: {fileID: 0}
+  _GoalFloor: {fileID: 0}
+  _FristHeight: {fileID: 0}
+  _SecondHeight: {fileID: 0}
+  _ThirdHeight: {fileID: 0}
+  _SolarPanel: {fileID: 0}
+  _Sponar: {fileID: 0}
+  _ShadowCreat: {fileID: 0}
+--- !u!114 &8018487808184738768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6806488381691764557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7031716f78c0645ab2f69d1aae303c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hori: 7
+  ver: 7
+  NULLObj: {fileID: 3379117187654520980, guid: c38cadd9e34999b41beffff74747c0fa, type: 3}
