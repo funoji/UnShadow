@@ -60,8 +60,6 @@ public class FloorController : MonoBehaviour
                 countOfChilds++;
             }
         }
-
-        StratPos();
     }
 
     static readonly Dictionary<PlayerMovable, Vector2Int> MoveVector = new Dictionary<PlayerMovable, Vector2Int>()
@@ -102,11 +100,11 @@ public class FloorController : MonoBehaviour
                     stratPosition.Add(position);
                     Debug.Log(Hi);
                     Debug.Log(Vi);
-                    break;
+                    return stratPosition.ToArray();
                 }
             }
         }
-        return stratPosition.ToArray();
+        return null;
     }
     public Floor.FloorRoles GetCurrentRole(int playerHori, int playerVer)
     {
