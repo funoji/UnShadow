@@ -17,7 +17,8 @@ public class Floor : MonoBehaviour
         ThirdHeight,
         SolarPanel,
         EnemySponer,
-        ShadowCreat
+        ShadowCreat,
+        NULL
     }
     [SerializeField] private FloorRoles Roles;
 
