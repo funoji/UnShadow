@@ -19,7 +19,6 @@ public class CharacterMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         floorController = GetComponent<FloorController>();
-        floorController.StratPos();
     }
     void Update()
     {
