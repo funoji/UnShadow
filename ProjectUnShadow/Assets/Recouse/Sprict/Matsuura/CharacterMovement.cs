@@ -14,11 +14,19 @@ public class CharacterMovement : MonoBehaviour
     private float _input_z;
     bool isrun;
     public int PlayerHP = 100;
-    FloorController floorController;
+    bool canmove;
+    int storedHi;
+    int storedVi;
+    [SerializeField] GameObject floorControllerOBJ;
     void Start()
     {
         animator = GetComponent<Animator>();
-        floorController = GetComponent<FloorController>();
+        int[][] StPos = floorControllerOBJ.GetComponent<FloorController>().StratPos();
+        storedHi = StartPosDataHolder.StoredHi; // プロジェクトAで格納したHiの値を取得
+        storedVi = StartPosDataHolder.StoredVi; // プロジェクトAで格納したViの値を取得
+        //Debug.Log(storedHi);
+        //Debug.Log(storedVi);
+        //canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up);
     }
     void Update()
     {
@@ -46,19 +54,54 @@ public class CharacterMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                TryMoveToPosition(transform.position + new Vector3(0f, 0f, moveDistance));
+                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up);
+                if (canmove)
+                {
+                    storedHi = PlayerPos.PlayertargetHori;
+                    storedVi = PlayerPos.PlayertargetVer;
+                    Debug.Log(storedHi);
+                    Debug.Log(storedVi);
+                    TryMoveToPosition(transform.position + new Vector3(0f, 0f, moveDistance));
+                }
+
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
-                TryMoveToPosition(transform.position - new Vector3(0f, 0f, moveDistance));
+                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Down);
+                if (canmove)
+                {
+                    storedHi = PlayerPos.PlayertargetHori;
+                    storedVi = PlayerPos.PlayertargetVer;
+                    Debug.Log(storedHi);
+                    Debug.Log(storedVi);
+                    TryMoveToPosition(transform.position - new Vector3(0f, 0f, moveDistance));
+                }
+                    
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
-                TryMoveToPosition(transform.position - new Vector3(moveDistance, 0f, 0f));
+                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Left);
+                if (canmove)
+                {
+                    storedHi = PlayerPos.PlayertargetHori;
+                    storedVi = PlayerPos.PlayertargetVer;
+                    Debug.Log(storedHi);
+                    Debug.Log(storedVi);
+                    TryMoveToPosition(transform.position - new Vector3(moveDistance, 0f, 0f));
+                }
+                
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
-                TryMoveToPosition(transform.position + new Vector3(moveDistance, 0f, 0f));
+                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Right);
+                if (canmove)
+                {
+                    storedHi = PlayerPos.PlayertargetHori;
+                    storedVi = PlayerPos.PlayertargetVer;
+                    Debug.Log(storedHi);
+                    Debug.Log(storedVi);
+                    TryMoveToPosition(transform.position + new Vector3(moveDistance, 0f, 0f));
+                }
             }
         }
     }

@@ -3,6 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+public class StartPosDataHolder
+{
+    public static int StoredHi { get; set; }
+    public static int StoredVi { get; set; }
+}
+public class PlayerPos
+{
+    public static int PlayertargetHori { get; set; }
+    public static int PlayertargetVer { get; set; }
+}
 public class FloorController : MonoBehaviour
 {
     public enum PlayerMovable
@@ -77,11 +87,11 @@ public class FloorController : MonoBehaviour
             throw new System.NotImplementedException("ERRORだにょ");
         }
 
-        int targetHori = playerHori + offset.x;
-        int targetVer = playerVer + offset.y;
+        PlayerPos.PlayertargetHori = playerHori + offset.x;
+        PlayerPos.PlayertargetVer = playerVer + offset.y;
 
         //if (floorObj[targetHori][targetVer].CompareTag("CanStep")) return true;
-        if (floorComponent[targetHori][targetVer] == Floor.FloorRoles.Normal) return true;
+        if (floorComponent[PlayerPos.PlayertargetHori][PlayerPos.PlayertargetVer] == Floor.FloorRoles.Normal) return true;
 
         else return false;
     }
@@ -98,8 +108,8 @@ public class FloorController : MonoBehaviour
                 {
                     int[] position = new int[] { Hi, Vi };
                     stratPosition.Add(position);
-                    Debug.Log(Hi);
-                    Debug.Log(Vi);
+                    StartPosDataHolder.StoredHi = Hi;// スタートHiの値を格納する変数
+                    StartPosDataHolder.StoredVi = Vi;// スタートViの値を格納する変数
                     return stratPosition.ToArray();
                 }
             }
