@@ -1507,11 +1507,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c800ad131f994044fac4cddb0aa4095c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
   moveSpeed: 8
   moveDistance: 1
   PlayerHP: 100
-  floorController: {fileID: 2013139216}
+  floorControllerOBJ: {fileID: 1610194782}
 --- !u!136 &433925764
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6349,10 +6348,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7635487270851373797, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1603707199}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6806488381691764557, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2013139216}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
 --- !u!1 &1696190697
 GameObject:
@@ -7465,20 +7461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dae70adad37aacd41b9253d1cc7e0872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2013139216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610194782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc7031716f78c0645ab2f69d1aae303c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Hori: 7
-  ver: 7
 --- !u!1 &2023196199
 GameObject:
   m_ObjectHideFlags: 0

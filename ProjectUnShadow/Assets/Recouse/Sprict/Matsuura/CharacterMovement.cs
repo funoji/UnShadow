@@ -14,11 +14,17 @@ public class CharacterMovement : MonoBehaviour
     private float _input_z;
     bool isrun;
     public int PlayerHP = 100;
+    bool canmove;
     [SerializeField] GameObject floorControllerOBJ;
     void Start()
     {
         animator = GetComponent<Animator>();
-        FloorController floorController = floorControllerOBJ.gameObject.GetComponent<FloorController>();
+        int[][] StPos = floorControllerOBJ.GetComponent<FloorController>().StratPos();
+        int storedHi = StartPosDataHolder.StoredHi; // プロジェクトAで格納したHiの値を取得
+        int storedVi = StartPosDataHolder.StoredVi; // プロジェクトAで格納したViの値を取得
+        Debug.Log(storedHi);
+        Debug.Log(storedVi);
+        canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Down);
     }
     void Update()
     {
@@ -46,7 +52,8 @@ public class CharacterMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                TryMoveToPosition(transform.position + new Vector3(0f, 0f, moveDistance));
+                if (canmove)
+                    TryMoveToPosition(transform.position + new Vector3(0f, 0f, moveDistance));
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {

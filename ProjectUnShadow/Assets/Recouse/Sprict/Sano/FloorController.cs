@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+public class StartPosDataHolder
+{
+    public static int StoredHi { get; set; }
+    public static int StoredVi { get; set; }
+}
 public class FloorController : MonoBehaviour
 {
     public enum PlayerMovable
@@ -98,8 +103,8 @@ public class FloorController : MonoBehaviour
                 {
                     int[] position = new int[] { Hi, Vi };
                     stratPosition.Add(position);
-                    Debug.Log(Hi);
-                    Debug.Log(Vi);
+                    StartPosDataHolder.StoredHi = Hi;// スタートHiの値を格納する変数
+                    StartPosDataHolder.StoredVi = Vi;// スタートViの値を格納する変数
                     return stratPosition.ToArray();
                 }
             }
