@@ -87,12 +87,16 @@ public class FloorController : MonoBehaviour
             throw new System.NotImplementedException("ERROR‚¾‚É‚å");
         }
 
-        PlayerPos.PlayertargetHori = playerHori + offset.x;
-        PlayerPos.PlayertargetVer = playerVer + offset.y;
+        int targetHori = playerHori + offset.x;
+        int targetVer = playerVer + offset.y;
 
         //if (floorObj[targetHori][targetVer].CompareTag("CanStep")) return true;
-        if (floorComponent[PlayerPos.PlayertargetHori][PlayerPos.PlayertargetVer] == Floor.FloorRoles.Normal) return true;
-
+        if (floorComponent[targetHori][targetVer] == Floor.FloorRoles.Normal)
+        {
+            PlayerPos.PlayertargetHori = targetHori;
+            PlayerPos.PlayertargetVer = targetVer;
+            return true;
+        }
         else return false;
     }
 
