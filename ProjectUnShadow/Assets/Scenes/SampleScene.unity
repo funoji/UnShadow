@@ -948,6 +948,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282249062}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &447310905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6806488381691764557, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
+  m_PrefabInstance: {fileID: 2097643097}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &464040947
 GameObject:
   m_ObjectHideFlags: 0
@@ -4994,7 +4999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce2880f4a4508f439dfed201bf378f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorPrefabs: {fileID: 0}
+  floorPrefabs: {fileID: 2097643098}
   Roles: 1
 --- !u!65 &1737096179
 BoxCollider:
@@ -6518,7 +6523,7 @@ PrefabInstance:
     - target: {fileID: 3272386413551491091, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
       propertyPath: floor
       value: 
-      objectReference: {fileID: 2097643100}
+      objectReference: {fileID: 447310905}
     - target: {fileID: 3272386413551491091, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
       propertyPath: _StartObj
       value: 
@@ -6748,7 +6753,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3272386413551491091, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
   m_PrefabInstance: {fileID: 2097643097}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 447310905}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dae70adad37aacd41b9253d1cc7e0872, type: 3}
@@ -6759,14 +6764,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7635487270851373797, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
   m_PrefabInstance: {fileID: 2097643097}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2097643100 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8018487808184738768, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
-  m_PrefabInstance: {fileID: 2097643097}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc7031716f78c0645ab2f69d1aae303c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
