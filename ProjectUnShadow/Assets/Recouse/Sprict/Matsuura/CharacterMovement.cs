@@ -14,11 +14,11 @@ public class CharacterMovement : MonoBehaviour
     private float _input_z;
     bool isrun;
     public int PlayerHP = 100;
-    FloorController floorController;
+    [SerializeField] GameObject floorControllerObj;
     void Start()
     {
         animator = GetComponent<Animator>();
-        floorController = GetComponent<FloorController>();
+        int[][] StPos = floorControllerObj.GetComponent<FloorController>().StratPos();
     }
     void Update()
     {
