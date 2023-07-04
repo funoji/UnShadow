@@ -20,7 +20,7 @@ public class FloorController : MonoBehaviour
     GameObject[][] floorObj;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         int countOfChilds = 0;
 
