@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class FloorPrefabs : MonoBehaviour
 {
-
-    //[SerializeField ]GameObject floor;
     [SerializeField] GameObject _Normalfloor;
     public GameObject NormalFloorObj => _Normalfloor;
     [SerializeField] GameObject _StartObj;
@@ -24,10 +22,4 @@ public class FloorPrefabs : MonoBehaviour
     public GameObject EnemySponar => _Sponar;
     [SerializeField] GameObject _ShadowCreat;
     public GameObject ShadowCreat => _ShadowCreat;
-    //void Start()
-    //{
-
-    //    int[][] a = floor.GetComponent<FloorController>().StratPos();
-    //    Debug.Log(a);
-    //}
 }

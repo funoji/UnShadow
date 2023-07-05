@@ -16,8 +16,7 @@ public class FloorController : MonoBehaviour
     [SerializeField] int Hori;
     [SerializeField] int ver;
     [SerializeField] GameObject NULLObj;
-    Floor.FloorRoles[][] floorComponent;
-    GameObject[][] floorObj;
+    Floor [][] floorComponent;
 
     // Start is called before the first frame update
     void Awake()
@@ -25,30 +24,29 @@ public class FloorController : MonoBehaviour
         int countOfChilds = 0;
 
         // 番兵生成のため、サイズを拡張して初期化
-        floorComponent = new Floor.FloorRoles[Hori + 2][];
-        floorObj = new GameObject[Hori][];
+        floorComponent = new Floor[Hori + 2][];
         for (int i = 0; i < Hori + 2; i++)
         {
-            floorComponent[i] = new Floor.FloorRoles[ver + 2];
+            floorComponent[i] = new Floor[ver + 2];
         }
 
-        //左右の番兵
-        for (int i = 0; i < Hori + 2; i++)
-        {
-            floorComponent[i][0] = Floor.FloorRoles.NULL;
-            floorComponent[i][ver + 1] = Floor.FloorRoles.NULL;
-           // floorObj[i][0] = GameObject.Instantiate(NULLObj);
-           // floorObj[i][ver + 1] = GameObject.Instantiate(NULLObj);
-        }
+        ////左右の番兵
+        //for (int i = 0; i < Hori + 2; i++)
+        //{
+        //    floorComponent[i][0] = new Floor
+        //    floorComponent[i][ver + 1].SetRoles(Floor.FloorRoles.NULL);
+        //   // floorObj[i][0] = GameObject.Instantiate(NULLObj);
+        //   // floorObj[i][ver + 1] = GameObject.Instantiate(NULLObj);
+        //}
 
-        //上下の番兵
-        for (int i = 0; i < ver + 2; i++)
-        {
-            floorComponent[0][i] = Floor.FloorRoles.NULL;
-            floorComponent[Hori + 1][i] = Floor.FloorRoles.NULL;
-            //floorObj[0][i] = GameObject.Instantiate(NULLObj);
-            //floorObj[Hori][i] = GameObject.Instantiate(NULLObj);
-        }
+        ////上下の番兵
+        //for (int i = 0; i < ver + 2; i++)
+        //{
+        //    floorComponent[0][i].SetRoles(Floor.FloorRoles.NULL);
+        //    floorComponent[Hori + 1][i] = Floor.FloorRoles.NULL;
+        //    //floorObj[0][i] = GameObject.Instantiate(NULLObj);
+        //    //floorObj[Hori][i] = GameObject.Instantiate(NULLObj);
+        //}
 
         // 各Floorのロールを取得し配列に格納
         for (int Hi = 1; Hi <= Hori; Hi++)
@@ -56,7 +54,7 @@ public class FloorController : MonoBehaviour
             for (int Vi = 1; Vi <= ver; Vi++)
             {
                 //floorObj[Hi][Vi] = transform.GetChild(countOfChilds).gameObject;
-                floorComponent[Hi][Vi] = transform.GetChild(countOfChilds).GetComponent<Floor>().GetRoles();
+                floorComponent[Hi][Vi].GetRoles();
                 countOfChilds++;
             }
         }
@@ -80,10 +78,14 @@ public class FloorController : MonoBehaviour
         int targetHori = playerHori + offset.x;
         int targetVer = playerVer + offset.y;
 
-        //if (floorObj[targetHori][targetVer].CompareTag("CanStep")) return true;
-        if (floorComponent[targetHori][targetVer] == Floor.FloorRoles.Normal) return true;
+        if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep) return true;
 
         else return false;
+    }
+
+    void ShadowBuilder()
+    {
+
     }
 
     public int[][] StratPos()
@@ -94,7 +96,7 @@ public class FloorController : MonoBehaviour
         {
             for (int Vi = 1; Vi <= ver; Vi++)
             {
-                if (floorComponent[Hi][Vi] == Floor.FloorRoles.Start)
+                if (floorComponent[Hi][Vi].GetRoles() == Floor.FloorRoles.Start)
                 {
                     int[] position = new int[] { Hi, Vi };
                     stratPosition.Add(position);
@@ -108,6 +110,6 @@ public class FloorController : MonoBehaviour
     }
     public Floor.FloorRoles GetCurrentRole(int playerHori, int playerVer)
     {
-        return floorComponent[playerHori][playerVer];
+        return floorComponent[playerHori][playerVer].GetRoles();
     }
 }
