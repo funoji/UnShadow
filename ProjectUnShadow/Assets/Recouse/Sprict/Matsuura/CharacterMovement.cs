@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour
     private float _input_x;
     //zŽ²•ûŒü‚Ì“ü—Í‚ð•Û‘¶
     private float _input_z;
-    bool isrun;
+    bool isrun;//“®‚¢‚Ä‚¢‚é‚©”»’f
     public int PlayerHP = 100;
     bool canmove;
     int storedHi;

@@ -91,9 +91,9 @@ public class FloorController : MonoBehaviour
         int targetVer = playerVer + offset.y;
 
         //if (floorObj[targetHori][targetVer].CompareTag("CanStep")) return true;
-        if (floorComponent[targetHori][targetVer] == Floor.FloorRoles.Normal)
+        if (floorComponent[targetVer][targetHori] == Floor.FloorRoles.Normal)
         {
-            PlayerPos.PlayertargetHori = targetHori;
+            PlayerPos.PlayertargetHori = targetHori;//“®‚¯‚½‚çPlayer‚Ì“ñŸŒ³À•W‚ğXV
             PlayerPos.PlayertargetVer = targetVer;
             return true;
         }
