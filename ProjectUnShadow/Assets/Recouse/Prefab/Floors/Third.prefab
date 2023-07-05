@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!1 &4954601315406987299
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 1
 --- !u!1 &7274190177134137377
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!1 &7289994610333897580
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,3 +486,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0

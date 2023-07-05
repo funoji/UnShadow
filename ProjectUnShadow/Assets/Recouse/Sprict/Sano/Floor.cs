@@ -73,7 +73,9 @@ public class Floor : MonoBehaviour
         {
             EditorGUI.BeginChangeCheck();
             UnityEditor.SerializedProperty RoleProperty = serializedObject.FindProperty("Roles");
+            UnityEditor.SerializedProperty MoveProperty = serializedObject.FindProperty("moveStatus");
             EditorGUILayout.PropertyField(RoleProperty);
+            EditorGUILayout.PropertyField(MoveProperty);
             currentRole = (FloorRoles)RoleProperty.enumValueIndex;
             GameObject NewFloor;
             //Role��prefab���擾�ł��Ă��邩�m�F
