@@ -49,20 +49,25 @@ public class FloorController : MonoBehaviour
         { PlayerMovable.Down, new Vector2Int(0, -1) }
     };
 
-    public bool CanMove(int playerHori, int playerVer, PlayerMovable playerMovable)
+    public (bool, Vector2Int) CanMove(int playerHori, int playerVer, PlayerMovable playerMovable)
     {
         if (!MoveVector.TryGetValue(playerMovable, out Vector2Int offset))
         {
             throw new System.NotImplementedException("ERROR���ɂ�");
         }
 
-        int targetHori = playerHori + offset.x;
-        int targetVer = playerVer + offset.y;
+        int targetHori = playerHori + offset.y;
+        int targetVer = playerVer + offset.x;
+        Vector2Int FeaacherPos = new(targetHori, targetVer);
 
-        if (floorComponent[targetHori][targetVer] == null) return false;
-        if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep) return true;
+        if (floorComponent[targetHori][targetVer] == null) return (false, FeaacherPos);
+        if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep)
+        {
+            Vector2Int PlayerPos = FeaacherPos;
+            return (true,PlayerPos);
+        }
 
-        else return false;
+        else return (false,FeaacherPos);
     }
 
     void ShadowBuilder()

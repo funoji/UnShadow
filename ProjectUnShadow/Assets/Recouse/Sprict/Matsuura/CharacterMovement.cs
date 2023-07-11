@@ -15,6 +15,7 @@ public class CharacterMovement : MonoBehaviour
     bool isrun;
     public int PlayerHP = 100;
     bool canmove;
+    private Vector2Int PlayerPos;
     int storedHi;
     int storedVi;
     [SerializeField] GameObject floorControllerOBJ;
@@ -53,9 +54,12 @@ public class CharacterMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up);
+                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up).Item1;
+                PlayerPos = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up).Item2;
                 if (canmove)
                 {
+                    storedHi = PlayerPos.x;
+                    storedVi = PlayerPos.y;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position + new Vector3(0f, 0f, moveDistance));
@@ -64,9 +68,12 @@ public class CharacterMovement : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
-                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Down);
+                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Down).Item1;
+                PlayerPos = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Down).Item2;
                 if (canmove)
                 {
+                    storedHi = PlayerPos.x;
+                    storedVi = PlayerPos.y;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position - new Vector3(0f, 0f, moveDistance));
@@ -75,9 +82,12 @@ public class CharacterMovement : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
-                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Left);
+                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Left).Item1;
+                PlayerPos = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Left).Item2;
                 if (canmove)
                 {
+                    storedHi = PlayerPos.x;
+                    storedVi = PlayerPos.y;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position - new Vector3(moveDistance, 0f, 0f));
@@ -86,9 +96,12 @@ public class CharacterMovement : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
-                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Right);
+                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Right).Item1;
+                PlayerPos = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Right).Item2;
                 if (canmove)
                 {
+                    storedHi = PlayerPos.x;
+                    storedVi = PlayerPos.y;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position + new Vector3(moveDistance, 0f, 0f));

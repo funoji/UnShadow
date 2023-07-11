@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3571930901677866750}
   - component: {fileID: 3623511111037773098}
   - component: {fileID: 4586805442743549021}
+  - component: {fileID: 3112650937516470861}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,6 +122,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Light: {fileID: 0}
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
+--- !u!114 &3112650937516470861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741388108497586173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ce2880f4a4508f439dfed201bf378f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floorPrefabs: {fileID: 0}
+  Roles: 4
+  moveStatus: 1
 --- !u!1 &4695045708544988506
 GameObject:
   m_ObjectHideFlags: 0
