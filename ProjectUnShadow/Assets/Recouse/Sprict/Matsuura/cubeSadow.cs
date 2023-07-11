@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class cubeSadow : MonoBehaviour
 {
+    GameObject LightObj;
     public LightContlloer Light;
     Vector3 objectPosition;
     Vector3 up, down, left, right;
