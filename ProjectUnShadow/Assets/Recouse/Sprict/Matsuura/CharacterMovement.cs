@@ -7,7 +7,7 @@ public class CharacterMovement : MonoBehaviour
     Animator animator;
     public float moveSpeed = 1f;
     private bool isMoving = false;
-    public float moveDistance = 1f; // 1マスの移動
+    [SerializeField] private float moveDistance = 1f; // 1マスの移動
     //x軸方向の入力を保存
     private float _input_x;
     //z軸方向の入力を保存
@@ -21,11 +21,10 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        int[][] StPos = floorControllerOBJ.GetComponent<FloorController>().StratPos();
-        storedHi = StartPosDataHolder.StoredHi; // プロジェクトAで格納したHiの値を取得
-        storedVi = StartPosDataHolder.StoredVi; // プロジェクトAで格納したViの値を取得
-        //Debug.Log(storedHi);
-        //Debug.Log(storedVi);
+        storedHi = floorControllerOBJ.GetComponent<FloorController>().StratPos().x; // プロジェクトAで格納したHiの値を取得
+        storedVi = floorControllerOBJ.GetComponent<FloorController>().StratPos().y; // プロジェクトAで格納したViの値を取得
+        Debug.Log(storedHi);
+        Debug.Log(storedVi);
         //canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up);
     }
     void Update()
@@ -57,8 +56,6 @@ public class CharacterMovement : MonoBehaviour
                 canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up);
                 if (canmove)
                 {
-                    storedHi = PlayerPos.PlayertargetHori;
-                    storedVi = PlayerPos.PlayertargetVer;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position + new Vector3(0f, 0f, moveDistance));
@@ -70,8 +67,6 @@ public class CharacterMovement : MonoBehaviour
                 canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Down);
                 if (canmove)
                 {
-                    storedHi = PlayerPos.PlayertargetHori;
-                    storedVi = PlayerPos.PlayertargetVer;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position - new Vector3(0f, 0f, moveDistance));
@@ -83,8 +78,6 @@ public class CharacterMovement : MonoBehaviour
                 canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Left);
                 if (canmove)
                 {
-                    storedHi = PlayerPos.PlayertargetHori;
-                    storedVi = PlayerPos.PlayertargetVer;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position - new Vector3(moveDistance, 0f, 0f));
@@ -96,8 +89,6 @@ public class CharacterMovement : MonoBehaviour
                 canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Right);
                 if (canmove)
                 {
-                    storedHi = PlayerPos.PlayertargetHori;
-                    storedVi = PlayerPos.PlayertargetVer;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position + new Vector3(moveDistance, 0f, 0f));

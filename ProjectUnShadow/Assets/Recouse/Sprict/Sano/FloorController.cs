@@ -3,16 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class StartPosDataHolder
-{
-    public static int StoredHi { get; set; }
-    public static int StoredVi { get; set; }
-}
-public class PlayerPos
-{
-    public static int PlayertargetHori { get; set; }
-    public static int PlayertargetVer { get; set; }
-}
 public class FloorController : MonoBehaviour
 {
     public enum PlayerMovable
@@ -40,31 +30,12 @@ public class FloorController : MonoBehaviour
             floorComponent[i] = new Floor[ver + 2];
         }
 
-        ////���E�̔ԕ�
-        //for (int i = 0; i < Hori + 2; i++)
-        //{
-        //    floorComponent[i][0] = new Floor
-        //    floorComponent[i][ver + 1].SetRoles(Floor.FloorRoles.NULL);
-        //   // floorObj[i][0] = GameObject.Instantiate(NULLObj);
-        //   // floorObj[i][ver + 1] = GameObject.Instantiate(NULLObj);
-        //}
-
-        ////�㉺�̔ԕ�
-        //for (int i = 0; i < ver + 2; i++)
-        //{
-        //    floorComponent[0][i].SetRoles(Floor.FloorRoles.NULL);
-        //    floorComponent[Hori + 1][i] = Floor.FloorRoles.NULL;
-        //    //floorObj[0][i] = GameObject.Instantiate(NULLObj);
-        //    //floorObj[Hori][i] = GameObject.Instantiate(NULLObj);
-        //}
-
         // �eFloor�̃��[�����擾���z��Ɋi�[
         for (int Hi = 1; Hi <= Hori; Hi++)
         {
             for (int Vi = 1; Vi <= ver; Vi++)
             {
-                //floorObj[Hi][Vi] = transform.GetChild(countOfChilds).gameObject;
-                floorComponent[Hi][Vi].GetRoles();
+                floorComponent[Hi][Vi] = this.transform.GetChild(countOfChilds).GetComponent<Floor>();
                 countOfChilds++;
             }
         }
@@ -88,6 +59,7 @@ public class FloorController : MonoBehaviour
         int targetHori = playerHori + offset.x;
         int targetVer = playerVer + offset.y;
 
+        if (floorComponent[targetHori][targetVer] == null) return false;
         if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep) return true;
 
         else return false;
@@ -98,9 +70,8 @@ public class FloorController : MonoBehaviour
 
     }
 
-    public int[][] StratPos()
+    public Vector2Int StratPos()
     {
-        List<int[]> stratPosition = new List<int[]>();
 
         for (int Hi = 1; Hi <= Hori; Hi++)
         {
@@ -108,15 +79,12 @@ public class FloorController : MonoBehaviour
             {
                 if (floorComponent[Hi][Vi].GetRoles() == Floor.FloorRoles.Start)
                 {
-                    int[] position = new int[] { Hi, Vi };
-                    stratPosition.Add(position);
-                    StartPosDataHolder.StoredHi = Hi;// �X�^�[�gHi�̒l���i�[����ϐ�
-                    StartPosDataHolder.StoredVi = Vi;// �X�^�[�gVi�̒l���i�[����ϐ�
-                    return stratPosition.ToArray();
+                    Vector2Int position = new(Hi, Vi);
+                    return position;
                 }
             }
         }
-        return null;
+        throw new Exception("None StartObj");
     }
     public Floor.FloorRoles GetCurrentRole(int playerHori, int playerVer)
     {
