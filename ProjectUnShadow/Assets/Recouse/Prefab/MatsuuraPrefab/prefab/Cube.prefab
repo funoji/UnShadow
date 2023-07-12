@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Light: {fileID: 0}
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
+  effectPrefab: {fileID: 6199060515860141735, guid: e2cd3ebe5700a874da6a5f20a3943469, type: 3}
 --- !u!114 &3112650937516470861
 MonoBehaviour:
   m_ObjectHideFlags: 0
