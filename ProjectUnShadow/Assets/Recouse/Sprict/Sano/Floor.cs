@@ -9,6 +9,7 @@ public class Floor : MonoBehaviour
     
     public enum FloorRoles
     {
+        NULL,
         Normal,
         Start,
         Goal,
@@ -18,9 +19,13 @@ public class Floor : MonoBehaviour
         SolarPanel,
         EnemySponer,
         ShadowCreat,
-        NULL
+        Shadow,
     }
-    [SerializeField] private FloorRoles Roles;
+    [SerializeField] private FloorRoles Roles = FloorRoles.NULL;
+
+    public enum MoveStatus
+    { CanStep,CantStep }
+    [SerializeField] private MoveStatus moveStatus;
 
     private void Reset()
     {
@@ -29,6 +34,10 @@ public class Floor : MonoBehaviour
     public FloorRoles GetRoles()
     {
         return Roles;
+    }
+    public MoveStatus GetMoveStatus()
+    {
+        return moveStatus;
     }
 
 #if UNITY_EDITOR
@@ -57,13 +66,16 @@ public class Floor : MonoBehaviour
             prefabDictionary.Add(FloorRoles.ThirdHeight, floor.floorPrefabs.ThirdHeight);
             prefabDictionary.Add(FloorRoles.SolarPanel, floor.floorPrefabs.SolarPanel);
             prefabDictionary.Add(FloorRoles.EnemySponer, floor.floorPrefabs.EnemySponar);
+            prefabDictionary.Add(FloorRoles.Shadow, floor.floorPrefabs.ShadowCreat);
         }
 
         void ChangeShape()
         {
             EditorGUI.BeginChangeCheck();
             UnityEditor.SerializedProperty RoleProperty = serializedObject.FindProperty("Roles");
+            UnityEditor.SerializedProperty MoveProperty = serializedObject.FindProperty("moveStatus");
             EditorGUILayout.PropertyField(RoleProperty);
+            EditorGUILayout.PropertyField(MoveProperty);
             currentRole = (FloorRoles)RoleProperty.enumValueIndex;
             GameObject NewFloor;
             //Role��prefab���擾�ł��Ă��邩�m�F

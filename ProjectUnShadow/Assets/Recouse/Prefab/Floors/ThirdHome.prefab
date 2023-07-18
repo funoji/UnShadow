@@ -120,7 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
-  Roles: 5
+  Roles: 6
+  moveStatus: 1
 --- !u!1 &8238800826979016574
 GameObject:
   m_ObjectHideFlags: 0

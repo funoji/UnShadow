@@ -226,3 +226,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 3
+  moveStatus: 1

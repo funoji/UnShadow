@@ -3,16 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class StartPosDataHolder
-{
-    public static int StoredHi { get; set; }
-    public static int StoredVi { get; set; }
-}
-public class PlayerPos
-{
-    public static int PlayertargetHori { get; set; }
-    public static int PlayertargetVer { get; set; }
-}
 public class FloorController : MonoBehaviour
 {
     public enum PlayerMovable
@@ -26,47 +16,26 @@ public class FloorController : MonoBehaviour
     [SerializeField] int Hori;
     [SerializeField] int ver;
     [SerializeField] GameObject NULLObj;
-    Floor.FloorRoles[][] floorComponent;
-    GameObject[][] floorObj;
+    Floor [][] floorComponent;
 
     // Start is called before the first frame update
     void Awake()
     {
         int countOfChilds = 0;
 
-        // ”Ô•º¶¬‚Ì‚½‚ßAƒTƒCƒY‚ğŠg’£‚µ‚Ä‰Šú‰»
-        floorComponent = new Floor.FloorRoles[Hori + 2][];
-        floorObj = new GameObject[Hori][];
+        // ï¿½Ô•ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‚ï¿½ï¿½ßAï¿½Tï¿½Cï¿½Yï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½Äï¿½ï¿½ï¿½ï¿½ï¿½
+        floorComponent = new Floor[Hori + 2][];
         for (int i = 0; i < Hori + 2; i++)
         {
-            floorComponent[i] = new Floor.FloorRoles[ver + 2];
+            floorComponent[i] = new Floor[ver + 2];
         }
 
-        //¶‰E‚Ì”Ô•º
-        for (int i = 0; i < Hori + 2; i++)
-        {
-            floorComponent[i][0] = Floor.FloorRoles.NULL;
-            floorComponent[i][ver + 1] = Floor.FloorRoles.NULL;
-           // floorObj[i][0] = GameObject.Instantiate(NULLObj);
-           // floorObj[i][ver + 1] = GameObject.Instantiate(NULLObj);
-        }
-
-        //ã‰º‚Ì”Ô•º
-        for (int i = 0; i < ver + 2; i++)
-        {
-            floorComponent[0][i] = Floor.FloorRoles.NULL;
-            floorComponent[Hori + 1][i] = Floor.FloorRoles.NULL;
-            //floorObj[0][i] = GameObject.Instantiate(NULLObj);
-            //floorObj[Hori][i] = GameObject.Instantiate(NULLObj);
-        }
-
-        // ŠeFloor‚Ìƒ[ƒ‹‚ğæ“¾‚µ”z—ñ‚ÉŠi”[
+        // ï¿½eFloorï¿½Ìƒï¿½ï¿½[ï¿½ï¿½ï¿½ï¿½ï¿½æ“¾ï¿½ï¿½ï¿½zï¿½ï¿½ÉŠiï¿½[
         for (int Hi = 1; Hi <= Hori; Hi++)
         {
             for (int Vi = 1; Vi <= ver; Vi++)
             {
-                //floorObj[Hi][Vi] = transform.GetChild(countOfChilds).gameObject;
-                floorComponent[Hi][Vi] = transform.GetChild(countOfChilds).GetComponent<Floor>().GetRoles();
+                floorComponent[Hi][Vi] = this.transform.GetChild(countOfChilds).GetComponent<Floor>();
                 countOfChilds++;
             }
         }
@@ -80,44 +49,50 @@ public class FloorController : MonoBehaviour
         { PlayerMovable.Down, new Vector2Int(0, -1) }
     };
 
-    public bool CanMove(int playerHori, int playerVer, PlayerMovable playerMovable)
+    public (bool, Vector2Int) CanMove(int playerHori, int playerVer, PlayerMovable playerMovable)
     {
         if (!MoveVector.TryGetValue(playerMovable, out Vector2Int offset))
         {
-            throw new System.NotImplementedException("ERROR‚¾‚É‚å");
+            throw new System.NotImplementedException("ERRORï¿½ï¿½ï¿½É‚ï¿½");
         }
 
-        PlayerPos.PlayertargetHori = playerHori + offset.x;
-        PlayerPos.PlayertargetVer = playerVer + offset.y;
+        int targetHori = playerHori + offset.y;
+        int targetVer = playerVer + offset.x;
+        Vector2Int FeaacherPos = new(targetHori, targetVer);
 
-        //if (floorObj[targetHori][targetVer].CompareTag("CanStep")) return true;
-        if (floorComponent[PlayerPos.PlayertargetHori][PlayerPos.PlayertargetVer] == Floor.FloorRoles.Normal) return true;
+        if (floorComponent[targetHori][targetVer] == null) return (false, FeaacherPos);
+        if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep)
+        {
+            Vector2Int PlayerPos = FeaacherPos;
+            return (true,PlayerPos);
+        }
 
-        else return false;
+        else return (false,FeaacherPos);
     }
 
-    public int[][] StratPos()
+    void ShadowBuilder()
     {
-        List<int[]> stratPosition = new List<int[]>();
+
+    }
+
+    public Vector2Int StratPos()
+    {
 
         for (int Hi = 1; Hi <= Hori; Hi++)
         {
             for (int Vi = 1; Vi <= ver; Vi++)
             {
-                if (floorComponent[Hi][Vi] == Floor.FloorRoles.Start)
+                if (floorComponent[Hi][Vi].GetRoles() == Floor.FloorRoles.Start)
                 {
-                    int[] position = new int[] { Hi, Vi };
-                    stratPosition.Add(position);
-                    StartPosDataHolder.StoredHi = Hi;// ƒXƒ^[ƒgHi‚Ì’l‚ğŠi”[‚·‚é•Ï”
-                    StartPosDataHolder.StoredVi = Vi;// ƒXƒ^[ƒgVi‚Ì’l‚ğŠi”[‚·‚é•Ï”
-                    return stratPosition.ToArray();
+                    Vector2Int position = new(Hi, Vi);
+                    return position;
                 }
             }
         }
-        return null;
+        throw new Exception("None StartObj");
     }
     public Floor.FloorRoles GetCurrentRole(int playerHori, int playerVer)
     {
-        return floorComponent[playerHori][playerVer];
+        return floorComponent[playerHori][playerVer].GetRoles();
     }
 }
