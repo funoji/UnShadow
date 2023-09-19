@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8650296036885974722}
   - component: {fileID: 5866034932626621656}
   - component: {fileID: 5546540096165146194}
+  - component: {fileID: 75150371195096707}
   m_Layer: 0
   m_Name: ThirdHome
   m_TagString: Box
@@ -122,6 +123,22 @@ MonoBehaviour:
   floorPrefabs: {fileID: 0}
   Roles: 6
   moveStatus: 1
+--- !u!114 &75150371195096707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748208852469853700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: {fileID: 0}
+  ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
+  effectPrefab: {fileID: 6199060515860141735, guid: e2cd3ebe5700a874da6a5f20a3943469, type: 3}
+  s: 3
 --- !u!1 &8238800826979016574
 GameObject:
   m_ObjectHideFlags: 0
