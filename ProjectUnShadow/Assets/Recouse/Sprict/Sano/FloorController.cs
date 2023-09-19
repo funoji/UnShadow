@@ -56,16 +56,11 @@ public class FloorController : MonoBehaviour
             throw new System.NotImplementedException("ERROR���ɂ�");
         }
 
-        int targetHori = playerHori + offset.y;
-        int targetVer = playerVer + offset.x;
-        Vector2Int FeaacherPos = new(targetHori, targetVer);
-
-        if (floorComponent[targetHori][targetVer] == null) return (false, FeaacherPos);
-        if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep)
-        {
-            Vector2Int PlayerPos = FeaacherPos;
-            return (true,PlayerPos);
-        }
+        int targetHori = playerHori + offset.x;
+        int targetVer = playerVer + offset.y;
+ 
+        if (floorComponent[targetHori][targetVer] == null) return false;
+        if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep) return true;
 
         else return (false,FeaacherPos);
     }
@@ -94,5 +89,9 @@ public class FloorController : MonoBehaviour
     public Floor.FloorRoles GetCurrentRole(int playerHori, int playerVer)
     {
         return floorComponent[playerHori][playerVer].GetRoles();
+    }  
+    public void SetTargetRole(int playerHori, int playerVer ,Floor.FloorRoles roles)
+    {
+        floorComponent[playerHori][playerVer].SetRole(roles);
     }
 }

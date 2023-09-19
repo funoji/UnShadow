@@ -46,8 +46,6 @@ public class CreateFromEdtor : EditorWindow
     //実際にオブジェクトを作成
     private void Create()
     {
-        
-
         //インスタンス化するobjectがない場合の処理
         if (FloorPrefab == null) { Debug.Log("床のプレハブを設定してください"); return; }
 

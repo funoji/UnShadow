@@ -5,13 +5,11 @@ using UnityEngine;
 public class CastShadow : MonoBehaviour
 {
     [SerializeField] GameObject[] lightObj;
+    Floor.FloorRoles CheckRole;
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < lightObj.Length;i++)
-        {
-
-        }
+        CheckRole = this.GetComponent<Floor.FloorRoles>();
     }
 
     // Update is called once per frame
