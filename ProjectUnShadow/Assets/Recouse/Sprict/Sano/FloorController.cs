@@ -58,7 +58,7 @@ public class FloorController : MonoBehaviour
 
         int targetHori = playerHori + offset.x;
         int targetVer = playerVer + offset.y;
-
+ 
         if (floorComponent[targetHori][targetVer] == null) return false;
         if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep) return true;
 
@@ -89,5 +89,9 @@ public class FloorController : MonoBehaviour
     public Floor.FloorRoles GetCurrentRole(int playerHori, int playerVer)
     {
         return floorComponent[playerHori][playerVer].GetRoles();
+    }  
+    public void SetTargetRole(int playerHori, int playerVer ,Floor.FloorRoles roles)
+    {
+        floorComponent[playerHori][playerVer].SetRole(roles);
     }
 }

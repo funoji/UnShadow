@@ -39,6 +39,14 @@ public class Floor : MonoBehaviour
     {
         return moveStatus;
     }
+    public void SetRole(FloorRoles Newroles)
+    {
+        Roles = Newroles;
+    }
+    public void SetMoveStatus(MoveStatus newSt)
+    {
+        moveStatus = newSt;
+    }
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(Floor))]
