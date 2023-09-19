@@ -24,4 +24,6 @@ public class FloorPrefabs : MonoBehaviour
     public GameObject ShadowCreat => _ShadowCreat;
     [SerializeField] GameObject _Bariier;
     public GameObject Bariier => _Bariier;
+    [SerializeField] GameObject _Teleport;
+    public GameObject Teleport => _Teleport;
 }
