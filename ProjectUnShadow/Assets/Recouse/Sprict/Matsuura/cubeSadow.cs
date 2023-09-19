@@ -9,16 +9,16 @@ public class cubeSadow : MonoBehaviour
     Vector3 objectPosition;
     Vector3 up, down, left, right;
     public GameObject ShadowBox;
-    private GameObject currentBlockup;
-    private GameObject currentBlockdown;
-    private GameObject currentBlockleft;
-    private GameObject currentBlockright;
+    private List<GameObject> currentBlockupList = new List<GameObject>();
+    private List<GameObject> currentBlockdownList = new List<GameObject>();
+    private List<GameObject> currentBlockleftList = new List<GameObject>();
+    private List<GameObject> currentBlockrightList = new List<GameObject>();
     [SerializeField] GameObject effectPrefab;
     // エフェクトインスタンスの変数を方向ごとに宣言
-    private GameObject effectInstanceUp;
-    private GameObject effectInstanceDown;
-    private GameObject effectInstanceLeft;
-    private GameObject effectInstanceRight;
+    private List<GameObject> effectInstanceUpList = new List<GameObject>();
+    private List<GameObject> effectInstanceDownList = new List<GameObject>();
+    private List<GameObject> effectInstanceLeftList = new List<GameObject>();
+    private List<GameObject> effectInstanceRightList = new List<GameObject>();
     private Quaternion effectRotation;
 
     [SerializeField] int s;
@@ -40,71 +40,116 @@ public class cubeSadow : MonoBehaviour
         //上のライトがついたとき
         if (Light.lights[0].enabled == true)
         {
-            if (currentBlockup == null)
+            if (currentBlockupList.Count == 0)
             {
-                for(int i = 0; i<s;i++)
+                for (int i = 0; i < s; i++)
                 {
-                    currentBlockup = Instantiate(ShadowBox, up + new Vector3(0,0,-i), Quaternion.identity);
-                    effectInstanceUp = Instantiate(effectPrefab, up, effectRotation);
+                    GameObject currentBlockup = Instantiate(ShadowBox, up + new Vector3(0, 0, -i), Quaternion.identity);
+                    GameObject effectInstanceUp = Instantiate(effectPrefab, up + new Vector3(0, 0, -i), effectRotation);
+                    currentBlockupList.Add(currentBlockup);
+                    effectInstanceUpList.Add(effectInstanceUp);
                 }
-               
+
             }
         }
         if (Light.lights[0].enabled == false)
         {
-            Destroy(currentBlockup);
-            Destroy(effectInstanceUp);
-            currentBlockup = null;
+            foreach (var block in currentBlockupList)
+            {
+                Destroy(block);
+            }
+            foreach (var effect in effectInstanceUpList)
+            {
+                Destroy(effect);
+            }
+            currentBlockupList.Clear();
+            effectInstanceUpList.Clear();
         }
 
         //下のライトがついたとき
         if (Light.lights[1].enabled == true)
         {
-            if (currentBlockdown == null)
+            if (currentBlockdownList.Count == 0)
             {
-                currentBlockdown = Instantiate(ShadowBox, down, Quaternion.identity);
-                effectInstanceDown = Instantiate(effectPrefab, down, effectRotation);
+                for (int i = 0; i < s; i++)
+                {
+                    GameObject currentBlockdown = Instantiate(ShadowBox, down + new Vector3(0, 0, i), Quaternion.identity);
+                    GameObject effectInstanceDown = Instantiate(effectPrefab, down + new Vector3(0, 0, i), effectRotation);
+                    currentBlockdownList.Add(currentBlockdown);
+                    effectInstanceDownList.Add(effectInstanceDown);
+                }
             }
         }
         if (Light.lights[1].enabled == false)
         {
-            Destroy(currentBlockdown);
-            Destroy(effectInstanceDown);
-            currentBlockdown = null;
+            foreach (var block in currentBlockdownList)
+            {
+                Destroy(block);
+            }
+            foreach (var effect in effectInstanceDownList)
+            {
+                Destroy(effect);
+            }
+            currentBlockdownList.Clear();
+            effectInstanceDownList.Clear();
         }
 
         //右のライトがついたとき
         if (Light.lights[2].enabled == true)
         {
-            if (currentBlockright == null)
+            if (currentBlockrightList.Count == 0)
             {
-                currentBlockright = Instantiate(ShadowBox, right, Quaternion.identity);
-                effectInstanceRight = Instantiate(effectPrefab, right, effectRotation);
+                for (int i = 0; i < s; i++)
+                {
+                    GameObject currentBlockright = Instantiate(ShadowBox, right + new Vector3(-i, 0, 0), Quaternion.identity);
+                    GameObject effectInstanceRight = Instantiate(effectPrefab, right + new Vector3(-i, 0, 0), effectRotation);
+                    currentBlockrightList.Add(currentBlockright);
+                    effectInstanceRightList.Add(effectInstanceRight);
+                }
             }
-                
+
         }
         if (Light.lights[2].enabled == false)
         {
-            Destroy(currentBlockright);
-            Destroy(effectInstanceRight);
-            currentBlockright = null;
+            foreach (var block in currentBlockrightList)
+            {
+                Destroy(block);
+            }
+            foreach (var effect in effectInstanceRightList)
+            {
+                Destroy(effect);
+            }
+            currentBlockrightList.Clear();
+            effectInstanceRightList.Clear();
         }
 
         //左のライトがついたとき
         if (Light.lights[3].enabled == true)
         {
-            if (currentBlockleft == null)
+            if (currentBlockleftList.Count == 0)
             {
-                currentBlockleft = Instantiate(ShadowBox, left, Quaternion.identity);
-                effectInstanceLeft = Instantiate(effectPrefab, left, effectRotation);
+                for (int i = 0; i < s; i++)
+                {
+                    GameObject currentBlockleft = Instantiate(ShadowBox, left + new Vector3(i, 0, 0), Quaternion.identity);
+                    GameObject effectInstanceLeft = Instantiate(effectPrefab, left + new Vector3(i, 0, 0), effectRotation);
+                    currentBlockleftList.Add(currentBlockleft);
+                    effectInstanceLeftList.Add(effectInstanceLeft);
+                }
             }
-                
+
         }
         if (Light.lights[3].enabled == false)
         {
-            Destroy(currentBlockleft);
-            Destroy(effectInstanceLeft);
-            currentBlockleft = null;
+            foreach (var block in currentBlockleftList)
+            {
+                Destroy(block);
+            }
+            foreach (var effect in effectInstanceLeftList)
+            {
+                Destroy(effect);
+            }
+            currentBlockleftList.Clear();
+            effectInstanceLeftList.Clear();
         }
     }
 }
