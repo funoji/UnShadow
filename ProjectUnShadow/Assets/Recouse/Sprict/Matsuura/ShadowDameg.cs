@@ -23,13 +23,16 @@ public class ShadowDameg : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        CharacterMovement playerHealth = other.GetComponent<CharacterMovement>();
-        Vector3 playerPosition = playerTransform.transform.position;
-        damageEffectInst = Instantiate(damageEffect, playerPosition, effectRotation);
-        Destroy(damageEffectInst, 1.0f);
-        if (playerHealth != null)
+        if(other.CompareTag("Player"))
         {
-            playerHealth.TakeDamage(damageAmount);
+            CharacterMovement playerHealth = other.GetComponent<CharacterMovement>();
+            Vector3 playerPosition = playerTransform.transform.position;
+            damageEffectInst = Instantiate(damageEffect, playerPosition, effectRotation);
+            Destroy(damageEffectInst, 1.0f);
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damageAmount);
+            }
         }
     }
 }
