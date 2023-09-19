@@ -69,12 +69,6 @@ public class FloorController : MonoBehaviour
         else return (false, FeaacherPos);
     }
 
-
-        void ShadowBuilder()
-    {
-
-    }
-
     public Vector2Int StratPos()
     {
 
