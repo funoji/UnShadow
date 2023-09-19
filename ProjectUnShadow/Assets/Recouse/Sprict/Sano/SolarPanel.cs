@@ -5,9 +5,7 @@ using UnityEditor;
 
 public class SolarPanel : Floor
 {
-    [SerializeField] GameObject[] Bariiers;
-
-
+    [SerializeField] private GameObject[] Bariiers;
     private void Start()
     {
         for(int Bi = 0; Bi < Bariiers.Length; Bi++)

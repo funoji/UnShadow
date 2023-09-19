@@ -26,6 +26,9 @@ public class Floor : MonoBehaviour
     public enum MoveStatus
     { CanStep,CantStep }
     [SerializeField] private MoveStatus moveStatus;
+    public enum shadowblock
+    { Unshadow,Shadow }
+    [SerializeField] private shadowblock Shadowblock;
 
     private void Reset()
     {
@@ -46,6 +49,11 @@ public class Floor : MonoBehaviour
     public void SetMoveStatus(MoveStatus newSt)
     {
         moveStatus = newSt;
+    }
+
+    public void SetShadow(shadowblock set)
+    {
+        Shadowblock = set;
     }
 
 #if UNITY_EDITOR
