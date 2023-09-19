@@ -6,7 +6,6 @@ using UnityEditor;
 public class SolarPanel : MonoBehaviour
 {
     [SerializeField] private GameObject[] Bariiers;
-    Barrier Barrier;
 
     private void Start()
     {
@@ -20,15 +19,20 @@ public class SolarPanel : MonoBehaviour
             }
         }
     }
-
     public void OnBarrier()
     {
         //if is this Unshadow
-        Barrier.setOn();
+        for(int i = 0;i < Bariiers.Length;i++)
+        {
+           Bariiers[i].GetComponent<Barrier>().setOn();
+        }
     }
     public void OffBarrier()
     {
- Å@Å@Å@ //if is this shadow
-        Barrier.setOff();
+        //if is this shadow
+        for (int i = 0; i < Bariiers.Length; i++)
+        {
+            Bariiers[i].GetComponent<Barrier>().setOff();
+        }
     }
 }
