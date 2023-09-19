@@ -20,6 +20,8 @@ public class cubeSadow : MonoBehaviour
     private GameObject effectInstanceLeft;
     private GameObject effectInstanceRight;
     private Quaternion effectRotation;
+
+    [SerializeField] int s;
     // Start is called before the first frame update
     private void Start()
     {
@@ -40,8 +42,12 @@ public class cubeSadow : MonoBehaviour
         {
             if (currentBlockup == null)
             {
-                currentBlockup = Instantiate(ShadowBox, up, Quaternion.identity);
-                effectInstanceUp = Instantiate(effectPrefab, up, effectRotation);
+                for(int i = 0; i<s;i++)
+                {
+                    currentBlockup = Instantiate(ShadowBox, up + new Vector3(0,0,-i), Quaternion.identity);
+                    effectInstanceUp = Instantiate(effectPrefab, up, effectRotation);
+                }
+               
             }
         }
         if (Light.lights[0].enabled == false)
