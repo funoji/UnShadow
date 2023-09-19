@@ -56,16 +56,21 @@ public class FloorController : MonoBehaviour
             throw new System.NotImplementedException("ERROR���ɂ�");
         }
 
-        int targetHori = playerHori + offset.x;
-        int targetVer = playerVer + offset.y;
- 
-        if (floorComponent[targetHori][targetVer] == null) return false;
-        if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep) return true;
+        int targetHori = playerHori + offset.y;
+        int targetVer = playerVer + offset.x;
+        Vector2Int FeaacherPos = new(targetHori, targetVer);
 
-        else return (false,FeaacherPos);
+        if (floorComponent[targetHori][targetVer] == null) return (false, FeaacherPos);
+        if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep)
+        {
+            Vector2Int PlayerPos = FeaacherPos;
+            return (true, PlayerPos);
+        }
+        else return (false, FeaacherPos);
     }
 
-    void ShadowBuilder()
+
+        void ShadowBuilder()
     {
 
     }
