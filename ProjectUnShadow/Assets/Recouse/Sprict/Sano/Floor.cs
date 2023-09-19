@@ -18,8 +18,7 @@ public class Floor : MonoBehaviour
         ThirdHeight,
         SolarPanel,
         EnemySponer,
-        ShadowCreat,
-        Shadow,
+        Barrier,
     }
     [SerializeField] private FloorRoles Roles = FloorRoles.NULL;
 
@@ -82,7 +81,8 @@ public class Floor : MonoBehaviour
             prefabDictionary.Add(FloorRoles.ThirdHeight, floor.floorPrefabs.ThirdHeight);
             prefabDictionary.Add(FloorRoles.SolarPanel, floor.floorPrefabs.SolarPanel);
             prefabDictionary.Add(FloorRoles.EnemySponer, floor.floorPrefabs.EnemySponar);
-            prefabDictionary.Add(FloorRoles.Shadow, floor.floorPrefabs.ShadowCreat);
+            //prefabDictionary.Add(FloorRoles.Shadow, floor.floorPrefabs.ShadowCreat);
+            prefabDictionary.Add(FloorRoles.Barrier, floor.floorPrefabs.Bariier);
         }
 
         void ChangeShape()
@@ -90,8 +90,10 @@ public class Floor : MonoBehaviour
             EditorGUI.BeginChangeCheck();
             UnityEditor.SerializedProperty RoleProperty = serializedObject.FindProperty("Roles");
             UnityEditor.SerializedProperty MoveProperty = serializedObject.FindProperty("moveStatus");
+            UnityEditor.SerializedProperty ShadowProperty = serializedObject.FindProperty("Shadowblock");
             EditorGUILayout.PropertyField(RoleProperty);
             EditorGUILayout.PropertyField(MoveProperty);
+            EditorGUILayout.PropertyField(ShadowProperty);
             currentRole = (FloorRoles)RoleProperty.enumValueIndex;
             GameObject NewFloor;
             //Role��prefab���擾�ł��Ă��邩�m�F

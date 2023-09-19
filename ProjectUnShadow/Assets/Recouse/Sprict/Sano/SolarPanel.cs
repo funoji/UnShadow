@@ -3,14 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class SolarPanel : Floor
+public class SolarPanel : MonoBehaviour
 {
     [SerializeField] private GameObject[] Bariiers;
+    Barrier Barrier;
+
     private void Start()
     {
-        for(int Bi = 0; Bi < Bariiers.Length; Bi++)
+        // Bariiers 配列内の各オブジェクトに対して MoveStatus を設定
+        foreach (var barrier in Bariiers)
         {
-            Bariiers[Bi].GetComponent<Floor>().SetMoveStatus((MoveStatus)1);
+            Floor floor = barrier.GetComponent<Floor>();
+            if (floor != null)
+            {
+                floor.SetMoveStatus((Floor.MoveStatus)1); // または CantStep に設定
+            }
         }
+    }
+
+    public void OnBarrier()
+    {
+        //if is this Unshadow
+        Barrier.setOn();
+    }
+    public void OffBarrier()
+    {
+ 　　　 //if is this shadow
+        Barrier.setOff();
     }
 }
