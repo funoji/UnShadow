@@ -420,6 +420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &72411949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -540,6 +541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &76645208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -663,6 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &101425762
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -783,6 +786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &113732855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1008,6 +1012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &149355559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1128,6 +1133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &154459637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1355,6 +1361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 4
+  moveStatus: 0
 --- !u!65 &325139212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1475,6 +1482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &393136200
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1595,6 +1603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &524523024
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1925,6 +1934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &592471930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2045,6 +2055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &605388370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2273,6 +2284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &648652398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2395,6 +2407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 4
+  moveStatus: 0
 --- !u!65 &714323615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2515,6 +2528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &808479159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2635,6 +2649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &822167567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2860,6 +2875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &823903673
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2980,6 +2996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &893716198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3100,6 +3117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &924280236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3220,6 +3238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &971846177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3446,6 +3465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 3
+  moveStatus: 0
 --- !u!65 &995198383
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3567,6 +3587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 3
+  moveStatus: 0
 --- !u!65 &1009227689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3687,6 +3708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1024113267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3807,6 +3829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1035565936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3927,6 +3950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &1044682310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4047,6 +4071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1045103666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4170,6 +4195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &1051776541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4290,6 +4316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1067889798
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4515,6 +4542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1095370464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4635,6 +4663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1101341588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4849,6 +4878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1118590329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5074,6 +5104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1176559276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5194,6 +5225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1195975280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5419,6 +5451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1235651294
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5539,6 +5572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1251537452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5659,6 +5693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1325613480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5779,6 +5814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1353280537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6004,6 +6040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 2
+  moveStatus: 0
 --- !u!65 &1412923380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6124,6 +6161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &1438754874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6244,6 +6282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1466906988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6364,6 +6403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &1481275755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6484,6 +6524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1541379526
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6604,6 +6645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1551029659
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6724,6 +6766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &1581976498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6936,6 +6979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1620300230
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7161,6 +7205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1748872254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7386,6 +7431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1860883203
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7506,6 +7552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &1862397380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7626,6 +7673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1865991753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7746,6 +7794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &1929320009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7866,6 +7915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 1
+  moveStatus: 0
 --- !u!65 &1968248701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7988,6 +8038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 4
+  moveStatus: 0
 --- !u!65 &1987907363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8215,6 +8266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 4
+  moveStatus: 0
 --- !u!65 &2009421844
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8337,6 +8389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 4
+  moveStatus: 0
 --- !u!65 &2048150571
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8458,6 +8511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 3
+  moveStatus: 0
 --- !u!65 &2050358992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8578,6 +8632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 52570811}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &2058970364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8699,6 +8754,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 3
+  moveStatus: 0
 --- !u!65 &2079328894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8819,6 +8875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 5
+  moveStatus: 0
 --- !u!65 &2105323823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8939,6 +8996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   Roles: 0
+  moveStatus: 0
 --- !u!65 &2108434410
 BoxCollider:
   m_ObjectHideFlags: 0
