@@ -18,7 +18,7 @@ public class ShadowGimmick : MonoBehaviour
             if (scriptOnSoraObject != null)
             {
                 // スクリプトの関数を呼び出す
-                scriptOnSoraObject.OnBarrier();
+                scriptOnSoraObject.OffBarrier();
             }
         }
     }

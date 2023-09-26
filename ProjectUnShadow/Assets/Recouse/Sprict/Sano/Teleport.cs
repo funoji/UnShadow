@@ -23,7 +23,7 @@ public class Teleport : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // 当たったオブジェクトのタグが "player" の場合
-        if (collision.gameObject.CompareTag("player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             // コルーチンを開始して待機
             StartCoroutine(TeleportPlayer(collision.gameObject.GetComponent<Transform>()));
