@@ -118,7 +118,6 @@ public class CharacterMovement : MonoBehaviour
             StartCoroutine(MoveToPosition(targetPosition));
         }
     }
-
     bool IsObstacleInPosition(Vector3 position)
     {
         Collider[] colliders = Physics.OverlapSphere(position, 0.25f); // áŠQ•¨‚Ì”¼Œa‚É‰‚¶‚Ä’²®
