@@ -2124,6 +2124,8 @@ MonoBehaviour:
   moveSpeed: 8
   moveDistance: 1
   PlayerHP: 100
+  storedHi: 0
+  storedVi: 0
   floorControllerOBJ: {fileID: 1915744082}
 --- !u!136 &433925764
 CapsuleCollider:
@@ -2581,7 +2583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportTargetObj: {fileID: 546240287}
-  Tpduration: 1
+  Tpduration: 0.1
   FloorControllObj: {fileID: 1915744082}
 --- !u!65 &537086037
 BoxCollider:
@@ -2703,6 +2705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f628b4307fd53f047bf41085cc4ee800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterMovement: {fileID: 433925762}
   FloorControllObj: {fileID: 1915744082}
 --- !u!65 &546240290
 BoxCollider:

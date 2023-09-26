@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TeleportGoal : MonoBehaviour
 {
+    [SerializeField] CharacterMovement characterMovement;
     [SerializeField] GameObject FloorControllObj;
     Floor thisFloor;
     FloorController _Controller;
@@ -21,7 +22,10 @@ public class TeleportGoal : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerPos = _Controller.GetScriptPos(thisFloor);
-            Debug.Log(PlayerPos);
+            characterMovement.storedHi = PlayerPos.x;
+            characterMovement.storedVi = PlayerPos.y;
+            Debug.Log(characterMovement.storedHi);
+            Debug.Log(characterMovement.storedVi);
         }
     }
 }
