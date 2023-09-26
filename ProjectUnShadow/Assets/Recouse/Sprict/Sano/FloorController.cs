@@ -93,4 +93,20 @@ public class FloorController : MonoBehaviour
     {
         floorComponent[playerHori][playerVer].SetRole(roles);
     }
+    public Vector2Int GetScriptPos(Floor TargetSprict)
+    {
+        for (int Hi = 1; Hi <= Hori; Hi++)
+        {
+            for (int Vi = 1; Vi <= ver; Vi++)
+            {
+                if (floorComponent[Hi][Vi] == TargetSprict)
+                {
+                    Vector2Int position = new(Hi, Vi);
+                    return position;
+                }
+            }
+        }
+       throw new Exception("there is none script");
+
+    }
 }
