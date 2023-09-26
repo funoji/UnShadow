@@ -16,8 +16,8 @@ public class CharacterMovement : MonoBehaviour
     public int PlayerHP = 100;
     bool canmove;
     private Vector2Int PlayerPos;
-    int storedHi;
-    int storedVi;
+    public int storedHi;
+    public int storedVi;
     [SerializeField] GameObject floorControllerOBJ;
     void Start()
     {
