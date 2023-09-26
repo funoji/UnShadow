@@ -20,6 +20,7 @@ public class Floor : MonoBehaviour
         EnemySponer,
         Barrier,
         Teleport,
+        TeleportGoal,
     }
     [SerializeField] private FloorRoles Roles = FloorRoles.NULL;
 
@@ -85,6 +86,7 @@ public class Floor : MonoBehaviour
             //prefabDictionary.Add(FloorRoles.Shadow, floor.floorPrefabs.ShadowCreat);
             prefabDictionary.Add(FloorRoles.Barrier, floor.floorPrefabs.Bariier);
             prefabDictionary.Add(FloorRoles.Teleport, floor.floorPrefabs.Teleport);
+            prefabDictionary.Add(FloorRoles.TeleportGoal, floor.floorPrefabs.TeleportGoal);
         }
 
         void ChangeShape()
