@@ -2583,7 +2583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TeleportTargetObj: {fileID: 546240287}
-  Tpduration: 0.1
+  Tpduration: 0.08
   FloorControllObj: {fileID: 1915744082}
 --- !u!65 &537086037
 BoxCollider:
