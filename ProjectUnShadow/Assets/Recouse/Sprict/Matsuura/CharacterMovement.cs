@@ -18,6 +18,7 @@ public class CharacterMovement : MonoBehaviour
     private Vector2Int PlayerPos;
     public int storedHi;
     public int storedVi;
+    FloorController _floorController;
     [SerializeField] GameObject floorControllerOBJ;
     void Start()
     {
@@ -26,6 +27,7 @@ public class CharacterMovement : MonoBehaviour
         storedVi = floorControllerOBJ.GetComponent<FloorController>().StratPos().y; // プロジェクトAで格納したViの値を取得
         Debug.Log(storedHi);
         Debug.Log(storedVi);
+        _floorController = floorControllerOBJ.GetComponent<FloorController>();
         //canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up);
     }
     void Update()
@@ -54,8 +56,8 @@ public class CharacterMovement : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
-                canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up).Item1;
-                PlayerPos = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up).Item2;
+                canmove = _floorController.CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up).Item1;
+                PlayerPos = _floorController.CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up).Item2;
                 if (canmove)
                 {
                     storedHi = PlayerPos.x;
