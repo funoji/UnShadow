@@ -13,12 +13,12 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         _floorController =FloorControllerObj.GetComponent<FloorController>();
-        this.GetComponent<>
+        //this.GetComponent<>
     }
     // Start is called before the first frame update
     void MoveEmeny()
     {
-        isEnemyMovable = _floorController.CanMove();
+        //isEnemyMovable = _floorController.CanMove();
     }
 
    void SpawnEnemy(GameObject EObj)
