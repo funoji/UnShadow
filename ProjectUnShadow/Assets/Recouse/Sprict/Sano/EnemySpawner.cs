@@ -18,7 +18,8 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void MoveEmeny()
     {
-        //isEnemyMovable = _floorController.CanMove();
+        isEnemyMovable = _floorController.CanMove(enemyPosition.x,enemyPosition.y,FloorController.PlayerMovable.Up).Item1;
+        enemyPosition = _floorController.CanMove(enemyPosition.x,enemyPosition.y,FloorController.PlayerMovable.Up).Item2;
     }
 
    void SpawnEnemy(GameObject EObj)
