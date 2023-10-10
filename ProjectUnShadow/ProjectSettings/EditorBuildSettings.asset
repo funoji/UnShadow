@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Mtsutake_Titl.unity
+    guid: 187bd8653ff1eed44b128ef1031eb962
   m_configObjects: {}
