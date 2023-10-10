@@ -9957,7 +9957,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1066237171340399534, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Intensity
-      value: 3
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066237171340399534, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1066237171340399534, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Shadows.m_NormalBias
@@ -10001,7 +10005,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2621630222789425347, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Intensity
-      value: 3
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621630222789425347, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2621630222789425347, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Shadows.m_NormalBias
@@ -10033,11 +10041,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3570208829724307456, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Intensity
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3570208829724307456, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3570208829724307456, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Shadows.m_NormalBias
@@ -10121,7 +10129,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542345349598752314, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Intensity
-      value: 3
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542345349598752314, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6542345349598752314, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Shadows.m_NormalBias
@@ -10153,11 +10165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8809698910619865897, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Intensity
-      value: 0.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8809698910619865897, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
