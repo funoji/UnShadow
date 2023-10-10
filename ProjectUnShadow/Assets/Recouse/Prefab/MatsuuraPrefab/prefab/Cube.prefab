@@ -123,6 +123,7 @@ MonoBehaviour:
   Light: {fileID: 0}
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 6199060515860141735, guid: e2cd3ebe5700a874da6a5f20a3943469, type: 3}
+  s: 1
 --- !u!114 &3112650937516470861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,7 @@ MonoBehaviour:
   floorPrefabs: {fileID: 0}
   Roles: 4
   moveStatus: 1
+  Shadowblock: 0
 --- !u!1001 &6960382831098832051
 PrefabInstance:
   m_ObjectHideFlags: 0

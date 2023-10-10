@@ -60,7 +60,7 @@ public class CharacterMovement : MonoBehaviour
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position - new Vector3(0f, 0f, moveDistance));
                 }
-                    
+
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
@@ -74,7 +74,7 @@ public class CharacterMovement : MonoBehaviour
                     Debug.Log(storedVi);
                     TryMoveToPosition(transform.position - new Vector3(moveDistance, 0f, 0f));
                 }
-                
+
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
