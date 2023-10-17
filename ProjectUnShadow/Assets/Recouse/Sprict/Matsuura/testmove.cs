@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMovement : MonoBehaviour
+public class testmove : MonoBehaviour
 {
     Animator animator;
     public float moveSpeed = 1f;
@@ -20,12 +20,20 @@ public class CharacterMovement : MonoBehaviour
     public int storedVi;
     FloorController _floorController;
     [SerializeField] GameObject floorControllerOBJ;
+    private Rigidbody rb;
+    private Transform mainCameraTransform;
+    private Vector3 destinationPositionForward;
+    private Vector3 destinationPositionBag;
+    private Vector3 destinationPositionRight;
+    private Vector3 destinationPositionLeft;
     int Up = 0,
-        Left = 1,
+        Right = 1,
         Down = 2,
-        Right = 3;
+        Left = 3;
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        mainCameraTransform = Camera.main.transform;
         animator = GetComponent<Animator>();
         moveDistanceForward = new Vector3(0, 0, 1);
         moveDistanceRight = new Vector3(1, 0, 0);
@@ -40,18 +48,47 @@ public class CharacterMovement : MonoBehaviour
     {
         if (!isMoving)
         {
- 
+            // カメラの正面方向を取得
+            Vector3 cameraForward = mainCameraTransform.forward;
+            Vector3 cameraRight = mainCameraTransform.right;
+            cameraForward.y = 0;
+            cameraRight.y = 0;
+            cameraForward.Normalize();
+            cameraRight.Normalize();
+            // 移動ベクトルをカメラの正面方向に固定
+            Vector3 moveVectorForward = cameraForward;
+            Vector3 moveVectorRight = cameraRight;
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (Up == 3)
+                    Up = -1;
+                if (Left == 3)
+                    Left = -1;
+                if (Down == 3)
+                    Down = -1;
+                if (Down == 3)
+                    Down = -1;
+                Up = Up + 1;
+                Right = Right + 1;
+                Down = Down + 1;
+                Left = Left + 1;
+                Debug.Log(Up);
+            }
+
             if (Input.GetKeyDown(KeyCode.W))
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item2;
                 if (canmove)
                 {
+                    destinationPositionForward = transform.position + moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
-                    TryMoveToPosition(transform.position + moveDistanceForward);
+                    Debug.Log(destinationPositionForward);
+                    TryMoveToPosition(destinationPositionForward);
                 }
 
             }
@@ -61,11 +98,12 @@ public class CharacterMovement : MonoBehaviour
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Down).Item2;
                 if (canmove)
                 {
+                    destinationPositionBag = transform.position - moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
-                    TryMoveToPosition(transform.position - moveDistanceForward);
+                    TryMoveToPosition(destinationPositionBag);
                 }
 
             }
@@ -75,11 +113,12 @@ public class CharacterMovement : MonoBehaviour
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Left).Item2;
                 if (canmove)
                 {
+                    destinationPositionLeft = transform.position - moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
-                    TryMoveToPosition(transform.position - moveDistanceRight);
+                    TryMoveToPosition(destinationPositionLeft);
                 }
 
             }
@@ -89,22 +128,16 @@ public class CharacterMovement : MonoBehaviour
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Right).Item2;
                 if (canmove)
                 {
+                    destinationPositionRight = transform.position + moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
-                    TryMoveToPosition(transform.position + moveDistanceRight);
+                    TryMoveToPosition(destinationPositionRight);
                 }
             }
         }
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            Up = Up + 1;
-            Left = Left + 1;
-            Down = Down + 1;
-            Right = Down + 1;
-            Debug.Log(Up);
-        }
+        
     }
 
     void TryMoveToPosition(Vector3 targetPosition)
