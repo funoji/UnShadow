@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TeleportGoal : MonoBehaviour
 {
-    [SerializeField] CharacterMovement characterMovement;
+    [SerializeField] testmove characterMovement;
     [SerializeField] GameObject FloorControllObj;
     Floor thisFloor;
     FloorController _Controller;

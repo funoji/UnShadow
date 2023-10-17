@@ -7,10 +7,10 @@ public class FloorController : MonoBehaviour
 {
     public enum PlayerMovable
     {
-        Right,
-        Left,
         Up,
-        Down
+        Right,
+        Down,
+        Left
     }
 
     [SerializeField] int Hori;
