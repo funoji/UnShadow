@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 8573720685479405492}
   - component: {fileID: 7255670567308772592}
   - component: {fileID: 1593102771661454570}
+  - component: {fileID: -8343247978596853671}
   m_Layer: 0
   m_Name: Frist
   m_TagString: Box
@@ -228,3 +229,19 @@ MonoBehaviour:
   Roles: 4
   moveStatus: 1
   Shadowblock: 0
+--- !u!114 &-8343247978596853671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437102919838207699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: {fileID: 0}
+  ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
+  effectPrefab: {fileID: 6199060515860141735, guid: e2cd3ebe5700a874da6a5f20a3943469, type: 3}
+  s: 1

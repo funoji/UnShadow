@@ -26,4 +26,6 @@ public class FloorPrefabs : MonoBehaviour
     public GameObject Bariier => _Bariier;
     [SerializeField] GameObject _Teleport;
     public GameObject Teleport => _Teleport;
+    [SerializeField] GameObject _TeleportGoal;
+    public GameObject TeleportGoal => _TeleportGoal;
 }
