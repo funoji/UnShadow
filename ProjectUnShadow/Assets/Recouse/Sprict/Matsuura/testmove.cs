@@ -59,22 +59,7 @@ public class testmove : MonoBehaviour
             Vector3 moveVectorForward = cameraForward;
             Vector3 moveVectorRight = cameraRight;
 
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (Up == 3)
-                    Up = -1;
-                if (Left == 3)
-                    Left = -1;
-                if (Down == 3)
-                    Down = -1;
-                if (Down == 3)
-                    Down = -1;
-                Up = Up + 1;
-                Right = Right + 1;
-                Down = Down + 1;
-                Left = Left + 1;
-                Debug.Log(Up);
-            }
+            
 
             if (Input.GetKeyDown(KeyCode.W))
             {
@@ -137,7 +122,24 @@ public class testmove : MonoBehaviour
                 }
             }
         }
-        
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            
+            Up = Up + 1;
+            Right = Right + 1;
+            Down = Down + 1;
+            Left = Left + 1;
+            Debug.Log(Up);
+            if (Up == 4)
+                Up = 0;
+            if (Right == 4)
+                Right = 0;
+            if (Down == 4)
+                Down = 0;
+            if (Left == 4)
+                Left = 0;
+        }
+
     }
 
     void TryMoveToPosition(Vector3 targetPosition)
