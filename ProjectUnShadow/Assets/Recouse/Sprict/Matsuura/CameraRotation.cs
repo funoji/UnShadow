@@ -4,7 +4,7 @@ using Cinemachine;
 public class CameraRotation : MonoBehaviour
 {
     public CinemachineVirtualCamera virtualCamera; // Cinemachine Virtual Cameraを参照するための変数
-    bool K;//回転させるフラグ
+    public bool K;//回転させるフラグ
     float count = 0;
 
     private void Start()
@@ -30,8 +30,8 @@ public class CameraRotation : MonoBehaviour
             var pov = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
 
             // Horizontal AxisのValueを変更（例: 90度）
-            pov.m_HorizontalAxis.Value++;
-            count++;
+            pov.m_HorizontalAxis.Value+=0.5f;
+            count+=0.5f;
             if (count == 90)
             {
                 K = false;

@@ -26,10 +26,11 @@ public class testmove : MonoBehaviour
     private Vector3 destinationPositionBag;
     private Vector3 destinationPositionRight;
     private Vector3 destinationPositionLeft;
-    int Up = 0,
+    public int Up = 0,
         Right = 1,
         Down = 2,
         Left = 3;
+    public CameraRotation Rotation;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -122,24 +123,27 @@ public class testmove : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            
-            Up = Up + 1;
-            Right = Right + 1;
-            Down = Down + 1;
-            Left = Left + 1;
-            Debug.Log(Up);
-            if (Up == 4)
-                Up = 0;
-            if (Right == 4)
-                Right = 0;
-            if (Down == 4)
-                Down = 0;
-            if (Left == 4)
-                Left = 0;
-        }
 
+        if (Rotation.K==false)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+
+                Up = Up + 1;
+                Right = Right + 1;
+                Down = Down + 1;
+                Left = Left + 1;
+                Debug.Log(Up);
+                if (Up == 4)
+                    Up = 0;
+                if (Right == 4)
+                    Right = 0;
+                if (Down == 4)
+                    Down = 0;
+                if (Left == 4)
+                    Left = 0;
+            }
+        }
     }
 
     void TryMoveToPosition(Vector3 targetPosition)

@@ -20,10 +20,11 @@ public class CharacterMovement : MonoBehaviour
     public int storedVi;
     FloorController _floorController;
     [SerializeField] GameObject floorControllerOBJ;
-    int Up = 0,
+    public int Up = 0,
         Left = 1,
         Down = 2,
         Right = 3;
+
     void Start()
     {
         animator = GetComponent<Animator>();
