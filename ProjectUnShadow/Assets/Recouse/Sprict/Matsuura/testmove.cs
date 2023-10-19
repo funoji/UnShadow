@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class testmove : MonoBehaviour
 {
+    private AudioSource audioSource; // AudioSourceを格納する変数
     Animator animator;
     public float moveSpeed = 1f;
     private bool isMoving = false;
@@ -43,6 +44,7 @@ public class testmove : MonoBehaviour
         Debug.Log(storedHi);
         Debug.Log(storedVi);
         _floorController = floorControllerOBJ.GetComponent<FloorController>();
+        audioSource = GetComponent<AudioSource>(); // このスクリプトがアタッチされたゲームオブジェクトのAudioSourceを取得
         //canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up);
     }
     void Update()
@@ -60,8 +62,6 @@ public class testmove : MonoBehaviour
             Vector3 moveVectorForward = cameraForward;
             Vector3 moveVectorRight = cameraRight;
 
-            
-
             if (Input.GetKeyDown(KeyCode.W))
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item1;
@@ -75,6 +75,7 @@ public class testmove : MonoBehaviour
                     Debug.Log(storedVi);
                     Debug.Log(destinationPositionForward);
                     TryMoveToPosition(destinationPositionForward);
+                    PlaySwitchSound(); // 足音を再生
                 }
 
             }
@@ -90,6 +91,7 @@ public class testmove : MonoBehaviour
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionBag);
+                    PlaySwitchSound(); // 足音を再生
                 }
 
             }
@@ -105,6 +107,7 @@ public class testmove : MonoBehaviour
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionLeft);
+                    PlaySwitchSound(); // 足音を再生
                 }
 
             }
@@ -120,6 +123,7 @@ public class testmove : MonoBehaviour
                     Debug.Log(storedHi);
                     Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionRight);
+                    PlaySwitchSound(); // 足音を再生
                 }
             }
         }
@@ -187,6 +191,13 @@ public class testmove : MonoBehaviour
         {
             // プレイヤーが死亡した場合の処理をここに記述する
             // 例えば、ゲームオーバー画面を表示するなど
+        }
+    }
+    private void PlaySwitchSound()
+    {
+        if (audioSource != null && audioSource.clip != null)
+        {
+            audioSource.Play(); // AudioSourceに設定されたオーディオクリップを再生
         }
     }
 }
