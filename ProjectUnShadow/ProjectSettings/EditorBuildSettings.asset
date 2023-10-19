@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MatsutakeMap.unity
     guid: 580d9e88ae645d348b50c3aa22dbdb03
+  - enabled: 1
+    path: Assets/Scenes/Matsutake_Gool.unity
+    guid: ea8052b985411fc4f90e98ece6206d96
   m_configObjects: {}
