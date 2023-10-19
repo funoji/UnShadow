@@ -5,25 +5,27 @@ using UnityEngine;
 public class LightContlloer : MonoBehaviour
 {
     public Light[] lights; // 切り替えるライトの配列
+    public testmove TestMove;
 
     private void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            ToggleLight(0); // ライトのインデックスを指定して切り替える
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            ToggleLight(1); // ライトのインデックスを指定して切り替える
+            ToggleLight(TestMove.Up); // ライトのインデックスを指定して切り替える
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            ToggleLight(2); // ライトのインデックスを指定して切り替える
+            ToggleLight(TestMove.Right); // ライトのインデックスを指定して切り替える
         }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            ToggleLight(TestMove.Down); // ライトのインデックスを指定して切り替える
+        }
+       
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            ToggleLight(3); // ライトのインデックスを指定して切り替える
+            ToggleLight(TestMove.Left); // ライトのインデックスを指定して切り替える
         }
     }
 

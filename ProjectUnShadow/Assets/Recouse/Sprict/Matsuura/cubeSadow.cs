@@ -65,37 +65,8 @@ public class cubeSadow : MonoBehaviour
             currentBlockupList.Clear();
             effectInstanceUpList.Clear();
         }
-
-        //下のライトがついたとき
-        if (Light.lights[1].enabled == true)
-        {
-            if (currentBlockdownList.Count == 0)
-            {
-                for (int i = 0; i < s; i++)
-                {
-                    GameObject currentBlockdown = Instantiate(ShadowBox, down + new Vector3(0, 0, i), Quaternion.identity);
-                    GameObject effectInstanceDown = Instantiate(effectPrefab, down + new Vector3(0, 0, i), effectRotation);
-                    currentBlockdownList.Add(currentBlockdown);
-                    effectInstanceDownList.Add(effectInstanceDown);
-                }
-            }
-        }
-        if (Light.lights[1].enabled == false)
-        {
-            foreach (var block in currentBlockdownList)
-            {
-                Destroy(block);
-            }
-            foreach (var effect in effectInstanceDownList)
-            {
-                Destroy(effect);
-            }
-            currentBlockdownList.Clear();
-            effectInstanceDownList.Clear();
-        }
-
         //右のライトがついたとき
-        if (Light.lights[2].enabled == true)
+        if (Light.lights[1].enabled == true)
         {
             if (currentBlockrightList.Count == 0)
             {
@@ -109,7 +80,7 @@ public class cubeSadow : MonoBehaviour
             }
 
         }
-        if (Light.lights[2].enabled == false)
+        if (Light.lights[1].enabled == false)
         {
             foreach (var block in currentBlockrightList)
             {
@@ -121,6 +92,34 @@ public class cubeSadow : MonoBehaviour
             }
             currentBlockrightList.Clear();
             effectInstanceRightList.Clear();
+        }
+
+        //下のライトがついたとき
+        if (Light.lights[2].enabled == true)
+        {
+            if (currentBlockdownList.Count == 0)
+            {
+                for (int i = 0; i < s; i++)
+                {
+                    GameObject currentBlockdown = Instantiate(ShadowBox, down + new Vector3(0, 0, i), Quaternion.identity);
+                    GameObject effectInstanceDown = Instantiate(effectPrefab, down + new Vector3(0, 0, i), effectRotation);
+                    currentBlockdownList.Add(currentBlockdown);
+                    effectInstanceDownList.Add(effectInstanceDown);
+                }
+            }
+        }
+        if (Light.lights[2].enabled == false)
+        {
+            foreach (var block in currentBlockdownList)
+            {
+                Destroy(block);
+            }
+            foreach (var effect in effectInstanceDownList)
+            {
+                Destroy(effect);
+            }
+            currentBlockdownList.Clear();
+            effectInstanceDownList.Clear();
         }
 
         //左のライトがついたとき
