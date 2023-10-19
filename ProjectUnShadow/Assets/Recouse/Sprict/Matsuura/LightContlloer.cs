@@ -10,7 +10,7 @@ public class LightContlloer : MonoBehaviour
 
     private void Start()
     {
-        switchSound = GameObject.Find("SE_Audio").GetComponent<AudioSource>(); // "SwitchSound"という名前のゲームオブジェクトからAudioSourceを取得
+        switchSound = GetComponent<AudioSource>(); // "SwitchSound"という名前のゲームオブジェクトからAudioSourceを取得
     }
 
     private void Update()
