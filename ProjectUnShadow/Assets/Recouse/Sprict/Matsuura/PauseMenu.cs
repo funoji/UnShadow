@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,12 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public GameObject resumeMenuUI;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     void Update()
     {
         // ESCキーが押されたらポーズメニューを表示/非表示にする
@@ -28,6 +34,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         // ポーズメニューを表示する
         pauseMenuUI.SetActive(true);
+        resumeMenuUI.SetActive(true);
     }
 
     public void ResumeGame()
@@ -36,5 +43,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         // ポーズメニューを非表示にする
         pauseMenuUI.SetActive(false);
+        resumeMenuUI.SetActive(false);
     }
 }
