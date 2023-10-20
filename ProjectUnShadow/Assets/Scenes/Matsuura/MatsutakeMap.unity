@@ -3340,7 +3340,6 @@ GameObject:
   - component: {fileID: 433925766}
   - component: {fileID: 433925765}
   - component: {fileID: 433925764}
-  - component: {fileID: 433925762}
   - component: {fileID: 433925768}
   - component: {fileID: 433925769}
   - component: {fileID: 433925770}
@@ -3351,27 +3350,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &433925762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433925761}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c800ad131f994044fac4cddb0aa4095c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 4
-  PlayerHP: 100
-  storedHi: 0
-  storedVi: 0
-  floorControllerOBJ: {fileID: 1915744082}
-  Up: 0
-  Left: 1
-  Down: 2
-  Right: 3
 --- !u!136 &433925764
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5470,6 +5448,7 @@ GameObject:
   - component: {fileID: 817209899}
   - component: {fileID: 817209898}
   - component: {fileID: 817209902}
+  - component: {fileID: 817209903}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5576,8 +5555,106 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7332fa0aca507a4cb3249986ca963ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultUI: {fileID: 1744427941}
+  DefaultUI2: {fileID: 753203201}
   pauseMenuUI: {fileID: 1560419097}
-  resumeMenuUI: {fileID: 1666700797}
+  pauseMenuUI2: {fileID: 1666700797}
+--- !u!82 &817209903
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817209897}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 22d17493dd1f7c14e863b6436cfb0789, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &847542446
 GameObject:
   m_ObjectHideFlags: 0
@@ -11859,7 +11936,7 @@ PrefabInstance:
       objectReference: {fileID: 433925769}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: lightcount
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1375690494098255560, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Name
@@ -15101,7 +15178,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 04ea4ab541d3cbc4595e6eca1d397d8d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 065f38b75ea9d4648a8a83b926c65fb8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.02
   m_Pitch: 1
