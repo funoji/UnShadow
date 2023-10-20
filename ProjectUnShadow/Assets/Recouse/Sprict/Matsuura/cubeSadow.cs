@@ -5,7 +5,7 @@ using UnityEngine;
 public class cubeSadow : MonoBehaviour
 {
     GameObject LightObj;
-    public LightContlloer Light;
+    private LightContlloer Light;
     Vector3 objectPosition;
     Vector3 up, down, left, right;
     public GameObject ShadowBox;
@@ -25,6 +25,7 @@ public class cubeSadow : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        Light= GameObject.Find("light").GetComponent<LightContlloer>();
         // オブジェクトの位置を取得
         objectPosition = transform.position;
         up = objectPosition + new Vector3(0, 0, -1);
