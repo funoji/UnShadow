@@ -25,7 +25,7 @@ public class ShadowDameg : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            CharacterMovement playerHealth = other.GetComponent<CharacterMovement>();
+            testmove playerHealth = other.GetComponent<testmove>();
             Vector3 playerPosition = playerTransform.transform.position;
             damageEffectInst = Instantiate(damageEffect, playerPosition, effectRotation);
             Destroy(damageEffectInst, 1.0f);

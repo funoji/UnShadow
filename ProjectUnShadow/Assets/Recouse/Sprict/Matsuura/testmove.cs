@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class testmove : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class testmove : MonoBehaviour
     //z軸方向の入力を保存
     private float _input_z;
     bool isrun;
-    public int PlayerHP = 100;
+    public int PlayerHP = 10;
     bool canmove;
     private Vector2Int PlayerPos;
     public int storedHi;
@@ -31,6 +32,7 @@ public class testmove : MonoBehaviour
         Right = 1,
         Down = 2,
         Left = 3;
+
     public CameraRotation Rotation;
     void Start()
     {
@@ -187,10 +189,11 @@ public class testmove : MonoBehaviour
     {
         PlayerHP -= damage;
 
-        if (PlayerHP <= 0)
+        if (PlayerHP == 0)
         {
             // プレイヤーが死亡した場合の処理をここに記述する
             // 例えば、ゲームオーバー画面を表示するなど
+            SceneManager.LoadScene("Matsutake_Retry");
         }
     }
     private void PlaySwitchSound()

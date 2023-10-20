@@ -6,7 +6,7 @@ using TMPro;
 public class Text : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI playerHP;
-    public CharacterMovement helth;
+    public testmove helth;
     // Start is called before the first frame update
     void Start()
     {
