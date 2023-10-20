@@ -50,7 +50,6 @@ public class cubeSadow : MonoBehaviour
                     currentBlockupList.Add(currentBlockup);
                     effectInstanceUpList.Add(effectInstanceUp);
                 }
-
             }
         }
         if (Light.lights[0].enabled == false)

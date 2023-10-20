@@ -36,7 +36,6 @@ public class LightContlloer : MonoBehaviour
                 PlaySwitchSound(); // ライトを切り替える際に音を再生
                 lightcount--;
             }
-
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 ToggleLight(TestMove.Left); // ライトのインデックスを指定して切り替える
