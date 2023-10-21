@@ -142,7 +142,7 @@ public class testmove : MonoBehaviour
 
         if (Rotation.L == false)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E)&&Rotation.count==0)
             {
                 Up = Up + 1;
                 Right = Right + 1;
@@ -161,7 +161,7 @@ public class testmove : MonoBehaviour
         }
         if(Rotation.R==false)
         {
-            if(Input.GetKeyDown(KeyCode.Q))
+            if(Input.GetKeyDown(KeyCode.Q) && Rotation.count == 0)
             {
                 Up = Up - 1;
                 Right = Right - 1;
