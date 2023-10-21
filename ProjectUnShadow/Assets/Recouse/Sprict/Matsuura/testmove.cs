@@ -51,7 +51,7 @@ public class testmove : MonoBehaviour
     }
     void Update()
     {
-        if (!isMoving)
+        if (!isMoving&&Time.timeScale==1)
         {
             // ƒJƒƒ‰‚Ì³–Ê•ûŒü‚ğæ“¾
             Vector3 cameraForward = mainCameraTransform.forward;

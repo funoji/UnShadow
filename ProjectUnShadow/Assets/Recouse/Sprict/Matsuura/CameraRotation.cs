@@ -24,25 +24,27 @@ public class CameraRotation : MonoBehaviour
     private void Update()
     {
         // FƒL[‚ª‰Ÿ‚³‚ê‚½‚Æ‚«‚ÉHorizontal Axis‚ÌValue‚ğ•ÏX‚·‚é
-        if (Input.GetKeyDown(KeyCode.E) && count == 0)
+        if (R == false)
         {
-            { 
+            if (Input.GetKeyDown(KeyCode.E) && count == 0)
+            {
                 L = true;
                 PlaySwitchSound(); // ‰ñ“]‰¹‚ğÄ¶
-                ;
             }
+            Revolution(ref L,1);
         }
+        
+        
 
-        Revolution(ref L,1);
-
-        if (Input.GetKeyDown(KeyCode.Q) && count == 0)
+        if (L == false)
         {
+            if (Input.GetKeyDown(KeyCode.Q) && count == 0)
             {
                 R = true;
                 PlaySwitchSound(); // ‰ñ“]‰¹‚ğÄ¶
             }
+            Revolution(ref R, -1);
         }
-        Revolution(ref R, -1);
     }
     private void PlaySwitchSound()
     {

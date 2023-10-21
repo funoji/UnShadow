@@ -18,7 +18,7 @@ public class LightContlloer : MonoBehaviour
 
     private void Update()
     {
-        if (lightcount > 0)
+        if (lightcount > 0&&Time.timeScale==1)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
