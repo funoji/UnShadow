@@ -11585,7 +11585,7 @@ PrefabInstance:
       objectReference: {fileID: 1541874968}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: lightcount
-      value: 20
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1066237171340399534, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.b
@@ -12777,7 +12777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce2880f4a4508f439dfed201bf378f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorPrefabs: {fileID: 0}
+  floorPrefabs: {fileID: 1915744084}
   Roles: 3
   moveStatus: 0
   Shadowblock: 0
@@ -12950,11 +12950,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8018487808184738768, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
       propertyPath: ver
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8018487808184738768, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
       propertyPath: Hori
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
