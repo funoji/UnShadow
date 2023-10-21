@@ -128,6 +128,10 @@ public class testmove : MonoBehaviour
                     PlaySwitchSound(); // ë´âπÇçƒê∂
                 }
             }
+            if (cameraForward != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(-cameraForward);
+            }
         }
 
         if (Rotation.K==false)
