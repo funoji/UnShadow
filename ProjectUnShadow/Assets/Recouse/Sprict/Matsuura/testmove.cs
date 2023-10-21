@@ -140,11 +140,10 @@ public class testmove : MonoBehaviour
             
         }
 
-        if (Rotation.K==false)
+        if (Rotation.L == false)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-
                 Up = Up + 1;
                 Right = Right + 1;
                 Down = Down + 1;
@@ -158,6 +157,25 @@ public class testmove : MonoBehaviour
                     Down = 0;
                 if (Left == 4)
                     Left = 0;
+            }
+        }
+        if(Rotation.R==false)
+        {
+            if(Input.GetKeyDown(KeyCode.Q))
+            {
+                Up = Up - 1;
+                Right = Right - 1;
+                Down = Down - 1;
+                Left = Left - 1;
+                Debug.Log(Up);
+                if (Up == -1)
+                    Up = 3;
+                if (Right == -1)
+                    Right = 3;
+                if (Down == -1)
+                    Down = 3;
+                if (Left == -1)
+                    Left = 3;
             }
         }
     }

@@ -5,7 +5,7 @@ public class CameraRotation : MonoBehaviour
 {
     private AudioSource audioSource; // AudioSourceを格納する変数
     public CinemachineVirtualCamera virtualCamera; // Cinemachine Virtual Cameraを参照するための変数
-    public bool K;//回転させるフラグ
+    public bool L,R;//回転させるフラグ
     float count = 0;
 
     private void Start()
@@ -14,7 +14,8 @@ public class CameraRotation : MonoBehaviour
         // virtualCameraがnullでないことを確認
         if (virtualCamera == null)
         {
-            K = false;
+            L = false;
+            R = false;
             Debug.LogError("Cinemachine Virtual Cameraがアタッチされていません。");
             return;
         }
@@ -23,36 +24,48 @@ public class CameraRotation : MonoBehaviour
     private void Update()
     {
         // Fキーが押されたときにHorizontal AxisのValueを変更する
-        if (Input.GetKeyDown(KeyCode.F) && count == 0)
+        if (Input.GetKeyDown(KeyCode.E) && count == 0)
         {
             { 
-                K = true;
+                L = true;
+                PlaySwitchSound(); // 回転音を再生
+                ;
+            }
+        }
+
+        Revolution(ref L,1);
+
+        if (Input.GetKeyDown(KeyCode.Q) && count == 0)
+        {
+            {
+                R = true;
                 PlaySwitchSound(); // 回転音を再生
             }
         }
-           
-
-        if (K == true)
-        {
-            // Cinemachine Virtual CameraのPOVを取得
-            var pov = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
-
-            // Horizontal AxisのValueを変更（例: 90度）
-            pov.m_HorizontalAxis.Value+=1f;
-            count+=1f;
-            if (count == 90)
-            {
-                K = false;
-                count = 0;
-            }
-        }
-        
+        Revolution(ref R, -1);
     }
     private void PlaySwitchSound()
     {
         if (audioSource != null && audioSource.clip != null)
         {
             audioSource.Play(); // AudioSourceに設定されたオーディオクリップを再生
+        }
+    }
+    private void Revolution(ref bool Flag,int A)
+    {
+        if (Flag == true)
+        {
+            // Cinemachine Virtual CameraのPOVを取得
+            var pov = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
+
+            // Horizontal AxisのValueを変更（例: 90度）
+            pov.m_HorizontalAxis.Value += A;
+            count += A;
+            if (count == 90||count==-90)
+            {
+                Flag = false;
+                count = 0;
+            }
         }
     }
 }
