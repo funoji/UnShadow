@@ -70,6 +70,8 @@ public class testmove : MonoBehaviour
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item2;
                 if (canmove)
                 {
+                    if (cameraForward != Vector3.zero)//ìÆÇ≠ï˚å¸Ç…âÒì]
+                        transform.rotation = Quaternion.LookRotation(-cameraForward);
                     destinationPositionForward = transform.position + moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
@@ -87,6 +89,8 @@ public class testmove : MonoBehaviour
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Down).Item2;
                 if (canmove)
                 {
+                    if (cameraForward != Vector3.zero)//ìÆÇ≠ï˚å¸Ç…âÒì]
+                        transform.rotation = Quaternion.LookRotation(cameraForward);
                     destinationPositionBag = transform.position - moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
@@ -103,6 +107,9 @@ public class testmove : MonoBehaviour
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Left).Item2;
                 if (canmove)
                 {
+                    if (cameraRight != Vector3.zero)//ìÆÇ≠ï˚å¸Ç…âÒì]
+                        transform.rotation = Quaternion.LookRotation(cameraRight);
+
                     destinationPositionLeft = transform.position - moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
@@ -111,7 +118,6 @@ public class testmove : MonoBehaviour
                     TryMoveToPosition(destinationPositionLeft);
                     PlaySwitchSound(); // ë´âπÇçƒê∂
                 }
-
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
@@ -119,6 +125,9 @@ public class testmove : MonoBehaviour
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Right).Item2;
                 if (canmove)
                 {
+                    if (cameraRight != Vector3.zero)//ìÆÇ≠ï˚å¸Ç…âÒì]
+                        transform.rotation = Quaternion.LookRotation(-cameraRight);
+
                     destinationPositionRight = transform.position + moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
@@ -128,10 +137,7 @@ public class testmove : MonoBehaviour
                     PlaySwitchSound(); // ë´âπÇçƒê∂
                 }
             }
-            if (cameraForward != Vector3.zero)
-            {
-                transform.rotation = Quaternion.LookRotation(-cameraForward);
-            }
+            
         }
 
         if (Rotation.K==false)
