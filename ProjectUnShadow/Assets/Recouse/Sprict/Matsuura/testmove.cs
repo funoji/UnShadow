@@ -204,12 +204,15 @@ public class testmove : MonoBehaviour
     IEnumerator MoveToPosition(Vector3 targetPosition)
     {
         isMoving = true;
-
+        // アニメーション再生開始
+        animator.SetBool("Walking", true);
         while (transform.position != targetPosition)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
             yield return null;
         }
+        // 移動が完了したらアニメーションを停止する
+        animator.SetBool("Walking", false);
 
         isMoving = false;
     }
