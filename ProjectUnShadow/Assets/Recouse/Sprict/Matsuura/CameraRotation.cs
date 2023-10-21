@@ -6,7 +6,7 @@ public class CameraRotation : MonoBehaviour
     private AudioSource audioSource; // AudioSource‚ğŠi”[‚·‚é•Ï”
     public CinemachineVirtualCamera virtualCamera; // Cinemachine Virtual Camera‚ğQÆ‚·‚é‚½‚ß‚Ì•Ï”
     public bool L,R;//‰ñ“]‚³‚¹‚éƒtƒ‰ƒO
-    float count = 0;
+    public float count = 0;
 
     private void Start()
     {
