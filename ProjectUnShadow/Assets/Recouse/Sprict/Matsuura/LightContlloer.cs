@@ -9,6 +9,8 @@ public class LightContlloer : MonoBehaviour
     private AudioSource switchSound; // AudioSourceを格納する変数
     public float lightcount;
 
+    private int currentLightIndex = -1; // 現在有効なライトのインデックス
+
     private void Start()
     {
         switchSound = GetComponent<AudioSource>(); // "SwitchSound"という名前のゲームオブジェクトからAudioSourceを取得
@@ -21,32 +23,30 @@ public class LightContlloer : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 ToggleLight(TestMove.Up); // ライトのインデックスを指定して切り替える
-                PlaySwitchSound(); // ライトを切り替える際に音を再生
-                lightcount--;
             }
             if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 ToggleLight(TestMove.Right); // ライトのインデックスを指定して切り替える
-                PlaySwitchSound(); // ライトを切り替える際に音を再生
-                lightcount--;
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 ToggleLight(TestMove.Down); // ライトのインデックスを指定して切り替える
-                PlaySwitchSound(); // ライトを切り替える際に音を再生
-                lightcount--;
             }
             if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 ToggleLight(TestMove.Left); // ライトのインデックスを指定して切り替える
-                PlaySwitchSound(); // ライトを切り替える際に音を再生
-                lightcount--;
             }
         }
     }
 
     public void ToggleLight(int index)
     {
+        if (index == currentLightIndex)
+        {
+            return; // 既に同じライトが有効になっている場合は何もしない
+        }
+
+        // ライトの切り替え処理
         for (int i = 0; i < lights.Length; i++)
         {
             if (i == index)
@@ -58,6 +58,11 @@ public class LightContlloer : MonoBehaviour
                 lights[i].enabled = false; // 他のライトを無効にする
             }
         }
+
+        currentLightIndex = index; // 現在有効なライトのインデックスを更新
+
+        PlaySwitchSound(); // ライトを切り替える際に音を再生
+        lightcount--;
     }
 
     private void PlaySwitchSound()
