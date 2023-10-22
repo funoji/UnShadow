@@ -14,6 +14,13 @@ public class LightContlloer : MonoBehaviour
     private void Start()
     {
         switchSound = GetComponent<AudioSource>(); // "SwitchSound"という名前のゲームオブジェクトからAudioSourceを取得
+        for(int i = 0; i < lights.Length; i++)
+        {
+            if (lights[i].enabled==true)
+            {
+
+            }
+        }
     }
 
     private void Update()
@@ -41,6 +48,14 @@ public class LightContlloer : MonoBehaviour
 
     public void ToggleLight(int index)
     {
+
+        for (int i = 0; i < lights.Length; i++)
+        {
+            if (lights[index].enabled)
+            {
+                return;
+            }
+        }
         if (index == currentLightIndex)
         {
             return; // 既に同じライトが有効になっている場合は何もしない
