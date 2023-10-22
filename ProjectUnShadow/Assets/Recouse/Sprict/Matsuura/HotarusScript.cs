@@ -5,16 +5,15 @@ using UnityEngine;
 public class HotarusScript : MonoBehaviour
 {
     LightContlloer lightContlloer;
-    [SerializeField] GameObject []Hotarus;
+    [SerializeField] GameObject[] Hotarus;
+    testmove TestMove;
     // Start is called before the first frame update
     void Start()
     {
-        // LightContlloer クラスのインスタンスを取得するか、新しく作成する
-        lightContlloer = GetComponent<LightContlloer>();
         if (lightContlloer == null)
-        {
             lightContlloer = GameObject.Find("light").GetComponent<LightContlloer>();
-        }
+        if (TestMove == null)
+            TestMove = GameObject.Find("player_rig3").GetComponent<testmove>();
     }
 
     // Update is called once per frame
@@ -24,10 +23,17 @@ public class HotarusScript : MonoBehaviour
         {
             if (lightContlloer.lights[i].enabled)
             {
+
                 Hotarus[i].gameObject.SetActive(true);
             }
             else
+            {
                 Hotarus[i].gameObject.SetActive(false);
+            }
+            if (TestMove.Down == i)
+            {
+                Hotarus[i].gameObject.SetActive(false);
+            }
         }
     }
 }
