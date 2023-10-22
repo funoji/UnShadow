@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/FutoStage2.unity
     guid: 493aac719a6b4d94ca6b850a5a107f41
+  - enabled: 1
+    path: Assets/Scenes/sizuki=aaaaa.unity
+    guid: 04604cbe927809d469ac94d18e5b5388
   m_configObjects: {}

@@ -14,13 +14,6 @@ public class LightContlloer : MonoBehaviour
     private void Start()
     {
         switchSound = GetComponent<AudioSource>(); // "SwitchSound"という名前のゲームオブジェクトからAudioSourceを取得
-        for(int i = 0; i < lights.Length; i++)
-        {
-            if (lights[i].enabled==true)
-            {
-
-            }
-        }
     }
 
     private void Update()
