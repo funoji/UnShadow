@@ -5,7 +5,7 @@ using UnityEngine;
 public class HotarusScript : MonoBehaviour
 {
     LightContlloer lightContlloer;
-    [SerializeField] GameObject Hotarus;
+    [SerializeField] GameObject []Hotarus;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +20,14 @@ public class HotarusScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // lightContlloer が null でないことを確認する
-        if (lightContlloer != null && lightContlloer.lights != null && lightContlloer.lights.Length > 1 && lightContlloer.lights[1] != null && lightContlloer.lights[1].enabled)
+        for (int i = 0; i < lightContlloer.lights.Length; i++)
         {
-            // lightContlloer が null でなく、lights 配列が null でなく、長さが2以上あり、lights[1] が null でなく、enabled が true の場合
-            Hotarus.gameObject.SetActive(true);
-        }
-        else
-        {
-            Hotarus.gameObject.SetActive(false);
+            if (lightContlloer.lights[i].enabled)
+            {
+                Hotarus[i].gameObject.SetActive(true);
+            }
+            else
+                Hotarus[i].gameObject.SetActive(false);
         }
     }
 }
