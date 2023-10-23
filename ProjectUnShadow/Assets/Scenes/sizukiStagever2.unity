@@ -17893,6 +17893,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5551620354297775777, guid: 30cc20c66f9e0c440b0915b67c7d2bae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.52
+      objectReference: {fileID: 0}
     - target: {fileID: 8926363741576313263, guid: 30cc20c66f9e0c440b0915b67c7d2bae, type: 3}
       propertyPath: m_Name
       value: HotarusGrup
