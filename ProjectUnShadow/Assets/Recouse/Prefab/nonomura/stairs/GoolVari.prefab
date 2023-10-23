@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &4873229160551549085
+--- !u!1001 &2292302164724983778
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ca6bb68470f8c3d4a852d2cd1e9f2c6d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ca6bb68470f8c3d4a852d2cd1e9f2c6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ca6bb68470f8c3d4a852d2cd1e9f2c6d, type: 3}
       propertyPath: m_Name
-      value: stairsVari
+      value: GoolVari
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -62,39 +62,42 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca6bb68470f8c3d4a852d2cd1e9f2c6d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1917245431870934180}
+      addedObject: {fileID: 482630405463242070}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca6bb68470f8c3d4a852d2cd1e9f2c6d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -720166033966473867}
+      addedObject: {fileID: 3953397343144356704}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ca6bb68470f8c3d4a852d2cd1e9f2c6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7166399410176894555}
   m_SourcePrefab: {fileID: 100100000, guid: ca6bb68470f8c3d4a852d2cd1e9f2c6d, type: 3}
---- !u!1 &5719670259398292940 stripped
+--- !u!1 &1373190506859174579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ca6bb68470f8c3d4a852d2cd1e9f2c6d, type: 3}
-  m_PrefabInstance: {fileID: 4873229160551549085}
+  m_PrefabInstance: {fileID: 2292302164724983778}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1917245431870934180
+--- !u!114 &482630405463242070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719670259398292940}
+  m_GameObject: {fileID: 1373190506859174579}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ce2880f4a4508f439dfed201bf378f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
-  Roles: 2
+  Roles: 3
   moveStatus: 0
   Shadowblock: 0
---- !u!65 &-720166033966473867
+--- !u!65 &3953397343144356704
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5719670259398292940}
+  m_GameObject: {fileID: 1373190506859174579}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -103,9 +106,21 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 100.00002, y: 100, z: 100.00002}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7166399410176894555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373190506859174579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00ec9aca590d7e48bc02a3b21e0d271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
