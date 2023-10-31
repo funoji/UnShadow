@@ -41,7 +41,7 @@ public class FloorController : MonoBehaviour
         }
     }
 
-    static readonly Dictionary<PlayerMovable, Vector2Int> MoveVector = new Dictionary<PlayerMovable, Vector2Int>()
+    static public readonly Dictionary<PlayerMovable, Vector2Int> MoveVector = new Dictionary<PlayerMovable, Vector2Int>()
     {
         { PlayerMovable.Right, new Vector2Int(1, 0) },
         { PlayerMovable.Left, new Vector2Int(-1, 0) },
