@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Matsuura/Matsutake_Retry.unity
     guid: 3d727726b84e143498e4cbb214c92de9
   - enabled: 1
-    path: Assets/Scenes/Futostage2Ver2.unity
+    path: Assets/Scenes/Futo/Futostage2Ver2.unity
     guid: 13e74314bd235224dbf699429c0785f5
   - enabled: 1
     path: Assets/Scenes/sizukiStagever2.unity
