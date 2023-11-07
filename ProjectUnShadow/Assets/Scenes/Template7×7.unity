@@ -2030,7 +2030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360988015}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.54, y: 3.64, z: -0.22}
+  m_LocalPosition: {x: -0.04, y: 3.64, z: -0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10751,6 +10751,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2752105527651189415, guid: 2d8e1021148f3464584de0e86a473934, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99639b74a29f785419d1e386ab251f11, type: 2}
     - target: {fileID: 3065483219220814492, guid: 2d8e1021148f3464584de0e86a473934, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -10775,6 +10779,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -6
       objectReference: {fileID: 0}
+    - target: {fileID: 3962849207429018761, guid: 2d8e1021148f3464584de0e86a473934, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99639b74a29f785419d1e386ab251f11, type: 2}
+    - target: {fileID: 4233916241352073715, guid: 2d8e1021148f3464584de0e86a473934, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99639b74a29f785419d1e386ab251f11, type: 2}
     - target: {fileID: 4673751895755852976, guid: 2d8e1021148f3464584de0e86a473934, type: 3}
       propertyPath: m_Name
       value: sotoyuka
@@ -10835,6 +10847,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7054999834881370439, guid: 2d8e1021148f3464584de0e86a473934, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 99639b74a29f785419d1e386ab251f11, type: 2}
     - target: {fileID: 8188467867559449128, guid: 2d8e1021148f3464584de0e86a473934, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
