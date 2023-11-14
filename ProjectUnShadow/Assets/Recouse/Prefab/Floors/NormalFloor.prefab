@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 677119893802391474}
   - component: {fileID: 6899801133024314063}
   - component: {fileID: -2753719838353757449}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4805785139401865698
 MeshFilter:

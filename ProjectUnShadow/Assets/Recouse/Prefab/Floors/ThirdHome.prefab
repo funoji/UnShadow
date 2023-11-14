@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5866034932626621656}
   - component: {fileID: 5546540096165146194}
   - component: {fileID: 75150371195096707}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ThirdHome
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -149,6 +149,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7727533437171909401}
     m_Modifications:
+    - target: {fileID: 1956256545299738306, guid: bacd09392b4a5a64cbf685572d84b734, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6191401884096972918, guid: bacd09392b4a5a64cbf685572d84b734, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -197,6 +201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: totem_pole_moth
       objectReference: {fileID: 0}
+    - target: {fileID: 7333426445726474409, guid: bacd09392b4a5a64cbf685572d84b734, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -218,6 +226,10 @@ PrefabInstance:
     - target: {fileID: 1408794043693989523, guid: c1a97944eb9f4194f904bf493f2c0276, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3890721271719171060, guid: c1a97944eb9f4194f904bf493f2c0276, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4231241072414239924, guid: c1a97944eb9f4194f904bf493f2c0276, type: 3}
       propertyPath: m_RootOrder
@@ -267,6 +279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: totem_pole_cockroach
       objectReference: {fileID: 0}
+    - target: {fileID: 8256127961975283833, guid: c1a97944eb9f4194f904bf493f2c0276, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -288,6 +304,10 @@ PrefabInstance:
     - target: {fileID: 2055414573363748773, guid: befef2508177fdd4c998b50dd1bdf071, type: 3}
       propertyPath: m_Name
       value: totem_pole_catapollar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055414573363748773, guid: befef2508177fdd4c998b50dd1bdf071, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5896085366744667715, guid: befef2508177fdd4c998b50dd1bdf071, type: 3}
       propertyPath: m_RootOrder
@@ -332,6 +352,10 @@ PrefabInstance:
     - target: {fileID: 5896085366744667715, guid: befef2508177fdd4c998b50dd1bdf071, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6299059066215217458, guid: befef2508177fdd4c998b50dd1bdf071, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
