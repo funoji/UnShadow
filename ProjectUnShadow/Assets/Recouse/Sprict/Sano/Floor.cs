@@ -21,6 +21,7 @@ public class Floor : MonoBehaviour
         Barrier,
         Teleport,
         TeleportGoal,
+        MoveableBlock,
     }
     [SerializeField] private FloorRoles Roles = FloorRoles.NULL;
 

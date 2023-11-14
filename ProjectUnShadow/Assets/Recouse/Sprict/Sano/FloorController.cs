@@ -107,6 +107,5 @@ public class FloorController : MonoBehaviour
             }
         }
        throw new Exception("there is none script");
-
     }
 }
