@@ -6,25 +6,27 @@ using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioMixer masterMixer;  // マスターミキサーへの参照
-    public Slider volumeSlider;     // UIのスライダーへの参照
+    public AudioMixer audioMixer;
+    public Slider bGMSlider;
+    public Slider sESlider;
 
-    // 初期化
-    void Start()
+    private void Start()
     {
-        // スライダーの値をマスターミキサーのパラメータに設定
-        float savedVolume = PlayerPrefs.GetFloat("MasterVolume", 0.75f); // デフォルトの音量
-        volumeSlider.value = savedVolume;
-        SetVolume(savedVolume); // 初期音量を設定
+
+        audioMixer.GetFloat("BGM_Volume", out float bgmVolume);
+        bGMSlider.value = bgmVolume;
+        audioMixer.GetFloat("SE_Volume", out float seVolume);
+        sESlider.value = seVolume;
     }
 
-    // スライダーの値が変更されたときに呼ばれるメソッド
-    public void SetVolume(float volume)
+    public void SetBGM(float volume)
     {
-        // マスターミキサーのパラメータを変更
-        masterMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
-
-        // 現在の音量を保存
-        PlayerPrefs.SetFloat("MasterVolume", volume);
+        audioMixer.SetFloat("BGM_Volume", volume);
     }
+
+    public void SetSE(float volume)
+    {
+        audioMixer.SetFloat("SE_Volume", volume);
+    }
+
 }

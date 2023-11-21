@@ -1147,6 +1147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186113198}
   - component: {fileID: 186113197}
+  - component: {fileID: 186113199}
   m_Layer: 0
   m_Name: BGM_Audio
   m_TagString: Untagged
@@ -1265,6 +1266,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &186113199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186113196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a7eddff9fa69a49b37e406a59acbeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 33ef1cd869c8f1a4dbcadb1568239065, type: 2}
+  audioSource: {fileID: 186113197}
 --- !u!1 &204826216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1322890256039215389, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
