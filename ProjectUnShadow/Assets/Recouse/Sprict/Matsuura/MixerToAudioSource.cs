@@ -5,14 +5,23 @@ using UnityEngine.UI;
 public class MixerToAudioSource : MonoBehaviour
 {
     public AudioMixer audioMixer;   // Audio Mixerを参照するための変数
-    public AudioSource audioSource; // Audio Sourceを参照するための変数
+    public AudioSource BGM_audioSource; // Audio Sourceを参照するための変数
+    public AudioSource[] SE_audioSource;
+
 
     void Start()
     {
         // 初期音量の設定（Audio Mixerの初期値をAudio Sourceに反映）
-        float initialVolume;
-        audioMixer.GetFloat("BGM_Volume", out initialVolume);
-        audioSource.volume = Mathf.Pow(10, initialVolume / 20);
+        float BGMinitialVolume;
+        audioMixer.GetFloat("BGM_Volume", out BGMinitialVolume);
+        BGM_audioSource.volume = Mathf.Pow(10, BGMinitialVolume / 20);
+
+        float SEinitialVolume;
+        audioMixer.GetFloat("SE_Volume", out SEinitialVolume);
+        for (int i = 0; i < SE_audioSource.Length; i++)
+        {
+            SE_audioSource[i].volume = Mathf.Pow(10, SEinitialVolume / 20);
+        }
     }
 
     public void SetVolume(float volume)
@@ -21,6 +30,6 @@ public class MixerToAudioSource : MonoBehaviour
         audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
 
         // Audio Mixerの値をAudio Sourceに反映
-        audioSource.volume = volume;
+        BGM_audioSource.volume = volume;
     }
 }
