@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Unity.VisualScripting;
 
 public class MovebleBlock : MonoBehaviour
 {
     Vector2Int m_Position;
+    [SerializeField] FloorController m_FloorController;
+    Floor m_floor;
 
     public enum PushTo
     {
@@ -14,36 +17,61 @@ public class MovebleBlock : MonoBehaviour
         ZtominusZ,
         MinusZtoZ
     }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            GetPlayerTouch(PushTo.MinusXtoX);
+            //Debug.Log("getpush");
+        }
+    }
+
+    private void Start()
+    {
+        m_floor = GetComponentInParent<Floor>();
+        m_Position = m_FloorController.GetScriptPos(m_floor);
+
+        Debug.Log(m_Position);
+    }
     void GetPlayerTouch(PushTo pushFrom)
     {
-        FloorController _floorController = GetComponent<FloorController>();
-        m_Position = _floorController.GetScriptPos(GetComponent<Floor>());
+        
         Dictionary<PushTo, Action> actions = new Dictionary<PushTo, Action>
         {
             { PushTo.XtoMinusX, () =>
                {
-                 if(_floorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Right)).Item1)
+                 if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Left)).Item1)
                  {
-                     _floorController.SetTargetRole(m_Position.x -1,m_Position.y, Floor.FloorRoles.MoveableBlock);
+                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
+                      m_FloorController.SetTargetStaus(m_Position.x + 1,m_Position.y, Floor.MoveStatus.CantStep);
                  }
                }
             },
             { PushTo.MinusXtoX, () =>
                {
-                if(_floorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Right)).Item1)
+                if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Right)).Item1)
                    {
-                     _floorController.SetTargetRole(m_Position.x -1,m_Position.y, Floor.FloorRoles.MoveableBlock);
+                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
+                       m_FloorController.SetTargetStaus(m_Position.x + 1,m_Position.y, Floor.MoveStatus.CantStep);
                    }
                }
             },
             { PushTo.MinusZtoZ, () =>
                {
-                // FrontToBackÇÃèÍçáÇÃèàóù
+                if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Up)).Item1)
+                   {
+                     m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
+                     m_FloorController.SetTargetStaus(m_Position.x,m_Position.y + 1, Floor.MoveStatus.CantStep);
+                   }
                }
             },
             { PushTo.ZtominusZ, () =>
                {
-                // BackToFrontÇÃèÍçáÇÃèàóù
+                if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Down)).Item1)
+                   {
+                     m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
+                     m_FloorController.SetTargetStaus(m_Position.x,m_Position.y - 1, Floor.MoveStatus.CantStep);
+                   }
                }
             }
         };
