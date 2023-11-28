@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 42339356}
   - component: {fileID: 42339355}
   - component: {fileID: 42339354}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 92150464}
   - component: {fileID: 92150463}
   - component: {fileID: 92150462}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_cockroach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 101867837}
   - component: {fileID: 101867836}
   - component: {fileID: 101867835}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 110950995}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_moth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 142232223}
   - component: {fileID: 142232222}
   - component: {fileID: 142232221}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Yuka(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,7 +906,7 @@ GameObject:
   - component: {fileID: 157415336}
   - component: {fileID: 157415335}
   - component: {fileID: 157415334}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -1028,7 +1028,7 @@ GameObject:
   - component: {fileID: 167536287}
   - component: {fileID: 167536286}
   - component: {fileID: 167536285}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -1327,7 +1327,7 @@ GameObject:
   - component: {fileID: 209374484}
   - component: {fileID: 209374483}
   - component: {fileID: 209374482}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 212263444}
   - component: {fileID: 212263443}
   - component: {fileID: 212263442}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -1587,7 +1587,7 @@ GameObject:
   - component: {fileID: 214525101}
   - component: {fileID: 214525100}
   - component: {fileID: 214525099}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -1936,7 +1936,7 @@ GameObject:
   - component: {fileID: 282374729}
   - component: {fileID: 282374728}
   - component: {fileID: 282374727}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -2131,7 +2131,7 @@ GameObject:
   - component: {fileID: 305920340}
   - component: {fileID: 305920339}
   - component: {fileID: 305920338}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -2253,7 +2253,7 @@ GameObject:
   - component: {fileID: 309132261}
   - component: {fileID: 309132260}
   - component: {fileID: 309132259}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -2376,7 +2376,7 @@ GameObject:
   - component: {fileID: 310316422}
   - component: {fileID: 310316421}
   - component: {fileID: 310316420}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2513,7 +2513,7 @@ GameObject:
   - component: {fileID: 313972751}
   - component: {fileID: 313972750}
   - component: {fileID: 313972749}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2620,7 +2620,7 @@ GameObject:
   - component: {fileID: 319603300}
   - component: {fileID: 319603299}
   - component: {fileID: 319603298}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -2743,7 +2743,7 @@ GameObject:
   - component: {fileID: 348072700}
   - component: {fileID: 348072699}
   - component: {fileID: 348072698}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ThirdHome(Clone)
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -2961,7 +2961,7 @@ GameObject:
   - component: {fileID: 380127370}
   - component: {fileID: 380127369}
   - component: {fileID: 380127368}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -3224,7 +3224,7 @@ GameObject:
   - component: {fileID: 382591105}
   - component: {fileID: 382591104}
   - component: {fileID: 382591103}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_catapillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3331,7 +3331,7 @@ GameObject:
   - component: {fileID: 391236617}
   - component: {fileID: 391236616}
   - component: {fileID: 391236615}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -3452,7 +3452,7 @@ GameObject:
   - component: {fileID: 391485856}
   - component: {fileID: 391485855}
   - component: {fileID: 391485854}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_cockroach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3644,7 +3644,7 @@ GameObject:
   - component: {fileID: 412417511}
   - component: {fileID: 412417510}
   - component: {fileID: 412417509}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -3766,7 +3766,7 @@ GameObject:
   - component: {fileID: 430433696}
   - component: {fileID: 430433695}
   - component: {fileID: 430433694}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -3889,7 +3889,7 @@ GameObject:
   - component: {fileID: 433200124}
   - component: {fileID: 433200123}
   - component: {fileID: 433200122}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4072,7 +4072,7 @@ GameObject:
   - component: {fileID: 440212762}
   - component: {fileID: 440212761}
   - component: {fileID: 440212760}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -4295,7 +4295,7 @@ GameObject:
   - component: {fileID: 448362152}
   - component: {fileID: 448362151}
   - component: {fileID: 448362150}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -4454,7 +4454,7 @@ GameObject:
   - component: {fileID: 479945293}
   - component: {fileID: 479945292}
   - component: {fileID: 479945291}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -4568,6 +4568,124 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2571862535128892399, guid: ba97ba111e807d84a9436aba90d91740, type: 3}
   m_PrefabInstance: {fileID: 447290427}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &505827027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 505827030}
+  - component: {fileID: 505827028}
+  - component: {fileID: 505827029}
+  m_Layer: 0
+  m_Name: Spot Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &505827028
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505827027}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.33663222, g: 0.44982588, b: 0.9056604, a: 1}
+  m_Intensity: 50
+  m_Range: 10
+  m_SpotAngle: 179
+  m_InnerSpotAngle: 179
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 8960
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &505827029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505827027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!4 &505827030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505827027}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.05, y: 3.94, z: 5.89}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 633591738}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &506721986
 GameObject:
   m_ObjectHideFlags: 0
@@ -4581,7 +4699,7 @@ GameObject:
   - component: {fileID: 506721990}
   - component: {fileID: 506721989}
   - component: {fileID: 506721988}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -4823,6 +4941,124 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 825ed53a2e393144193efe19a239b369, type: 3}
+--- !u!1 &627258320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627258323}
+  - component: {fileID: 627258321}
+  - component: {fileID: 627258322}
+  m_Layer: 0
+  m_Name: Spot Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &627258321
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627258320}
+  m_Enabled: 0
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.33663222, g: 0.44982588, b: 0.9056604, a: 1}
+  m_Intensity: 50
+  m_Range: 10
+  m_SpotAngle: 179
+  m_InnerSpotAngle: 170.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 768
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &627258322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627258320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!4 &627258323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627258320}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 6.04, y: 3.15, z: -0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 633591738}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1001 &631155293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4913,6 +5149,61 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6555168305967400229, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
   m_PrefabInstance: {fileID: 1212084103}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &633591736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633591738}
+  - component: {fileID: 633591737}
+  m_Layer: 0
+  m_Name: Walls_Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &633591737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633591736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe257a42d783421429bfa73c29440545, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 505827028}
+  - {fileID: 627258321}
+  - {fileID: 1855586510}
+  - {fileID: 2089926821}
+  TestMove: {fileID: 1541874968}
+  lightcount: 4
+--- !u!4 &633591738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633591736}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 505827030}
+  - {fileID: 627258323}
+  - {fileID: 1855586512}
+  - {fileID: 2089926823}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &647133718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5105,7 +5396,7 @@ GameObject:
   - component: {fileID: 677199216}
   - component: {fileID: 677199215}
   - component: {fileID: 677199214}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -5227,7 +5518,7 @@ GameObject:
   - component: {fileID: 679543927}
   - component: {fileID: 679543926}
   - component: {fileID: 679543925}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -5348,7 +5639,7 @@ GameObject:
   - component: {fileID: 683384101}
   - component: {fileID: 683384100}
   - component: {fileID: 683384099}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_moth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5456,7 +5747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 707859578}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_catapollar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5685,7 +5976,7 @@ GameObject:
   - component: {fileID: 771890159}
   - component: {fileID: 771890158}
   - component: {fileID: 771890157}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -5807,7 +6098,7 @@ GameObject:
   - component: {fileID: 772732752}
   - component: {fileID: 772732751}
   - component: {fileID: 772732750}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -5965,7 +6256,7 @@ GameObject:
   - component: {fileID: 813799327}
   - component: {fileID: 813799326}
   - component: {fileID: 813799325}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6292,7 +6583,7 @@ GameObject:
   - component: {fileID: 845229703}
   - component: {fileID: 845229702}
   - component: {fileID: 845229701}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -6465,7 +6756,7 @@ GameObject:
   - component: {fileID: 850718902}
   - component: {fileID: 850718901}
   - component: {fileID: 850718900}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -6693,7 +6984,7 @@ GameObject:
   - component: {fileID: 871006952}
   - component: {fileID: 871006951}
   - component: {fileID: 871006950}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GoolVari(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6827,7 +7118,7 @@ GameObject:
   - component: {fileID: 872228184}
   - component: {fileID: 872228183}
   - component: {fileID: 872228182}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -6948,7 +7239,7 @@ GameObject:
   - component: {fileID: 877184531}
   - component: {fileID: 877184530}
   - component: {fileID: 877184529}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_moth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7056,7 +7347,7 @@ GameObject:
   - component: {fileID: 882696413}
   - component: {fileID: 882696412}
   - component: {fileID: 882696411}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ThirdHome(Clone)
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -7205,7 +7496,7 @@ GameObject:
   - component: {fileID: 893786075}
   - component: {fileID: 893786074}
   - component: {fileID: 893786073}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_cockroach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7327,7 +7618,7 @@ GameObject:
   - component: {fileID: 913638445}
   - component: {fileID: 913638444}
   - component: {fileID: 913638443}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -7454,7 +7745,7 @@ GameObject:
   - component: {fileID: 921013458}
   - component: {fileID: 921013457}
   - component: {fileID: 921013456}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -7608,7 +7899,7 @@ GameObject:
   - component: {fileID: 947825233}
   - component: {fileID: 947825232}
   - component: {fileID: 947825231}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -7763,7 +8054,7 @@ GameObject:
   - component: {fileID: 966842315}
   - component: {fileID: 966842314}
   - component: {fileID: 966842313}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ThirdHome(Clone)
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -7903,7 +8194,7 @@ GameObject:
   - component: {fileID: 974482651}
   - component: {fileID: 974482650}
   - component: {fileID: 974482649}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Yuka(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7937,7 +8228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce2880f4a4508f439dfed201bf378f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorPrefabs: {fileID: 0}
+  floorPrefabs: {fileID: 1915744084}
   Roles: 0
   moveStatus: 0
   Shadowblock: 0
@@ -8093,7 +8384,7 @@ GameObject:
   - component: {fileID: 1002765166}
   - component: {fileID: 1002765165}
   - component: {fileID: 1002765164}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -8216,7 +8507,7 @@ GameObject:
   - component: {fileID: 1041079981}
   - component: {fileID: 1041079980}
   - component: {fileID: 1041079979}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ThirdHome(Clone)
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -8416,7 +8707,7 @@ GameObject:
   - component: {fileID: 1054643567}
   - component: {fileID: 1054643566}
   - component: {fileID: 1054643565}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -8580,10 +8871,10 @@ Light:
   m_GameObject: {fileID: 1062134330}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.5704872, b: 0, a: 1}
-  m_Intensity: 145
+  m_Color: {r: 0, g: 0.27508545, b: 1, a: 1}
+  m_Intensity: 0.2
   m_Range: 70
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -8620,7 +8911,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4352
   m_RenderingLayerMask: 1
   m_Lightmapping: 2
   m_LightShadowCasterMode: 0
@@ -8641,7 +8932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062134330}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.54, y: 7.9, z: 1.17}
+  m_LocalPosition: {x: 0.54, y: 12.27, z: 1.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8661,7 +8952,7 @@ GameObject:
   - component: {fileID: 1065897104}
   - component: {fileID: 1065897103}
   - component: {fileID: 1065897102}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -8782,7 +9073,7 @@ GameObject:
   - component: {fileID: 1095300813}
   - component: {fileID: 1095300812}
   - component: {fileID: 1095300811}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8888,7 +9179,7 @@ GameObject:
   - component: {fileID: 1099608697}
   - component: {fileID: 1099608696}
   - component: {fileID: 1099608695}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_moth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8995,7 +9286,7 @@ GameObject:
   - component: {fileID: 1104185231}
   - component: {fileID: 1104185230}
   - component: {fileID: 1104185229}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -9150,7 +9441,7 @@ GameObject:
   - component: {fileID: 1130024260}
   - component: {fileID: 1130024259}
   - component: {fileID: 1130024258}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9288,7 +9579,7 @@ GameObject:
   - component: {fileID: 1130408620}
   - component: {fileID: 1130408619}
   - component: {fileID: 1130408618}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -9483,7 +9774,7 @@ GameObject:
   - component: {fileID: 1156323374}
   - component: {fileID: 1156323373}
   - component: {fileID: 1156323372}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -9604,7 +9895,7 @@ GameObject:
   - component: {fileID: 1162951501}
   - component: {fileID: 1162951500}
   - component: {fileID: 1162951499}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_moth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9711,7 +10002,7 @@ GameObject:
   - component: {fileID: 1189515712}
   - component: {fileID: 1189515711}
   - component: {fileID: 1189515710}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -9829,7 +10120,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190110826}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_cockroach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9864,7 +10155,7 @@ GameObject:
   - component: {fileID: 1196589454}
   - component: {fileID: 1196589453}
   - component: {fileID: 1196589452}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_catapillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9971,7 +10262,7 @@ GameObject:
   - component: {fileID: 1197352447}
   - component: {fileID: 1197352446}
   - component: {fileID: 1197352445}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -10092,7 +10383,7 @@ GameObject:
   - component: {fileID: 1205156371}
   - component: {fileID: 1205156370}
   - component: {fileID: 1205156369}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10204,7 +10495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4614166224858284626, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6169742205142902659, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: m_Layer
@@ -10220,7 +10511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6555168305967400229, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6556531004897219285, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: TestMove
@@ -10260,7 +10551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7841025313831136516, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7841025313831136516, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: m_IsActive
@@ -10268,11 +10559,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7916432520424213285, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8086397533265505589, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8235788157647168393, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: m_RootOrder
@@ -10335,7 +10626,7 @@ GameObject:
   - component: {fileID: 1230697378}
   - component: {fileID: 1230697377}
   - component: {fileID: 1230697376}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10515,7 +10806,7 @@ GameObject:
   - component: {fileID: 1246420774}
   - component: {fileID: 1246420773}
   - component: {fileID: 1246420772}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -10636,7 +10927,7 @@ GameObject:
   - component: {fileID: 1250139314}
   - component: {fileID: 1250139313}
   - component: {fileID: 1250139312}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10743,7 +11034,7 @@ GameObject:
   - component: {fileID: 1252900134}
   - component: {fileID: 1252900133}
   - component: {fileID: 1252900132}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -10866,7 +11157,7 @@ GameObject:
   - component: {fileID: 1263347884}
   - component: {fileID: 1263347883}
   - component: {fileID: 1263347882}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11003,7 +11294,7 @@ GameObject:
   - component: {fileID: 1266165441}
   - component: {fileID: 1266165440}
   - component: {fileID: 1266165439}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11184,7 +11475,7 @@ GameObject:
   - component: {fileID: 1294019637}
   - component: {fileID: 1294019636}
   - component: {fileID: 1294019635}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11318,7 +11609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1300266918}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11397,7 +11688,7 @@ GameObject:
   - component: {fileID: 1354936474}
   - component: {fileID: 1354936473}
   - component: {fileID: 1354936472}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11534,7 +11825,7 @@ GameObject:
   - component: {fileID: 1357614590}
   - component: {fileID: 1357614589}
   - component: {fileID: 1357614588}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11640,7 +11931,7 @@ GameObject:
   - component: {fileID: 1398873753}
   - component: {fileID: 1398873752}
   - component: {fileID: 1398873751}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_cockroach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11837,7 +12128,7 @@ GameObject:
   - component: {fileID: 1451132157}
   - component: {fileID: 1451132156}
   - component: {fileID: 1451132155}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -11964,7 +12255,7 @@ GameObject:
   - component: {fileID: 1469121025}
   - component: {fileID: 1469121024}
   - component: {fileID: 1469121023}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -12085,7 +12376,7 @@ GameObject:
   - component: {fileID: 1469944277}
   - component: {fileID: 1469944276}
   - component: {fileID: 1469944275}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_catapillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12192,7 +12483,7 @@ GameObject:
   - component: {fileID: 1474279760}
   - component: {fileID: 1474279759}
   - component: {fileID: 1474279758}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -12314,7 +12605,7 @@ GameObject:
   - component: {fileID: 1492104314}
   - component: {fileID: 1492104313}
   - component: {fileID: 1492104312}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -12609,7 +12900,7 @@ GameObject:
   - component: {fileID: 1529373036}
   - component: {fileID: 1529373035}
   - component: {fileID: 1529373034}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -12730,7 +13021,7 @@ GameObject:
   - component: {fileID: 1534579923}
   - component: {fileID: 1534579922}
   - component: {fileID: 1534579921}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: mummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13060,7 +13351,7 @@ GameObject:
   - component: {fileID: 1565706662}
   - component: {fileID: 1565706661}
   - component: {fileID: 1565706660}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_catapillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13167,7 +13458,7 @@ GameObject:
   - component: {fileID: 1573343605}
   - component: {fileID: 1573343604}
   - component: {fileID: 1573343603}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -13289,7 +13580,7 @@ GameObject:
   - component: {fileID: 1581654977}
   - component: {fileID: 1581654976}
   - component: {fileID: 1581654975}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -13412,7 +13703,7 @@ GameObject:
   - component: {fileID: 1587005071}
   - component: {fileID: 1587005070}
   - component: {fileID: 1587005069}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ThirdHome(Clone)
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -13889,7 +14180,7 @@ GameObject:
   - component: {fileID: 1673295882}
   - component: {fileID: 1673295881}
   - component: {fileID: 1673295880}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -14020,15 +14311,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1066237171340399534, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.9056604
       objectReference: {fileID: 0}
     - target: {fileID: 1066237171340399534, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.g
-      value: 0.38466036
+      value: 0.38539347
       objectReference: {fileID: 0}
     - target: {fileID: 1066237171340399534, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.r
-      value: 0.703
+      value: 0.17429687
       objectReference: {fileID: 0}
     - target: {fileID: 1066237171340399534, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Enabled
@@ -14038,41 +14329,53 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1066237171340399534, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 6400
+      objectReference: {fileID: 0}
     - target: {fileID: 1375690494098255560, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Name
       value: light
       objectReference: {fileID: 0}
     - target: {fileID: 2621630222789425347, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.735849
       objectReference: {fileID: 0}
     - target: {fileID: 2621630222789425347, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.g
-      value: 0.385
+      value: 0.3572737
       objectReference: {fileID: 0}
     - target: {fileID: 2621630222789425347, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.r
-      value: 0.7
+      value: 0.20409396
       objectReference: {fileID: 0}
     - target: {fileID: 2621630222789425347, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Intensity
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621630222789425347, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 6400
       objectReference: {fileID: 0}
     - target: {fileID: 3570208829724307456, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.8207547
       objectReference: {fileID: 0}
     - target: {fileID: 3570208829724307456, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.g
-      value: 0.385
+      value: 0.3292864
       objectReference: {fileID: 0}
     - target: {fileID: 3570208829724307456, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.r
-      value: 0.7
+      value: 0.111498706
       objectReference: {fileID: 0}
     - target: {fileID: 3570208829724307456, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Intensity
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570208829724307456, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 6400
       objectReference: {fileID: 0}
     - target: {fileID: 6202030595618865786, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_RootOrder
@@ -14124,19 +14427,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6542345349598752314, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.8113208
       objectReference: {fileID: 0}
     - target: {fileID: 6542345349598752314, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.g
-      value: 0.385
+      value: 0.28368747
       objectReference: {fileID: 0}
     - target: {fileID: 6542345349598752314, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Color.r
-      value: 0.7
+      value: 0.117871106
       objectReference: {fileID: 0}
     - target: {fileID: 6542345349598752314, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Intensity
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6542345349598752314, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 6400
       objectReference: {fileID: 0}
     - target: {fileID: 7468735431460070793, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: m_Volume
@@ -14198,7 +14505,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1714806928}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_catapollar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14394,7 +14701,7 @@ GameObject:
   - component: {fileID: 1745435330}
   - component: {fileID: 1745435329}
   - component: {fileID: 1745435328}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -14658,7 +14965,7 @@ GameObject:
   - component: {fileID: 1769117099}
   - component: {fileID: 1769117098}
   - component: {fileID: 1769117097}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -14780,7 +15087,7 @@ GameObject:
   - component: {fileID: 1773318455}
   - component: {fileID: 1773318454}
   - component: {fileID: 1773318453}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -14902,7 +15209,7 @@ GameObject:
   - component: {fileID: 1773715779}
   - component: {fileID: 1773715778}
   - component: {fileID: 1773715777}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -15024,7 +15331,7 @@ GameObject:
   - component: {fileID: 1819383675}
   - component: {fileID: 1819383674}
   - component: {fileID: 1819383673}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -15151,7 +15458,7 @@ GameObject:
   - component: {fileID: 1821228716}
   - component: {fileID: 1821228715}
   - component: {fileID: 1821228714}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -15269,7 +15576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1824488612}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_moth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15304,7 +15611,7 @@ GameObject:
   - component: {fileID: 1847371579}
   - component: {fileID: 1847371578}
   - component: {fileID: 1847371577}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_catapillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15398,6 +15705,124 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847371575}
   m_Mesh: {fileID: 1832538377814824148, guid: e000bee737795a54db37b9918722fe6a, type: 3}
+--- !u!1 &1855586509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855586512}
+  - component: {fileID: 1855586510}
+  - component: {fileID: 1855586511}
+  m_Layer: 0
+  m_Name: Spot Light (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1855586510
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855586509}
+  m_Enabled: 0
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.33663222, g: 0.44982588, b: 0.9056604, a: 1}
+  m_Intensity: 50
+  m_Range: 10
+  m_SpotAngle: 179
+  m_InnerSpotAngle: 170.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 768
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &1855586511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855586509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!4 &1855586512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855586509}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.11, y: 3.15, z: -6.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 633591738}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1857782841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15489,7 +15914,7 @@ GameObject:
   - component: {fileID: 1873318910}
   - component: {fileID: 1873318909}
   - component: {fileID: 1873318908}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -15611,7 +16036,7 @@ GameObject:
   - component: {fileID: 1874764548}
   - component: {fileID: 1874764547}
   - component: {fileID: 1874764546}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -15732,7 +16157,7 @@ GameObject:
   - component: {fileID: 1888928014}
   - component: {fileID: 1888928013}
   - component: {fileID: 1888928012}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_cockroach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16195,7 +16620,7 @@ GameObject:
   - component: {fileID: 1901639060}
   - component: {fileID: 1901639059}
   - component: {fileID: 1901639058}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -16371,7 +16796,7 @@ GameObject:
   - component: {fileID: 1919532114}
   - component: {fileID: 1919532113}
   - component: {fileID: 1919532112}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16541,7 +16966,7 @@ GameObject:
   - component: {fileID: 1923901633}
   - component: {fileID: 1923901632}
   - component: {fileID: 1923901631}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: start(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16575,7 +17000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce2880f4a4508f439dfed201bf378f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorPrefabs: {fileID: 0}
+  floorPrefabs: {fileID: 1915744084}
   Roles: 2
   moveStatus: 0
   Shadowblock: 0
@@ -16659,7 +17084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1927407126}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_cockroach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16778,7 +17203,7 @@ GameObject:
   - component: {fileID: 1969574028}
   - component: {fileID: 1969574030}
   - component: {fileID: 1969574029}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: trajerbox Variant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16864,7 +17289,7 @@ GameObject:
   - component: {fileID: 1969831309}
   - component: {fileID: 1969831308}
   - component: {fileID: 1969831307}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17002,7 +17427,7 @@ GameObject:
   - component: {fileID: 1972378715}
   - component: {fileID: 1972378714}
   - component: {fileID: 1972378713}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -17156,7 +17581,7 @@ GameObject:
   - component: {fileID: 2000452181}
   - component: {fileID: 2000452180}
   - component: {fileID: 2000452179}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -17278,7 +17703,7 @@ GameObject:
   - component: {fileID: 2004564923}
   - component: {fileID: 2004564922}
   - component: {fileID: 2004564921}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -17400,7 +17825,7 @@ GameObject:
   - component: {fileID: 2006999909}
   - component: {fileID: 2006999908}
   - component: {fileID: 2006999907}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -17522,7 +17947,7 @@ GameObject:
   - component: {fileID: 2009496161}
   - component: {fileID: 2009496160}
   - component: {fileID: 2009496159}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -17714,7 +18139,7 @@ GameObject:
   - component: {fileID: 2045613956}
   - component: {fileID: 2045613955}
   - component: {fileID: 2045613954}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Frist(Clone)
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -18335,7 +18760,7 @@ GameObject:
   - component: {fileID: 2086649012}
   - component: {fileID: 2086649011}
   - component: {fileID: 2086649010}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -18444,6 +18869,124 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2086649008}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2089926820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2089926823}
+  - component: {fileID: 2089926821}
+  - component: {fileID: 2089926822}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &2089926821
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089926820}
+  m_Enabled: 0
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 0.33663222, g: 0.44982588, b: 0.9056604, a: 1}
+  m_Intensity: 50
+  m_Range: 10
+  m_SpotAngle: 179
+  m_InnerSpotAngle: 170.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 768
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &2089926822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089926820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!4 &2089926823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089926820}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -5.91, y: 3.15, z: -0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 633591738}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &2103164959
 GameObject:
   m_ObjectHideFlags: 0
@@ -18457,7 +19000,7 @@ GameObject:
   - component: {fileID: 2103164963}
   - component: {fileID: 2103164962}
   - component: {fileID: 2103164961}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: NormalFloor(Clone)
   m_TagString: CanStep
   m_Icon: {fileID: 0}
@@ -18578,7 +19121,7 @@ GameObject:
   - component: {fileID: 2106470450}
   - component: {fileID: 2106470449}
   - component: {fileID: 2106470448}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: totem_pole_moth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
