@@ -18,11 +18,11 @@ TagManager:
   - Player
   - PostProcess
   - ornament
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Walls
+  - stage
+  - Gameobj
+  - yuka
+  - kazari
   - 
   - 
   - 

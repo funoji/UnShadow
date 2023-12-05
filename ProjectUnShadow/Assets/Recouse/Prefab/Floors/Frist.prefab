@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7255670567308772592}
   - component: {fileID: 1593102771661454570}
   - component: {fileID: -8343247978596853671}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Frist
   m_TagString: Box
   m_Icon: {fileID: 0}
@@ -202,6 +202,10 @@ PrefabInstance:
     - target: {fileID: 4214461518793460955, guid: 8aab13dfd9bccb74782ff675432aa0df, type: 3}
       propertyPath: m_Name
       value: trajerbox Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214461518793460955, guid: 8aab13dfd9bccb74782ff675432aa0df, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

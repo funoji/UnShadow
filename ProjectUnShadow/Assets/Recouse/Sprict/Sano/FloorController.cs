@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Data;
 
 public class FloorController : MonoBehaviour
 {
@@ -107,6 +108,9 @@ public class FloorController : MonoBehaviour
             }
         }
        throw new Exception("there is none script");
-
+    }
+    public void SetTargetStaus(int playerHori, int playerVer, Floor.MoveStatus Newst)
+    {
+        floorComponent[playerHori][playerVer].SetMoveStatus(Newst);
     }
 }
