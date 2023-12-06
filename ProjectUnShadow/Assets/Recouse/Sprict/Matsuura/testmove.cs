@@ -36,6 +36,10 @@ public class testmove : MonoBehaviour
     public CameraRotation Rotation;
     void Start()
     {
+        Up = 0;
+        Right = 1;
+        Down = 2;
+        Left = 3;
         rb = GetComponent<Rigidbody>();
         mainCameraTransform = Camera.main.transform;
         animator = GetComponent<Animator>();

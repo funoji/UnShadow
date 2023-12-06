@@ -1,46 +1,38 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WallScript : MonoBehaviour
 {
     public GameObject[] Walls;
     public testmove TestMove;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public CameraRotation Rotation;
 
-    // Update is called once per frame
     void Update()
     {
-            if (TestMove.Up == 0)
+        for (int i = 0; i < Walls.Length; i++)
+        {
+            if (TestMove.Up == i)
             {
-                Walls[0].gameObject.SetActive(false);
+                Walls[i].SetActive(false);
             }
             else
-            { Walls[0].gameObject.SetActive(true); }
+            {
+                StartCoroutine(ShowWallAfterRotation(i));
+            }
+        }
 
-            if (TestMove.Up == 1)
-            {
-                Walls[1].gameObject.SetActive(false);
-            }
-            else
-            { Walls[1].gameObject.SetActive(true); }
+    }
 
-            if (TestMove.Up == 2)
-            {
-                Walls[2].gameObject.SetActive(false);
-            }
-            else
-            { Walls[2].gameObject.SetActive(true); }
+    IEnumerator ShowWallAfterRotation(int wallIndex)
+    {
+        // カメラ回転中の待機
+        while (Rotation.R && Rotation.L)
+        {
+            yield return null;
+        }
 
-            if (TestMove.Up == 3)
-            {
-                Walls[3].gameObject.SetActive(false);
-            }
-            else
-            { Walls[3].gameObject.SetActive(true); }
+        // カメラ回転が終わったら壁を表示
+        if (Rotation.count == 0)
+            Walls[wallIndex].gameObject.SetActive(true);
     }
 }
