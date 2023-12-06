@@ -3948,7 +3948,7 @@ Transform:
   - {fileID: 904125846}
   - {fileID: 773421626}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &438849152 stripped
 Transform:
@@ -4970,7 +4970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetMaterial: {fileID: 2100000, guid: fafcc39ddc23db44eac64c8f58985105, type: 2}
-  animationSpeed: 0.25
+  animationSpeed: 0.5
 --- !u!1 &627258320
 GameObject:
   m_ObjectHideFlags: 0
@@ -5215,9 +5215,9 @@ MonoBehaviour:
   - {fileID: 2089926821}
   TestMove: {fileID: 1541874968}
   lightcount: 4
-  animationSpeed: 20
-  minIntensity: 200
-  maxIntensity: 50
+  animationSpeed: 10
+  minIntensity: 80
+  maxIntensity: 200
 --- !u!4 &633591738
 Transform:
   m_ObjectHideFlags: 0
@@ -5235,7 +5235,7 @@ Transform:
   - {fileID: 1855586512}
   - {fileID: 2089926823}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &647133718
 PrefabInstance:
@@ -8964,7 +8964,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1065897100
 GameObject:
@@ -14363,7 +14363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: minIntensity
-      value: 1.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: animationSpeed
@@ -16635,7 +16635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7635487270851373797, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7635487270851373797, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19579,7 +19579,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4624518859796129506, guid: 30cc20c66f9e0c440b0915b67c7d2bae, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4624518859796129506, guid: 30cc20c66f9e0c440b0915b67c7d2bae, type: 3}
       propertyPath: m_LocalPosition.x
