@@ -103,11 +103,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-<<<<<<< HEAD
-    - _Metallic: 0.7986506
-=======
-    - _Metallic: 0.4001456
->>>>>>> test/matsutake1207
+    - _Metallic: 0.6982263
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
