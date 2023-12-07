@@ -4528,7 +4528,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.39215687, g: 1, b: 1, a: 1}
-  m_Intensity: 200
+  m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 179
   m_InnerSpotAngle: 179
@@ -5025,7 +5025,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.39215687, g: 1, b: 1, a: 1}
-  m_Intensity: 200
+  m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
@@ -15758,7 +15758,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.39215687, g: 1, b: 1, a: 1}
-  m_Intensity: 200
+  m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
@@ -18532,7 +18532,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.39215687, g: 1, b: 1, a: 1}
-  m_Intensity: 200
+  m_Intensity: 150
   m_Range: 20
   m_SpotAngle: 179
   m_InnerSpotAngle: 170.80208
@@ -19034,7 +19034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8926363741576313263, guid: 30cc20c66f9e0c440b0915b67c7d2bae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
