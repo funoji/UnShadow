@@ -38,9 +38,9 @@ public class MetallicMapAnimation : MonoBehaviour
         else
         {
             metallicValue -= Time.deltaTime * animationSpeed;
-            if (metallicValue <= 0.3f)
+            if (metallicValue <= 0.1f)
             {
-                metallicValue = 0.3f;
+                metallicValue = 0.1f;
                 increasing = true;
             }
         }

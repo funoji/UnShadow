@@ -2566,8 +2566,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetMaterial: {fileID: 2100000, guid: fafcc39ddc23db44eac64c8f58985105, type: 2}
-  animationSpeed: 0.25
-  scaleSpeed: 0.5
+  animationSpeed: 0.275
+  scaleSpeed: 0.4
 --- !u!1 &627258320
 GameObject:
   m_ObjectHideFlags: 0
