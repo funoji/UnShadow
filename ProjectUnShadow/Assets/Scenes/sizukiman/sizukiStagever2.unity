@@ -4970,7 +4970,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetMaterial: {fileID: 2100000, guid: fafcc39ddc23db44eac64c8f58985105, type: 2}
+<<<<<<< HEAD
   animationSpeed: 0.5
+=======
+  animationSpeed: 0.25
+  scaleSpeed: 0.5
+>>>>>>> test/matsutake1207
 --- !u!1 &627258320
 GameObject:
   m_ObjectHideFlags: 0
@@ -5216,7 +5221,11 @@ MonoBehaviour:
   TestMove: {fileID: 1541874968}
   lightcount: 4
   animationSpeed: 10
+<<<<<<< HEAD
   minIntensity: 80
+=======
+  minIntensity: 100
+>>>>>>> test/matsutake1207
   maxIntensity: 200
 --- !u!4 &633591738
 Transform:
@@ -14363,7 +14372,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: minIntensity
+<<<<<<< HEAD
       value: 0.8
+=======
+      value: 1
+>>>>>>> test/matsutake1207
       objectReference: {fileID: 0}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: animationSpeed

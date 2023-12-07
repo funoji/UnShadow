@@ -1,11 +1,17 @@
 using UnityEngine;
+using System.Collections;
 
 public class MetallicMapAnimation : MonoBehaviour
 {
     public Material targetMaterial;
     public float animationSpeed = 1f;
-
+    public float scaleSpeed = 1f; // アニメーションの速度
     private bool increasing = true;
+
+    private void Start()
+    {
+        StartCoroutine(ScaleAnimation());
+    }
 
     private void Update()
     {
@@ -40,5 +46,21 @@ public class MetallicMapAnimation : MonoBehaviour
         }
 
         targetMaterial.SetFloat("_Metallic", metallicValue);
+    }
+    IEnumerator ScaleAnimation()
+    {
+        while (true)
+        {
+            // スケールを計算
+            float scaleFactor = Mathf.Lerp(1f, 0.1f, Mathf.PingPong(Time.time * scaleSpeed, 1f));
+
+            // XとZのスケールを設定
+            transform.localScale = new Vector3(scaleFactor, transform.localScale.y, scaleFactor);
+
+            // アニメーションの更新
+            Debug.Log($"X Scale = {transform.localScale.x}, Z Scale = {transform.localScale.z}");
+
+            yield return null;
+        }
     }
 }
