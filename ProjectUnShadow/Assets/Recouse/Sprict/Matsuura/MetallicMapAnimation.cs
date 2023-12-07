@@ -52,13 +52,15 @@ public class MetallicMapAnimation : MonoBehaviour
         while (true)
         {
             // スケールを計算
-            float scaleFactor = Mathf.Lerp(1f, 0.5f, Mathf.PingPong(Time.time * scaleSpeed, 1f));
+            float scaleFactor = Mathf.Lerp(1f, 0.1f, Mathf.PingPong(Time.time * scaleSpeed, 1f));
 
             // XとZのスケールを設定
             transform.localScale = new Vector3(scaleFactor, transform.localScale.y, scaleFactor);
 
             // アニメーションの更新
             Debug.Log($"X Scale = {transform.localScale.x}, Z Scale = {transform.localScale.z}");
+
+            yield return null;
         }
     }
 }
