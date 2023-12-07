@@ -3651,7 +3651,7 @@ MonoBehaviour:
   TestMove: {fileID: 1541874968}
   lightcount: 4
   animationSpeed: 10
-  minIntensity: 100
+  minIntensity: 50
   maxIntensity: 200
 --- !u!4 &633591738
 Transform:
@@ -4003,7 +4003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ce2880f4a4508f439dfed201bf378f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorPrefabs: {fileID: 0}
+  floorPrefabs: {fileID: 1915744084}
   MoveBlockPrefab: {fileID: 0}
   Roles: 0
   moveStatus: 0
@@ -8765,7 +8765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: minIntensity
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: animationSpeed

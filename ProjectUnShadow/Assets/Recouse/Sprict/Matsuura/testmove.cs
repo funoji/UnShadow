@@ -55,6 +55,10 @@ public class testmove : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Retry();
+        }
         if (!isMoving&&Time.timeScale==1)
         {
             // ƒJƒƒ‰‚Ì³–Ê•ûŒü‚ğæ“¾
@@ -182,6 +186,11 @@ public class testmove : MonoBehaviour
                     Left = 3;
             }
         }
+    }
+    void Retry()
+    {
+        // Œ»İ‚ÌƒV[ƒ“‚ğÄ“Ç‚İ‚İ
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void TryMoveToPosition(Vector3 targetPosition)
