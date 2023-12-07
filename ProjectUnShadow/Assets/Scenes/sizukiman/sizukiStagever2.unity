@@ -5215,9 +5215,9 @@ MonoBehaviour:
   - {fileID: 2089926821}
   TestMove: {fileID: 1541874968}
   lightcount: 4
-  animationSpeed: 20
-  minIntensity: 200
-  maxIntensity: 50
+  animationSpeed: 10
+  minIntensity: 100
+  maxIntensity: 200
 --- !u!4 &633591738
 Transform:
   m_ObjectHideFlags: 0
@@ -14363,7 +14363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: minIntensity
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: animationSpeed

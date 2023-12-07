@@ -31,18 +31,18 @@ public class LightContlloer : MonoBehaviour
                 if (Changflag)
                 {
                     lights[currentLightIndex].intensity += Time.deltaTime * animationSpeed;
-                    if (lights[currentLightIndex].intensity >= 200f)
+                    if (lights[currentLightIndex].intensity >= maxIntensity)
                     {
-                        lights[currentLightIndex].intensity = 200f;
+                        lights[currentLightIndex].intensity = maxIntensity;
                         Changflag = false;
                     }
                 }
                 else
                 {
                     lights[currentLightIndex].intensity -= Time.deltaTime * animationSpeed;
-                    if (lights[currentLightIndex].intensity <= 0.3f)
+                    if (lights[currentLightIndex].intensity <= minIntensity)
                     {
-                        lights[currentLightIndex].intensity = 0.3f;
+                        lights[currentLightIndex].intensity = minIntensity;
                         Changflag = true;
                     }
                 }
