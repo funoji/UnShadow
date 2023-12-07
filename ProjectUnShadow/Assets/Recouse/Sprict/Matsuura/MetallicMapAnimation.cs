@@ -56,10 +56,6 @@ public class MetallicMapAnimation : MonoBehaviour
 
             // XとZのスケールを設定
             transform.localScale = new Vector3(scaleFactor, transform.localScale.y, scaleFactor);
-
-            // アニメーションの更新
-            Debug.Log($"X Scale = {transform.localScale.x}, Z Scale = {transform.localScale.z}");
-
             yield return null;
         }
     }
