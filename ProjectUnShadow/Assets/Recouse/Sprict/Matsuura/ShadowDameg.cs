@@ -28,10 +28,16 @@ public class ShadowDameg : MonoBehaviour
             testmove playerHealth = other.GetComponent<testmove>();
             Vector3 playerPosition = playerTransform.transform.position;
             damageEffectInst = Instantiate(damageEffect, playerPosition, effectRotation);
-            Destroy(damageEffectInst, 1.0f);
+            
+            Destroy(damageEffectInst, 3.0f);
             if (playerHealth != null)
             {
                 playerHealth.TakeDamage(damageAmount);
+                Collider playerCollider = other.GetComponent<Collider>();
+                if (playerCollider != null)
+                {
+                    playerCollider.enabled = false;
+                }
             }
         }
     }
