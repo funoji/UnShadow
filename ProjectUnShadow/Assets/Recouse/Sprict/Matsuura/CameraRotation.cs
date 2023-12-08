@@ -7,6 +7,7 @@ public class CameraRotation : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera; // Cinemachine Virtual Cameraを参照するための変数
     public bool L,R;//回転させるフラグ
     public float count;
+    public float rotationSpeed = 9f;
 
     private void Start()
     {
@@ -62,8 +63,8 @@ public class CameraRotation : MonoBehaviour
             var pov = virtualCamera.GetCinemachineComponent<CinemachinePOV>();
 
             // Horizontal AxisのValueを変更（例: 90度）
-            pov.m_HorizontalAxis.Value += A;
-            count += A;
+            pov.m_HorizontalAxis.Value += A*rotationSpeed;
+            count += A*rotationSpeed;
             if (count >= 90||count<=-90)
             {
                 Debug.Log("カウント0");

@@ -32,7 +32,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Futo/Futo6.unity
     guid: d9309dfb1a367b24f82e26247104e98d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/sizukiman/sizukiStagever2 1.unity
     guid: 7aab300c77c35d84ba952c12c91a1c87
+  - enabled: 0
+    path: "Assets/Scenes/Templet7\xD77.unity"
+    guid: 3aad5661ccd62ae4c91cea8d64b3fb9e
   m_configObjects: {}
