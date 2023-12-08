@@ -19,6 +19,13 @@ public class LightContlloer : MonoBehaviour
     private void Start()
     {
         switchSound = GetComponent<AudioSource>(); // "SwitchSound"という名前のゲームオブジェクトからAudioSourceを取得
+        for (int i = 0; i < lights.Length; i++)
+        {
+            if (lights[i].enabled)
+            {
+                currentLightIndex = i;
+            }
+        }
     }
 
     private void Update()
@@ -52,6 +59,7 @@ public class LightContlloer : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
+                Debug.Log("おん");
                 ToggleLight(TestMove.Up); // ライトのインデックスを指定して切り替える
             }
             if (Input.GetKeyDown(KeyCode.RightArrow))
