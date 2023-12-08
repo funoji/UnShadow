@@ -72,7 +72,10 @@ public class testmove : MonoBehaviour
             Vector3 moveVectorForward = cameraForward;
             Vector3 moveVectorRight = cameraRight;
 
-            if (Input.GetKeyDown(KeyCode.W))
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+
+            if (Input.GetKeyDown(KeyCode.W)|| verticalInput > 0)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item2;
@@ -91,7 +94,7 @@ public class testmove : MonoBehaviour
                 }
 
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S)||verticalInput < 0)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Down).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Down).Item2;
@@ -109,7 +112,7 @@ public class testmove : MonoBehaviour
                 }
 
             }
-            else if (Input.GetKeyDown(KeyCode.A))
+            else if (Input.GetKeyDown(KeyCode.A)||horizontalInput < 0)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Left).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Left).Item2;
@@ -127,7 +130,7 @@ public class testmove : MonoBehaviour
                     PlaySwitchSound(); // ‘«‰¹‚ðÄ¶
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.D)||horizontalInput > 0)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Right).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Right).Item2;
