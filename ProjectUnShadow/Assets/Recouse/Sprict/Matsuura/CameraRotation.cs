@@ -6,7 +6,7 @@ public class CameraRotation : MonoBehaviour
     private AudioSource audioSource; // AudioSourceを格納する変数
     public CinemachineVirtualCamera virtualCamera; // Cinemachine Virtual Cameraを参照するための変数
     public bool L,R;//回転させるフラグ
-    public float count = 0;
+    public float count;
 
     private void Start()
     {
@@ -16,6 +16,7 @@ public class CameraRotation : MonoBehaviour
         {
             L = false;
             R = false;
+            count = 0;
             Debug.LogError("Cinemachine Virtual Cameraがアタッチされていません。");
             return;
         }
@@ -63,8 +64,9 @@ public class CameraRotation : MonoBehaviour
             // Horizontal AxisのValueを変更（例: 90度）
             pov.m_HorizontalAxis.Value += A;
             count += A;
-            if (count == 90||count==-90)
+            if (count >= 90||count<=-90)
             {
+                Debug.Log("カウント0");
                 Flag = false;
                 count = 0;
             }

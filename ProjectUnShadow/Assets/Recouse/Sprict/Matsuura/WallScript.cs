@@ -20,19 +20,20 @@ public class WallScript : MonoBehaviour
                 StartCoroutine(ShowWallAfterRotation(i));
             }
         }
-
     }
 
     IEnumerator ShowWallAfterRotation(int wallIndex)
     {
         // カメラ回転中の待機
-        while (Rotation.R && Rotation.L)
+        while (Rotation.count != 0)
         {
+            Debug.Log("待機中");
             yield return null;
         }
 
         // カメラ回転が終わったら壁を表示
-        if (Rotation.count == 0)
-            Walls[wallIndex].gameObject.SetActive(true);
+        Walls[wallIndex].gameObject.SetActive(true);
+        Debug.Log("回転完了");
     }
+            
 }
