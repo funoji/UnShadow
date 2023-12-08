@@ -18034,7 +18034,7 @@ MonoBehaviour:
   L: 0
   R: 0
   count: 0
-  rotationSpeed: 9
+  rotationSpeed: 5
 --- !u!82 &2061535532
 AudioSource:
   m_ObjectHideFlags: 0
