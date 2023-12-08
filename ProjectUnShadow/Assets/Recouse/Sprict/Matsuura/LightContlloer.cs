@@ -10,7 +10,7 @@ public class LightContlloer : MonoBehaviour
     private AudioSource switchSound; // AudioSourceを格納する変数
     public float lightcount;
 
-    private int currentLightIndex = 0; // 現在有効なライトのインデックス
+    private int currentLightIndex; // 現在有効なライトのインデックス
     public float animationSpeed = 0.5f; // アニメーションの速さ
     public float minIntensity = 50.0f; // 最小の明るさ
     public float maxIntensity = 200.0f; // 最大の明るさ
