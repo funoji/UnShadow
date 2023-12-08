@@ -75,7 +75,7 @@ public class testmove : MonoBehaviour
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
 
-            if (Input.GetKeyDown(KeyCode.W)|| verticalInput > 0)
+            if (Input.GetKeyDown(KeyCode.W)/*|| verticalInput > 0*/)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item2;
@@ -94,7 +94,7 @@ public class testmove : MonoBehaviour
                 }
 
             }
-            else if (Input.GetKeyDown(KeyCode.S)||verticalInput < 0)
+            else if (Input.GetKeyDown(KeyCode.S)/*||verticalInput < 0*/)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Down).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Down).Item2;
@@ -112,7 +112,7 @@ public class testmove : MonoBehaviour
                 }
 
             }
-            else if (Input.GetKeyDown(KeyCode.A)||horizontalInput < 0)
+            else if (Input.GetKeyDown(KeyCode.A)/*||horizontalInput < 0*/)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Left).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Left).Item2;
@@ -130,7 +130,7 @@ public class testmove : MonoBehaviour
                     PlaySwitchSound(); // ‘«‰¹‚ðÄ¶
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.D)||horizontalInput > 0)
+            else if (Input.GetKeyDown(KeyCode.D)/*||horizontalInput > 0*/)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Right).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Right).Item2;
@@ -153,7 +153,7 @@ public class testmove : MonoBehaviour
 
         if (Rotation.L == false)
         {
-            if (Input.GetKeyDown(KeyCode.E)&&Rotation.count==0)
+            if (Input.GetKeyDown(KeyCode.Q)&&Rotation.count==0)
             {
                 Up = Up + 1;
                 Right = Right + 1;
@@ -172,7 +172,7 @@ public class testmove : MonoBehaviour
         }
         if(Rotation.R==false)
         {
-            if(Input.GetKeyDown(KeyCode.Q) && Rotation.count == 0)
+            if(Input.GetKeyDown(KeyCode.E) && Rotation.count == 0)
             {
                 Up = Up - 1;
                 Right = Right - 1;

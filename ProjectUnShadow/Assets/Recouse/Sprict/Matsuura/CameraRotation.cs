@@ -28,7 +28,7 @@ public class CameraRotation : MonoBehaviour
         // FƒL[‚ª‰Ÿ‚³‚ê‚½‚Æ‚«‚ÉHorizontal Axis‚ÌValue‚ğ•ÏX‚·‚é
         if (R == false)
         {
-            if (Input.GetKeyDown(KeyCode.E) && count == 0)
+            if (Input.GetKeyDown(KeyCode.Q) && count == 0)
             {
                 L = true;
                 PlaySwitchSound(); // ‰ñ“]‰¹‚ğÄ¶
@@ -40,7 +40,7 @@ public class CameraRotation : MonoBehaviour
 
         if (L == false)
         {
-            if (Input.GetKeyDown(KeyCode.Q) && count == 0)
+            if (Input.GetKeyDown(KeyCode.E) && count == 0)
             {
                 R = true;
                 PlaySwitchSound(); // ‰ñ“]‰¹‚ğÄ¶
