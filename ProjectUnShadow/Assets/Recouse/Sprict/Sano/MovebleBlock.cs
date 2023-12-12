@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 public class MovebleBlock : MonoBehaviour
 {
     Vector2Int m_Position;
-    [SerializeField] FloorController m_FloorController;
+    FloorController m_FloorController;
     Floor m_floor;
     Vector3 BloackPos;
 
@@ -21,10 +21,11 @@ public class MovebleBlock : MonoBehaviour
     }
     private void Start()
     {
+        m_FloorController = GameObject.Find("CreateStage").GetComponent<FloorController>();
         m_floor = GetComponentInParent<Floor>();
         m_Position = m_FloorController.GetScriptPos(m_floor);
         m_FloorController.SetTargetStaus(m_Position.x, m_Position.y, Floor.MoveStatus.CantStep);
-        BloackPos = new Vector3(m_Position.x, 0, m_Position.y);
+        BloackPos = new Vector3(transform.position.x, 1 ,transform.position.z);
 
         Debug.Log(m_Position);
     }
@@ -38,10 +39,11 @@ public class MovebleBlock : MonoBehaviour
                  if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Left)).Item1)
                  {
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
-                       m_Position.x += 1;
+                       m_Position.x -= 1;
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
-                       BloackPos.z +=1;
+                       BloackPos.z -=1;
                        transform.position = BloackPos;
+                       Debug.Log(m_Position);
                  }
                }
             },
@@ -50,10 +52,11 @@ public class MovebleBlock : MonoBehaviour
                 if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Right)).Item1)
                    {
                        m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
-                       m_Position.x -= 1;
+                       m_Position.x += 1;
                        m_FloorController.SetTargetStaus(m_Position.x ,m_Position.y, Floor.MoveStatus.CantStep);
-                       BloackPos.z -= 1;
+                       BloackPos.z += 1;
                        transform.position = BloackPos;
+                       Debug.Log(m_Position);
                    }
                }
             },
@@ -66,6 +69,7 @@ public class MovebleBlock : MonoBehaviour
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.x += 1;
                        transform.position = BloackPos;
+                       Debug.Log(m_Position);
                    }
                }
             },
@@ -78,6 +82,7 @@ public class MovebleBlock : MonoBehaviour
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.x -=1;
                        transform.position = BloackPos;
+                       Debug.Log(m_Position);
                    }
                }
             }
