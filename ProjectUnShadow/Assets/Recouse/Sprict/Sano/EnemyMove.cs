@@ -10,6 +10,7 @@ public class EnemyMove : MonoBehaviour
     int enemyPositionZ;
     Vector3 moveDirection = Vector3.zero;
     Vector2Int enemypos;
+    
 
     private void Start()
     {
@@ -19,17 +20,6 @@ public class EnemyMove : MonoBehaviour
         enemyPositionX = _floorCon.GetScriptPos(GetComponentInParent<Floor>()).x;
         enemyPositionZ = _floorCon.GetScriptPos(GetComponentInParent<Floor>()).y;
     }
-
-    //private void Update()
-    //{
-    //    MoveEnemy();
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        MoveEnemy();
-    //        Debug.Log("Plessed");
-    //    }
-    //}
-
     public void MoveEnemy()
     {
         Debug.Log("MoveEnemy() called");

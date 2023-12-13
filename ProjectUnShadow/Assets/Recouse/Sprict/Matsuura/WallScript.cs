@@ -34,7 +34,7 @@ public class WallScript : MonoBehaviour
         // ƒJƒƒ‰‰ñ“]‚ªI‚í‚Á‚½‚ç•Ç‚ğ•\¦
         if (Rotation.count == 0)
             Walls[wallIndex].gameObject.SetActive(true);
-        Debug.Log("‰ñ“]Š®—¹");
+        //Debug.Log("‰ñ“]Š®—¹");
     }
-            
+          
 }
