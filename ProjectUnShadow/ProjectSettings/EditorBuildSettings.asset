@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Matsuura/Mtsutake_Titl.unity
     guid: 187bd8653ff1eed44b128ef1031eb962
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Matsuura/Matsutake_Option.unity
     guid: 53352730201062141b3a72bb5fcd9955
   - enabled: 0
@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Matsuura/Matsutake_Gool.unity
     guid: ea8052b985411fc4f90e98ece6206d96
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Matsuura/Matsutake_stageselect.unity
     guid: 6a8df5b9ba7b8c2428260f71624d729a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Matsuura/Matsutake_Retry.unity
     guid: 3d727726b84e143498e4cbb214c92de9
   - enabled: 0
