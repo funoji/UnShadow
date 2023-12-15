@@ -86,9 +86,9 @@ public class testmove : MonoBehaviour
                     destinationPositionForward = transform.position + moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
-                    Debug.Log(destinationPositionForward);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
+                    //Debug.Log(destinationPositionForward);
                     TryMoveToPosition(destinationPositionForward);
                     PlaySwitchSound(); // ë´âπÇçƒê∂
                 }
@@ -105,8 +105,8 @@ public class testmove : MonoBehaviour
                     destinationPositionBag = transform.position - moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionBag);
                     PlaySwitchSound(); // ë´âπÇçƒê∂
                 }
@@ -124,8 +124,8 @@ public class testmove : MonoBehaviour
                     destinationPositionLeft = transform.position - moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionLeft);
                     PlaySwitchSound(); // ë´âπÇçƒê∂
                 }
@@ -142,8 +142,8 @@ public class testmove : MonoBehaviour
                     destinationPositionRight = transform.position + moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionRight);
                     PlaySwitchSound(); // ë´âπÇçƒê∂
                 }

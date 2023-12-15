@@ -61,7 +61,8 @@ public class FloorController : MonoBehaviour
         int targetVer = playerVer + offset.x;
         Vector2Int FeaacherPos = new(targetHori, targetVer);
 
-        if (floorComponent[targetHori][targetVer] == null) return (false, FeaacherPos);
+        if (floorComponent[targetHori][targetVer].GetRoles() == Floor.FloorRoles.NULLOBJ) return (false, FeaacherPos);
+
         if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep)
         {
             Vector2Int PlayerPos = FeaacherPos;
