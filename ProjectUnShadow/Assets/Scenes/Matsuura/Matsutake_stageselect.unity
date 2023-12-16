@@ -1437,7 +1437,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 33ef1cd869c8f1a4dbcadb1568239065, type: 2}
   BGM_audioSource: {fileID: 2075071599}
-  SE_audioSource: []
+  SE_audioSource:
+  - {fileID: 287560564}
+  - {fileID: 2033170519}
 --- !u!1 &2132274885
 GameObject:
   m_ObjectHideFlags: 0

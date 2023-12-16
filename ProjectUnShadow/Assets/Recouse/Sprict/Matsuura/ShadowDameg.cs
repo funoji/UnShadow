@@ -8,6 +8,7 @@ public class ShadowDameg : MonoBehaviour
     private GameObject damageEffectInst;
     private GameObject playerTransform; // プレイヤーオブジェクト
     private Quaternion effectRotation;
+    AudioSource audioSource;
     // Start is called before the first frame update
     public int damageAmount = 10;
 
@@ -15,6 +16,7 @@ public class ShadowDameg : MonoBehaviour
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player");
         effectRotation = damageEffect.transform.rotation;
+        audioSource =GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -32,7 +34,9 @@ public class ShadowDameg : MonoBehaviour
             Destroy(damageEffectInst, 3.0f);
             if (playerHealth != null)
             {
+               
                 StartCoroutine(playerHealth.TakeDamage(damageAmount));
+                audioSource.Play();
                 Collider playerCollider = other.GetComponent<Collider>();
                 if (playerCollider != null)
                 {
