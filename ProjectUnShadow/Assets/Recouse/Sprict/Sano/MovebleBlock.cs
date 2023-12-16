@@ -53,7 +53,7 @@ public class MovebleBlock : MonoBehaviour
                {
                 if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Down)).Item1)
                    {
-                      
+                      Playeranimation.SetBool("Pushing",true);
                        m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.x -= 1;
                        m_FloorController.SetTargetStaus(m_Position.x ,m_Position.y, Floor.MoveStatus.CantStep);
@@ -67,6 +67,7 @@ public class MovebleBlock : MonoBehaviour
                {
                 if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Right)).Item1)
                    {
+                       Playeranimation.SetBool("Pushing",true);
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.y += 1;
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
@@ -80,6 +81,7 @@ public class MovebleBlock : MonoBehaviour
                {
                 if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Left)).Item1)
                    {
+                       Playeranimation.SetBool("Pushing",true);
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.y -= 1;
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
