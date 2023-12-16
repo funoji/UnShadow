@@ -122,9 +122,7 @@ public class cubeSadow : MonoBehaviour
                 {
                     LightInstantiate(currentBlockleftList,effectInstanceLeftList,left, new Vector3(i, 0, 0));
                 }
-                
             }
-
         }
         if (Light.lights[3].enabled == false)
         {

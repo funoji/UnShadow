@@ -11,23 +11,27 @@ public class MixerToAudioSource : MonoBehaviour
 
     void Start()
     {
+       
+    }
+    private void Update()
+    {
         // 初期音量の設定（Audio Mixerの初期値をAudio Sourceに反映）
         float BGMinitialVolume;
         audioMixer.GetFloat("BGM_Volume", out BGMinitialVolume);
-        BGM_audioSource.volume = Mathf.Pow(10, BGMinitialVolume / 20);
+        BGM_audioSource.volume = Mathf.Pow(10, BGMinitialVolume / 60);
 
         float SEinitialVolume;
         audioMixer.GetFloat("SE_Volume", out SEinitialVolume);
         for (int i = 0; i < SE_audioSource.Length; i++)
         {
-            SE_audioSource[i].volume = Mathf.Pow(10, SEinitialVolume / 20);
+            SE_audioSource[i].volume = Mathf.Pow(10, SEinitialVolume / 60);
         }
     }
 
     public void SetVolume(float volume)
     {
         // スライダーの値をAudio Mixerに反映
-        audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
+        audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 60);
 
         // Audio Mixerの値をAudio Sourceに反映
         BGM_audioSource.volume = volume;

@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 public class GoolScript : MonoBehaviour
 {
     private GameObject player;
+    AudioSource audioSource;
     public float ascendSpeed = 5f;  // 上昇速度
+    private bool audioflag;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        audioSource = GetComponent<AudioSource>();
+        audioflag = false;
     }
 
     private void OnTriggerStay(Collider other)
@@ -20,6 +24,11 @@ public class GoolScript : MonoBehaviour
         {
             Debug.Log("触れてます");
             AscendPlayer();
+            if(!audioflag)
+            {
+                audioSource.Play();
+                audioflag = true;
+            }
             // ゴールに触れた後の処理（例: シーンの切り替え）
             StartCoroutine(LoadNextSceneAfterDelay(2f));
         }
