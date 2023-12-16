@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Matsuura/MatsutakeMap.unity
     guid: 580d9e88ae645d348b50c3aa22dbdb03
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Matsuura/Matsutake_Gool.unity
     guid: ea8052b985411fc4f90e98ece6206d96
   - enabled: 1
@@ -35,7 +35,22 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/sizukiman/sizukiStagever2 1.unity
     guid: 7aab300c77c35d84ba952c12c91a1c87
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Templet7\xD77.unity"
     guid: 3aad5661ccd62ae4c91cea8d64b3fb9e
+  - enabled: 1
+    path: "Assets/Scenes/Stages/9\xD79Stage2.unity"
+    guid: b7576f20cb20a4f4f976de384a00bb7b
+  - enabled: 1
+    path: "Assets/Scenes/Stages/5\xD75Stage1.unity"
+    guid: ffb9e7d87027b874eb3279ce7f385d59
+  - enabled: 1
+    path: "Assets/Scenes/Stages/9\xD79Stage1.unity"
+    guid: 4568c60adb262244fa193fb81590840d
+  - enabled: 1
+    path: "Assets/Scenes/Stages/7\xD77Stage2.unity"
+    guid: e5db75e00a2273d40b7cb885dee18c21
+  - enabled: 1
+    path: "Assets/Scenes/Stages/7\xD77Stage1.unity"
+    guid: ba13579c623f7ef439b93c9b6e81b53b
   m_configObjects: {}

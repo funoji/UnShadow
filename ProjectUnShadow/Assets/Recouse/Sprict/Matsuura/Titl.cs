@@ -21,7 +21,7 @@ public class Titl : MonoBehaviour
         {
             audioSource.Play();
         }
-
+        Time.timeScale = 1.0f;
         // Start a coroutine to add a delay before changing scenes
         StartCoroutine(ChangeSceneWithDelay(sceneName));
     }
@@ -34,5 +34,6 @@ public class Titl : MonoBehaviour
 
         // Load the specified scene after the delay
         SceneManager.LoadScene(sceneName);
+        Debug.Log("‰Ÿ‚³‚ê‚½");
     }
 }
