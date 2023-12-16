@@ -123,7 +123,7 @@ MonoBehaviour:
   floorPrefabs: {fileID: 0}
   MoveBlockPrefab: {fileID: 0}
   Roles: 4
-  moveStatus: 0
+  moveStatus: 1
   Shadowblock: 0
 --- !u!114 &-3145275927956826288
 MonoBehaviour:
