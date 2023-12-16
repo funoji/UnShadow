@@ -32,7 +32,7 @@ public class ShadowDameg : MonoBehaviour
             Destroy(damageEffectInst, 3.0f);
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damageAmount);
+                StartCoroutine(playerHealth.TakeDamage(damageAmount));
                 Collider playerCollider = other.GetComponent<Collider>();
                 if (playerCollider != null)
                 {
