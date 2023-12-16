@@ -221,6 +221,7 @@ public class testmove : MonoBehaviour
     {
         isMoving = true;
         // アニメーション再生開始
+        //animator.SetBool("Pushing", true);
         animator.SetBool("Walking", true);
         while (transform.position != targetPosition)
         {
@@ -228,6 +229,7 @@ public class testmove : MonoBehaviour
             yield return null;
         }
         // 移動が完了したらアニメーションを停止する
+        //animator.SetBool("Pushing", false);
         animator.SetBool("Walking", false);
 
         isMoving = false;
