@@ -27,12 +27,12 @@ public class cubeSadow : MonoBehaviour
     {
         Light= GameObject.Find("light").GetComponent<LightContlloer>();
         // オブジェクトの位置を取得
-        objectPosition = transform.position;
-        up = objectPosition + new Vector3(0, 0, -1);
-        down = objectPosition + new Vector3(0, 0, 1);
-        right = objectPosition + new Vector3(-1, 0, 0);
-        left = objectPosition + new Vector3(1, 0, 0);
+        objectPosition = transform.position; 
         effectRotation = effectPrefab.transform.rotation;
+        up = new Vector3(0, 0, -1);
+        down = new Vector3(0, 0, 1);
+        right = new Vector3(-1, 0, 0);
+        left = new Vector3(1, 0, 0);
     }
 
     // Update is called once per frame
@@ -45,10 +45,7 @@ public class cubeSadow : MonoBehaviour
             {
                 for (int i = 0; i < s; i++)
                 {
-                    GameObject currentBlockup = Instantiate(ShadowBox, up + new Vector3(0, 0, -i), Quaternion.identity);
-                    GameObject effectInstanceUp = Instantiate(effectPrefab, up + new Vector3(0, 0, -i), effectRotation);
-                    currentBlockupList.Add(currentBlockup);
-                    effectInstanceUpList.Add(effectInstanceUp);
+                    LightInstantiate(currentBlockupList, effectInstanceUpList, up, new Vector3(0, 0, -i));
                 }
             }
         }
@@ -72,10 +69,7 @@ public class cubeSadow : MonoBehaviour
             {
                 for (int i = 0; i < s; i++)
                 {
-                    GameObject currentBlockright = Instantiate(ShadowBox, right + new Vector3(-i, 0, 0), Quaternion.identity);
-                    GameObject effectInstanceRight = Instantiate(effectPrefab, right + new Vector3(-i, 0, 0), effectRotation);
-                    currentBlockrightList.Add(currentBlockright);
-                    effectInstanceRightList.Add(effectInstanceRight);
+                    LightInstantiate(currentBlockrightList, effectInstanceRightList, right, new Vector3(-i, 0, 0));
                 }
             }
 
@@ -101,10 +95,7 @@ public class cubeSadow : MonoBehaviour
             {
                 for (int i = 0; i < s; i++)
                 {
-                    GameObject currentBlockdown = Instantiate(ShadowBox, down + new Vector3(0, 0, i), Quaternion.identity);
-                    GameObject effectInstanceDown = Instantiate(effectPrefab, down + new Vector3(0, 0, i), effectRotation);
-                    currentBlockdownList.Add(currentBlockdown);
-                    effectInstanceDownList.Add(effectInstanceDown);
+                    LightInstantiate(currentBlockdownList, effectInstanceDownList, down, new Vector3(0, 0, i));
                 }
             }
         }
@@ -129,11 +120,9 @@ public class cubeSadow : MonoBehaviour
             {
                 for (int i = 0; i < s; i++)
                 {
-                    GameObject currentBlockleft = Instantiate(ShadowBox, left + new Vector3(i, 0, 0), Quaternion.identity);
-                    GameObject effectInstanceLeft = Instantiate(effectPrefab, left + new Vector3(i, 0, 0), effectRotation);
-                    currentBlockleftList.Add(currentBlockleft);
-                    effectInstanceLeftList.Add(effectInstanceLeft);
+                    LightInstantiate(currentBlockleftList,effectInstanceLeftList,left, new Vector3(i, 0, 0));
                 }
+                
             }
 
         }
@@ -149,6 +138,36 @@ public class cubeSadow : MonoBehaviour
             }
             currentBlockleftList.Clear();
             effectInstanceLeftList.Clear();
+        }
+    }
+    void LightInstantiate(List<GameObject> Block, List<GameObject> effect, Vector3 direction, Vector3 move)
+    {
+        objectPosition = transform.position;
+        effectRotation = effectPrefab.transform.rotation;
+        GameObject currentBlock = Instantiate(ShadowBox, objectPosition + direction + move, Quaternion.identity);
+        GameObject effectInstance = Instantiate(effectPrefab, objectPosition + direction + move, effectRotation);
+        Block.Add(currentBlock);
+        effect.Add(effectInstance);
+    }
+    public void MoveShadow(Vector3 move)
+    {
+        // 各方向の影を移動
+        MoveShadowList(currentBlockupList, move, Vector3.back);
+        MoveShadowList(currentBlockdownList, move, Vector3.forward);
+        MoveShadowList(currentBlockleftList, move, Vector3.left);
+        MoveShadowList(currentBlockrightList, move, Vector3.right);
+
+        // エフェクトも同様に移動
+        MoveShadowList(effectInstanceUpList, move, Vector3.back);
+        MoveShadowList(effectInstanceDownList, move, Vector3.forward);
+        MoveShadowList(effectInstanceLeftList, move, Vector3.left);
+        MoveShadowList(effectInstanceRightList, move, Vector3.right);
+    }
+    void MoveShadowList(List<GameObject> shadowList, Vector3 move, Vector3 direction)
+    {
+        for (int i = 0; i < shadowList.Count; i++)
+        {
+            shadowList[i].transform.position += move + direction * i;
         }
     }
 }

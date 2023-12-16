@@ -9,6 +9,7 @@ public class MovebleBlock : MonoBehaviour
 {
     Vector2Int m_Position;
     [SerializeField] FloorController m_FloorController;
+    [SerializeField] cubeSadow shadowController;
     Floor m_floor;
     Vector3 BloackPos;
 
@@ -37,10 +38,12 @@ public class MovebleBlock : MonoBehaviour
                {
                  if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Up)).Item1)
                  {
+                       
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.x += 1;
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.z +=1;
+                       shadowController.MoveShadow(new Vector3(0,0,1));
                        transform.position+=new Vector3(0, 0,1);
                  }
                }
@@ -49,10 +52,12 @@ public class MovebleBlock : MonoBehaviour
                {
                 if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Down)).Item1)
                    {
+                      
                        m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.x -= 1;
                        m_FloorController.SetTargetStaus(m_Position.x ,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.z -= 1;
+                       shadowController.MoveShadow(new Vector3(0,0,-1));
                        transform.position+=new Vector3(0, 0,-1);
                    }
                }
@@ -65,7 +70,8 @@ public class MovebleBlock : MonoBehaviour
                        m_Position.y += 1;
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.x += 1;
-                       transform.position+=new Vector3(1, 0,0);
+                       shadowController.MoveShadow(new Vector3(1,0,0));
+                       transform.position+=new Vector3(1,0,0);
                    }
                }
             },
@@ -77,6 +83,7 @@ public class MovebleBlock : MonoBehaviour
                        m_Position.y -= 1;
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.x -=1;
+                       shadowController.MoveShadow(new Vector3(-1,0,0));
                         transform.position+=new Vector3(-1, 0,0);
                    }
                }
