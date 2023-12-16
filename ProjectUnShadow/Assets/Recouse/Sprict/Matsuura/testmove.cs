@@ -242,7 +242,7 @@ public class testmove : MonoBehaviour
         {
             // プレイヤーが死亡した場合の処理をここに記述する
             // 例えば、ゲームオーバー画面を表示するなど
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(2.4f);
             SceneManager.LoadScene("Matsutake_Retry");
         }
     }
