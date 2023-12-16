@@ -10,6 +10,7 @@ public class MovebleBlock : MonoBehaviour
     Vector2Int m_Position;
     [SerializeField] FloorController m_FloorController;
     [SerializeField] cubeSadow shadowController;
+    Animator Playeranimation;
     Floor m_floor;
     Vector3 BloackPos;
 
@@ -26,7 +27,7 @@ public class MovebleBlock : MonoBehaviour
         m_Position = m_FloorController.GetScriptPos(m_floor);
         m_FloorController.SetTargetStaus(m_Position.x, m_Position.y, Floor.MoveStatus.CantStep);
         BloackPos = new Vector3(m_Position.x, 0, m_Position.y);
-        
+        Playeranimation = GameObject.Find("player_rig3").GetComponent<Animator>();
         Debug.Log(m_Position);
     }
     public void GetPlayerTouch(PushTo pushFrom)
@@ -38,7 +39,7 @@ public class MovebleBlock : MonoBehaviour
                {
                  if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Up)).Item1)
                  {
-                       
+                       Playeranimation.SetBool("Pushing",true);
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.x += 1;
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);

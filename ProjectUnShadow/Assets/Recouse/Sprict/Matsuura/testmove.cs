@@ -231,6 +231,7 @@ public class testmove : MonoBehaviour
         // 移動が完了したらアニメーションを停止する
         //animator.SetBool("Pushing", false);
         animator.SetBool("Walking", false);
+        animator.SetBool("Pushing", false);
 
         isMoving = false;
     }
