@@ -10553,6 +10553,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1647351057930914576, guid: 1392a98830b3fdd43b84853a41c1f254, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4484573810498404453, guid: 1392a98830b3fdd43b84853a41c1f254, type: 3}
       propertyPath: m_RootOrder
       value: 17
