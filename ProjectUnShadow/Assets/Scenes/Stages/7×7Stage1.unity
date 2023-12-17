@@ -4104,6 +4104,7 @@ MonoBehaviour:
   animationSpeed: 10
   minIntensity: 50
   maxIntensity: 150
+  DestroyIntensity: 100
 --- !u!4 &633591738
 Transform:
   m_ObjectHideFlags: 0
@@ -10582,6 +10583,10 @@ PrefabInstance:
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: animationSpeed
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
+      propertyPath: DestroyIntensity
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 741962014537592661, guid: 088bbc1ab1975674e90bcf2b5812e9ec, type: 3}
       propertyPath: lights.Array.size
