@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3629793011085754504}
   - component: {fileID: 8146725659316728915}
   - component: {fileID: 5911130402122574244}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SolerPanel
   m_TagString: sora
   m_Icon: {fileID: 0}
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
+  MoveBlockPrefab: {fileID: 0}
   Roles: 7
   moveStatus: 0
   Shadowblock: 0

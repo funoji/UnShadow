@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 1441076931441598465}
   - component: {fileID: 2818076666078904844}
   - component: {fileID: 4948199824979546855}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MoveBloack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,6 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FloorController: {fileID: 0}
+  shadowController: {fileID: 0}
 --- !u!114 &4948199824979546855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,9 +273,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShadowBox: {fileID: 0}
+  ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
-  s: 0
+  s: 1
 --- !u!1 &6325112332128302754
 GameObject:
   m_ObjectHideFlags: 0
