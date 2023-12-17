@@ -13,6 +13,7 @@ public class MovebleBlock : MonoBehaviour
     Animator Playeranimation;
     Floor m_floor;
     Vector3 BloackPos;
+    private float moveSpeed=1.0f;
 
     public enum PushTo
     {
@@ -39,13 +40,13 @@ public class MovebleBlock : MonoBehaviour
                {
                  if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Up)).Item1)
                  {
+
                        //Playeranimation.SetBool("Pushing",true);
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.x += 1;
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.z +=1;
-                       shadowController.MoveShadow(new Vector3(0,0,1));
-                       transform.position+=new Vector3(0, 0,1);
+                        StartCoroutine(MoveTowardsTarget(new Vector3(0, 0, 1)));
                  }
                }
             },
@@ -58,8 +59,7 @@ public class MovebleBlock : MonoBehaviour
                        m_Position.x -= 1;
                        m_FloorController.SetTargetStaus(m_Position.x ,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.z -= 1;
-                       shadowController.MoveShadow(new Vector3(0,0,-1));
-                       transform.position+=new Vector3(0, 0,-1);
+                       StartCoroutine(MoveTowardsTarget(new Vector3(0, 0, -1)));
                    }
                }
             },
@@ -72,8 +72,7 @@ public class MovebleBlock : MonoBehaviour
                        m_Position.y += 1;
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.x += 1;
-                       shadowController.MoveShadow(new Vector3(1,0,0));
-                       transform.position+=new Vector3(1,0,0);
+                      StartCoroutine(MoveTowardsTarget(new Vector3(1, 0, 0)));
                    }
                }
             },
@@ -85,8 +84,7 @@ public class MovebleBlock : MonoBehaviour
                        m_Position.y -= 1;
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.x -=1;
-                       shadowController.MoveShadow(new Vector3(-1,0,0));
-                        transform.position+=new Vector3(-1, 0,0);
+                       StartCoroutine(MoveTowardsTarget(new Vector3(-1, 0, 0)));
                    }
                }
             }
@@ -101,5 +99,20 @@ public class MovebleBlock : MonoBehaviour
         {
             // 未知の値の場合の処理
         }
+
+    }
+    private IEnumerator MoveTowardsTarget(Vector3 direction)
+    {
+        Vector3 targetPosition = transform.position + direction;
+        shadowController.MoveShadow(direction);
+        while (transform.position != targetPosition)
+        {   
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+        
+        // ここで m_Position を更新する必要があるかもしれません
+        // m_Position の更新処理を追加してください
+        yield return null;
     }
 }
