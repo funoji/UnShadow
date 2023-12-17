@@ -2648,7 +2648,7 @@ MonoBehaviour:
   animationSpeed: 10
   minIntensity: 50
   maxIntensity: 150
-  DestroyIntensity: 1
+  DestroyIntensity: 100
 --- !u!4 &633591738
 Transform:
   m_ObjectHideFlags: 0
