@@ -22,6 +22,7 @@ public class cubeSadow : MonoBehaviour
     private Quaternion effectRotation;
 
     [SerializeField] int s;
+    private float moveSpeed = 1.0f;
     // Start is called before the first frame update
     private void Start()
     {
@@ -147,25 +148,32 @@ public class cubeSadow : MonoBehaviour
         Block.Add(currentBlock);
         effect.Add(effectInstance);
     }
-    public void MoveShadow(Vector3 move)
+public void MoveShadow(Vector3 move)
     {
         // 各方向の影を移動
-        MoveShadowList(currentBlockupList, move, Vector3.back);
-        MoveShadowList(currentBlockdownList, move, Vector3.forward);
-        MoveShadowList(currentBlockleftList, move, Vector3.left);
-        MoveShadowList(currentBlockrightList, move, Vector3.right);
+        StartCoroutine(MoveShadowList(currentBlockupList, move, Vector3.back));
+        StartCoroutine(MoveShadowList(currentBlockdownList, move, Vector3.forward));
+        StartCoroutine(MoveShadowList(currentBlockleftList, move, Vector3.left));
+        StartCoroutine(MoveShadowList(currentBlockrightList, move, Vector3.right));
 
         // エフェクトも同様に移動
-        MoveShadowList(effectInstanceUpList, move, Vector3.back);
-        MoveShadowList(effectInstanceDownList, move, Vector3.forward);
-        MoveShadowList(effectInstanceLeftList, move, Vector3.left);
-        MoveShadowList(effectInstanceRightList, move, Vector3.right);
+        StartCoroutine(MoveShadowList(effectInstanceUpList, move, Vector3.back));
+        StartCoroutine(MoveShadowList(effectInstanceDownList, move, Vector3.forward));
+        StartCoroutine(MoveShadowList(effectInstanceLeftList, move, Vector3.left));
+        StartCoroutine(MoveShadowList(effectInstanceRightList, move, Vector3.right));
     }
-    void MoveShadowList(List<GameObject> shadowList, Vector3 move, Vector3 direction)
+    private IEnumerator MoveShadowList(List<GameObject> shadowList, Vector3 move, Vector3 direction)
     {
+
         for (int i = 0; i < shadowList.Count; i++)
         {
-            shadowList[i].transform.position += move + direction * i;
+            Vector3 targetPosition = shadowList[i].transform.position + move;
+            while (shadowList[i].transform.position != targetPosition)
+            {
+                shadowList[i].transform.position = Vector3.MoveTowards(shadowList[i].transform.position, targetPosition, moveSpeed * Time.deltaTime);
+                yield return null;
+            }
         }
+        yield return null;
     }
 }
