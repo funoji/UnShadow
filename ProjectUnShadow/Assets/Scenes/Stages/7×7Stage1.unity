@@ -12163,7 +12163,7 @@ PrefabInstance:
     - target: {fileID: 3272386413551491091, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
       propertyPath: _FristHeight
       value: 
-      objectReference: {fileID: 8670700897915016339, guid: a1b7245ec3df4b548bd57cc611bb1125, type: 3}
+      objectReference: {fileID: 4437102919838207699, guid: c45d8994ac0ef654390535fcd067860a, type: 3}
     - target: {fileID: 3272386413551491091, guid: ff0aa011da23fc34f900f0c0b2e3536b, type: 3}
       propertyPath: _Normalfloor
       value: 
