@@ -106,7 +106,7 @@ public class cubeSadow : MonoBehaviour
                     if (!MoveBlock)
                         LightInstantiate(currentBlockdownList, effectInstanceDownList, down, new Vector3(0, 0, i));
                     else
-                        LightInstantiate(currentBlockrightList, effectInstanceRightList, right, new Vector3(0, -1, i));
+                        LightInstantiate(currentBlockdownList, effectInstanceDownList, down, new Vector3(0, -1, i));
                 }
             }
         }
@@ -132,9 +132,9 @@ public class cubeSadow : MonoBehaviour
                 for (int i = 0; i < s; i++)
                 {
                     if (!MoveBlock)
-                        LightInstantiate(currentBlockleftList,effectInstanceLeftList,left, new Vector3(i, 0, 0));
+                        LightInstantiate(currentBlockleftList, effectInstanceLeftList, left, new Vector3(i, 0, 0));
                     else
-                        LightInstantiate(currentBlockrightList, effectInstanceRightList, right, new Vector3(i, -1, 0));
+                        LightInstantiate(currentBlockleftList, effectInstanceLeftList, left, new Vector3(i, -1, 0));
                 }
             }
         }

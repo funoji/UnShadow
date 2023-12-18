@@ -8,7 +8,7 @@ public class testmove : MonoBehaviour
     private AudioSource audioSource; // AudioSource‚ğŠi”[‚·‚é•Ï”
     Animator animator;
     public float moveSpeed = 1f;
-    private bool isMoving = false;
+    public bool isMoving = false;
     Vector3 moveDistanceForward, moveDistanceRight; // 1ƒ}ƒX‚ÌˆÚ“®
     //x²•ûŒü‚Ì“ü—Í‚ğ•Û‘¶
     private float _input_x;
