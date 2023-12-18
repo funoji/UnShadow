@@ -14,6 +14,7 @@ public class MoveBGetplayer : MonoBehaviour
         {
             // トリガー内にプレイヤーが入ったときにフラグを立てる
             hasBeenCalled = true;
+
         }
     }
     private void OnTriggerExit(Collider other)
@@ -23,7 +24,22 @@ public class MoveBGetplayer : MonoBehaviour
     private void Update()
     {
         // フラグが立っているときにWキーが押されたら関数を呼ぶ
-        if (hasBeenCalled && Input.GetKeyDown(KeyCode.W)&&testmove.isMoving==false)
+        if (hasBeenCalled && Input.GetKeyDown(KeyCode.W)&&testmove.isMoving==false&&testmove.PlayerPos==m_Move.m_Position)
+        {
+            m_Move.GetPlayerTouch(pushTo);
+            hasBeenCalled = false; // フラグをリセットする
+        }
+        if (hasBeenCalled && Input.GetKeyDown(KeyCode.A) && testmove.isMoving == false && testmove.PlayerPos == m_Move.m_Position)
+        {
+            m_Move.GetPlayerTouch(pushTo);
+            hasBeenCalled = false; // フラグをリセットする
+        }
+        if (hasBeenCalled && Input.GetKeyDown(KeyCode.S) && testmove.isMoving == false && testmove.PlayerPos == m_Move.m_Position)
+        {
+            m_Move.GetPlayerTouch(pushTo);
+            hasBeenCalled = false; // フラグをリセットする
+        }
+        if (hasBeenCalled && Input.GetKeyDown(KeyCode.D) && testmove.isMoving == false && testmove.PlayerPos == m_Move.m_Position)
         {
             m_Move.GetPlayerTouch(pushTo);
             hasBeenCalled = false; // フラグをリセットする

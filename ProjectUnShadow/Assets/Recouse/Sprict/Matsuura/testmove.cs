@@ -17,7 +17,7 @@ public class testmove : MonoBehaviour
     bool isrun;
     public int PlayerHP = 10;
     bool canmove;
-    private Vector2Int PlayerPos;
+    public Vector2Int PlayerPos;
     public int storedHi;
     public int storedVi;
     FloorController _floorController;

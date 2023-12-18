@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class MovebleBlock : MonoBehaviour
 {
-    Vector2Int m_Position;
+    public Vector2Int m_Position;
     [SerializeField] FloorController m_FloorController;
     [SerializeField] cubeSadow shadowController;
     Animator Playeranimation;
