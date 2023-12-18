@@ -5,6 +5,7 @@ using UnityEngine;
 public class cubeSadow : MonoBehaviour
 {
     GameObject LightObj;
+    [SerializeField] bool MoveBlock;
     private LightContlloer Light;
     Vector3 objectPosition;
     Vector3 up, down, left, right;
@@ -46,7 +47,10 @@ public class cubeSadow : MonoBehaviour
             {
                 for (int i = 0; i < s; i++)
                 {
-                    LightInstantiate(currentBlockupList, effectInstanceUpList, up, new Vector3(0, 0, -i));
+                    if (!MoveBlock)
+                        LightInstantiate(currentBlockupList, effectInstanceUpList, up, new Vector3(0, 0, -i));
+                    else
+                        LightInstantiate(currentBlockupList, effectInstanceUpList, up, new Vector3(0, -1, -i));
                 }
             }
         }
@@ -70,7 +74,10 @@ public class cubeSadow : MonoBehaviour
             {
                 for (int i = 0; i < s; i++)
                 {
-                    LightInstantiate(currentBlockrightList, effectInstanceRightList, right, new Vector3(-i, 0, 0));
+                    if (!MoveBlock)
+                        LightInstantiate(currentBlockrightList, effectInstanceRightList, right, new Vector3(-i, 0, 0));
+                    else
+                        LightInstantiate(currentBlockrightList, effectInstanceRightList, right, new Vector3(-i, -1, 0));
                 }
             }
 
@@ -96,7 +103,10 @@ public class cubeSadow : MonoBehaviour
             {
                 for (int i = 0; i < s; i++)
                 {
-                    LightInstantiate(currentBlockdownList, effectInstanceDownList, down, new Vector3(0, 0, i));
+                    if (!MoveBlock)
+                        LightInstantiate(currentBlockdownList, effectInstanceDownList, down, new Vector3(0, 0, i));
+                    else
+                        LightInstantiate(currentBlockrightList, effectInstanceRightList, right, new Vector3(0, -1, i));
                 }
             }
         }
@@ -121,7 +131,10 @@ public class cubeSadow : MonoBehaviour
             {
                 for (int i = 0; i < s; i++)
                 {
-                    LightInstantiate(currentBlockleftList,effectInstanceLeftList,left, new Vector3(i, 0, 0));
+                    if (!MoveBlock)
+                        LightInstantiate(currentBlockleftList,effectInstanceLeftList,left, new Vector3(i, 0, 0));
+                    else
+                        LightInstantiate(currentBlockrightList, effectInstanceRightList, right, new Vector3(i, -1, 0));
                 }
             }
         }

@@ -34,6 +34,8 @@ public class testmove : MonoBehaviour
         Left = 3;
 
     public CameraRotation Rotation;
+    UIManager UIManager;
+
     void Start()
     {
         Up = 0;
@@ -52,6 +54,7 @@ public class testmove : MonoBehaviour
         _floorController = floorControllerOBJ.GetComponent<FloorController>();
         audioSource = GetComponent<AudioSource>(); // このスクリプトがアタッチされたゲームオブジェクトのAudioSourceを取得
         //canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up);
+        UIManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
     void Update()
     {
@@ -238,12 +241,12 @@ public class testmove : MonoBehaviour
     public IEnumerator TakeDamage(int damage)
     {
         PlayerHP -= damage;
-
         if (PlayerHP == 0)
         {
+            UIManager.StartCountDown();
             // プレイヤーが死亡した場合の処理をここに記述する
             // 例えば、ゲームオーバー画面を表示するなど
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
             SceneManager.LoadScene("Matsutake_Retry");
         }
     }
