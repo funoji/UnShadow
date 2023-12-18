@@ -53,4 +53,31 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Stages/7\xD77Stage1.unity"
     guid: ba13579c623f7ef439b93c9b6e81b53b
+  - enabled: 1
+    path: Assets/Scenes/Futo/5x5EasyStage1.unity
+    guid: 452a38810fc31eb4b98f801bd8038d3c
+  - enabled: 1
+    path: Assets/Scenes/Futo/5x5EasyStage2-T.unity
+    guid: ea01b9f1e76eb174390986e66cf60d45
+  - enabled: 1
+    path: Assets/Scenes/Futo/7x7EasyStage1.unity
+    guid: bb2f7ec9538ca9941a04948671cb9add
+  - enabled: 1
+    path: Assets/Scenes/Futo/7x7EasyStage2-B.unity
+    guid: bef95ddbd70bbcb41ab08fb3c06638ea
+  - enabled: 1
+    path: Assets/Scenes/Futo/7x7EasyStage3.unity
+    guid: 55d6a051df162944c86adae559bdab87
+  - enabled: 1
+    path: Assets/Scenes/Futo/7x7EasyStage4.unity
+    guid: bc0a3a2ffd30fe94888b9ea8353b3b3b
+  - enabled: 1
+    path: Assets/Scenes/Futo/7x7NomalStage1.unity
+    guid: 6acb55f88f32a054e88f3522e90981c7
+  - enabled: 1
+    path: Assets/Scenes/Futo/7x7NomalStage2-B.unity
+    guid: 19fbe9956ae032546999a4d4000b8686
+  - enabled: 1
+    path: Assets/Scenes/Futo/7x7NomalStage3-BT.unity
+    guid: a2f2fc6537be0a342b3e927c64b8a03f
   m_configObjects: {}
