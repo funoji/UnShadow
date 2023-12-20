@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 2
@@ -700,6 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 1
@@ -1736,6 +1738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 2
@@ -2643,6 +2646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 1
@@ -4761,6 +4765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 1
@@ -5522,6 +5527,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 3
@@ -5662,6 +5668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 1
@@ -6645,6 +6652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 1
@@ -6992,6 +7000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 2
@@ -7296,6 +7305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 1
@@ -9128,6 +9138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 3
@@ -11768,6 +11779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d7a2d6218d4c324c85cddc65acac570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveBlock: 0
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
   effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 2
@@ -13042,7 +13054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6193546022415077764, guid: 058bb53bbfdfc52429b178d6b362bccf, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
