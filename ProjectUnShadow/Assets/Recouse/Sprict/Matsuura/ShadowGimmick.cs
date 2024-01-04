@@ -27,6 +27,13 @@ public class ShadowGimmick : MonoBehaviour
             }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("sora"))
+        {
+            scriptOnSoraObject.OnBarrier();
+        }
+    }
     private void OnDestroy()
     {
         // このスクリプトをアタッチしているオブジェクトが削除された際の処理

@@ -120,6 +120,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
   MoveBlockPrefab: {fileID: 0}
-  Roles: 0
+  Roles: 1
   moveStatus: 0
   Shadowblock: 0

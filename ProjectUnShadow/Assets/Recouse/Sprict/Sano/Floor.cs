@@ -11,7 +11,7 @@ public class Floor : MonoBehaviour
 
     public enum FloorRoles
     {
-        NULL,
+        NULLOBJ,
         Normal,
         Start,
         Goal,
@@ -25,7 +25,7 @@ public class Floor : MonoBehaviour
         TeleportGoal,
         MoveableBlock,
     }
-    [SerializeField] private FloorRoles Roles = FloorRoles.NULL;
+    [SerializeField] private FloorRoles Roles = FloorRoles.NULLOBJ;
 
     public enum MoveStatus
     { CanStep,CantStep }
@@ -94,6 +94,8 @@ public class Floor : MonoBehaviour
             prefabDictionary.Add(FloorRoles.Teleport, floor.floorPrefabs.Teleport);
             prefabDictionary.Add(FloorRoles.TeleportGoal, floor.floorPrefabs.TeleportGoal);
             prefabDictionary.Add(FloorRoles.MoveableBlock, floor.floorPrefabs.MoveBlock);
+            prefabDictionary.Add(FloorRoles.NULLOBJ, floor.floorPrefabs.NULLOBJ);
+
         }
 
         void ChangeShape()

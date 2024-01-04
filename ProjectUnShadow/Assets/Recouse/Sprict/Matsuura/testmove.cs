@@ -8,7 +8,7 @@ public class testmove : MonoBehaviour
     private AudioSource audioSource; // AudioSourceを格納する変数
     Animator animator;
     public float moveSpeed = 1f;
-    private bool isMoving = false;
+    public bool isMoving = false;
     Vector3 moveDistanceForward, moveDistanceRight; // 1マスの移動
     //x軸方向の入力を保存
     private float _input_x;
@@ -17,7 +17,7 @@ public class testmove : MonoBehaviour
     bool isrun;
     public int PlayerHP = 10;
     bool canmove;
-    private Vector2Int PlayerPos;
+    public Vector2Int PlayerPos;
     public int storedHi;
     public int storedVi;
     FloorController _floorController;
@@ -34,6 +34,8 @@ public class testmove : MonoBehaviour
         Left = 3;
 
     public CameraRotation Rotation;
+    UIManager UIManager;
+
     void Start()
     {
         Up = 0;
@@ -52,6 +54,7 @@ public class testmove : MonoBehaviour
         _floorController = floorControllerOBJ.GetComponent<FloorController>();
         audioSource = GetComponent<AudioSource>(); // このスクリプトがアタッチされたゲームオブジェクトのAudioSourceを取得
         //canmove = floorControllerOBJ.GetComponent<FloorController>().CanMove(storedHi, storedVi, FloorController.PlayerMovable.Up);
+        UIManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
     void Update()
     {
@@ -86,9 +89,9 @@ public class testmove : MonoBehaviour
                     destinationPositionForward = transform.position + moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
-                    Debug.Log(destinationPositionForward);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
+                    //Debug.Log(destinationPositionForward);
                     TryMoveToPosition(destinationPositionForward);
                     PlaySwitchSound(); // 足音を再生
                 }
@@ -105,8 +108,8 @@ public class testmove : MonoBehaviour
                     destinationPositionBag = transform.position - moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionBag);
                     PlaySwitchSound(); // 足音を再生
                 }
@@ -124,8 +127,8 @@ public class testmove : MonoBehaviour
                     destinationPositionLeft = transform.position - moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionLeft);
                     PlaySwitchSound(); // 足音を再生
                 }
@@ -142,8 +145,8 @@ public class testmove : MonoBehaviour
                     destinationPositionRight = transform.position + moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionRight);
                     PlaySwitchSound(); // 足音を再生
                 }
@@ -221,6 +224,7 @@ public class testmove : MonoBehaviour
     {
         isMoving = true;
         // アニメーション再生開始
+        //animator.SetBool("Pushing", true);
         animator.SetBool("Walking", true);
         while (transform.position != targetPosition)
         {
@@ -228,18 +232,21 @@ public class testmove : MonoBehaviour
             yield return null;
         }
         // 移動が完了したらアニメーションを停止する
+        //animator.SetBool("Pushing", false);
         animator.SetBool("Walking", false);
+        animator.SetBool("Pushing", false);
 
         isMoving = false;
     }
-    public void TakeDamage(int damage)
+    public IEnumerator TakeDamage(int damage)
     {
         PlayerHP -= damage;
-
         if (PlayerHP == 0)
         {
+            UIManager.StartCountDown();
             // プレイヤーが死亡した場合の処理をここに記述する
             // 例えば、ゲームオーバー画面を表示するなど
+            yield return new WaitForSeconds(3f);
             SceneManager.LoadScene("Matsutake_Retry");
         }
     }

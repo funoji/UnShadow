@@ -7,10 +7,13 @@ using UnityEngine.UIElements;
 
 public class MovebleBlock : MonoBehaviour
 {
-    Vector2Int m_Position;
-    FloorController m_FloorController;
+    public Vector2Int m_Position;
+    [SerializeField] FloorController m_FloorController;
+    [SerializeField] cubeSadow shadowController;
+    Animator Playeranimation;
     Floor m_floor;
     Vector3 BloackPos;
+    private float moveSpeed=1.0f;
 
     public enum PushTo
     {
@@ -25,8 +28,8 @@ public class MovebleBlock : MonoBehaviour
         m_floor = GetComponentInParent<Floor>();
         m_Position = m_FloorController.GetScriptPos(m_floor);
         m_FloorController.SetTargetStaus(m_Position.x, m_Position.y, Floor.MoveStatus.CantStep);
-        BloackPos = new Vector3(transform.position.x, 1 ,transform.position.z);
-
+        BloackPos = new Vector3(m_Position.x, 0, m_Position.y);
+        Playeranimation = GameObject.Find("player_rig3").GetComponent<Animator>();
         Debug.Log(m_Position);
     }
     public void GetPlayerTouch(PushTo pushFrom)
@@ -36,53 +39,53 @@ public class MovebleBlock : MonoBehaviour
         {
             { PushTo.ZtominusZ, () =>
                {
-                 if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Left)).Item1)
+                 if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Up)).Item1)
                  {
+
+                       //Playeranimation.SetBool("Pushing",true);
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.x -= 1;
                       m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
-                       BloackPos.z -=1;
-                       transform.position = BloackPos;
-                       Debug.Log(m_Position);
+                       BloackPos.z +=1;
+                        StartCoroutine(MoveTowardsTarget(new Vector3(0, 0, 1)));
                  }
                }
             },
             { PushTo.MinusZtoZ, () =>
                {
-                if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Right)).Item1)
+                if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Down)).Item1)
                    {
+                     
                        m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.x += 1;
                        m_FloorController.SetTargetStaus(m_Position.x ,m_Position.y, Floor.MoveStatus.CantStep);
-                       BloackPos.z += 1;
-                       transform.position = BloackPos;
-                       Debug.Log(m_Position);
+                       BloackPos.z -= 1;
+                       StartCoroutine(MoveTowardsTarget(new Vector3(0, 0, -1)));
                    }
                }
             },
             { PushTo.MinusXtoX, () =>
                {
-                if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Up)).Item1)
+                if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Right)).Item1)
                    {
+                       //Playeranimation.SetBool("Pushing",true);
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.y += 1;
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.x += 1;
-                       transform.position = BloackPos;
-                       Debug.Log(m_Position);
+                      StartCoroutine(MoveTowardsTarget(new Vector3(1, 0, 0)));
                    }
                }
             },
             { PushTo.XtoMinusX, () =>
                {
-                if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Down)).Item1)
+                if(m_FloorController.CanMove(m_Position.x,m_Position.y,(FloorController.PlayerMovable.Left)).Item1)
                    {
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CanStep);
                        m_Position.y -= 1;
                      m_FloorController.SetTargetStaus(m_Position.x,m_Position.y, Floor.MoveStatus.CantStep);
                        BloackPos.x -=1;
-                       transform.position = BloackPos;
-                       Debug.Log(m_Position);
+                       StartCoroutine(MoveTowardsTarget(new Vector3(-1, 0, 0)));
                    }
                }
             }
@@ -90,11 +93,27 @@ public class MovebleBlock : MonoBehaviour
 
         if (actions.ContainsKey(pushFrom))
         {
+            Playeranimation.SetBool("Pushing", true);
             actions[pushFrom]();
         }
         else
         {
-            // –¢’m‚Ì’l‚Ìê‡‚Ìˆ—
+            // ï¿½ï¿½ï¿½mï¿½Ì’lï¿½Ìê‡ï¿½Ìï¿½ï¿½ï¿½
         }
+
+    }
+    private IEnumerator MoveTowardsTarget(Vector3 direction)
+    {
+        Vector3 targetPosition = transform.position + direction;
+        shadowController.MoveShadow(direction);
+        while (transform.position != targetPosition)
+        {   
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+        
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ m_Position ï¿½ï¿½ï¿½Xï¿½Vï¿½ï¿½ï¿½ï¿½Kï¿½vï¿½ï¿½ï¿½ï¿½ï¿½é‚©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½
+        // m_Position ï¿½ÌXï¿½Vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç‰ï¿½ï¿½ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        yield return null;
     }
 }
