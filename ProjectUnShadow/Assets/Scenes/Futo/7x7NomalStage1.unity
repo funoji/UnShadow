@@ -7802,6 +7802,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1541874968}
     - target: {fileID: 6556531004897219285, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556531004897219285, guid: c9ec0402a4b7833479cecde0347bf9e2, type: 3}
       propertyPath: Walls.Array.data[0]
       value: 
       objectReference: {fileID: 671342906}
@@ -12791,6 +12795,26 @@ PrefabInstance:
       propertyPath: virtualCamera
       value: 
       objectReference: {fileID: 1528411310}
+    - target: {fileID: 7743063701886141295, guid: 27b22fe892c65bd4b80b7f2849b8d073, type: 3}
+      propertyPath: Walls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743063701886141295, guid: 27b22fe892c65bd4b80b7f2849b8d073, type: 3}
+      propertyPath: Walls.Array.data[0]
+      value: 
+      objectReference: {fileID: 671342906}
+    - target: {fileID: 7743063701886141295, guid: 27b22fe892c65bd4b80b7f2849b8d073, type: 3}
+      propertyPath: Walls.Array.data[1]
+      value: 
+      objectReference: {fileID: 1463909825}
+    - target: {fileID: 7743063701886141295, guid: 27b22fe892c65bd4b80b7f2849b8d073, type: 3}
+      propertyPath: Walls.Array.data[2]
+      value: 
+      objectReference: {fileID: 84204242}
+    - target: {fileID: 7743063701886141295, guid: 27b22fe892c65bd4b80b7f2849b8d073, type: 3}
+      propertyPath: Walls.Array.data[3]
+      value: 
+      objectReference: {fileID: 632946715}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

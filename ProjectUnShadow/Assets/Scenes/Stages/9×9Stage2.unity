@@ -19053,6 +19053,11 @@ MonoBehaviour:
   R: 0
   count: 0
   rotationSpeed: 9
+  Walls:
+  - {fileID: 671342906}
+  - {fileID: 1463909825}
+  - {fileID: 84204242}
+  - {fileID: 632946715}
 --- !u!82 &2061535532
 AudioSource:
   m_ObjectHideFlags: 0

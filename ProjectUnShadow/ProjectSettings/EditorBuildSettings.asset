@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Matsuura/Matsutake_Option.unity
     guid: 53352730201062141b3a72bb5fcd9955
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Matsuura/MatsutakeMap.unity
     guid: 580d9e88ae645d348b50c3aa22dbdb03
   - enabled: 1
@@ -44,13 +44,13 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Stages/5\xD75Stage1.unity"
     guid: ffb9e7d87027b874eb3279ce7f385d59
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Stages/9\xD79Stage1.unity"
     guid: 4568c60adb262244fa193fb81590840d
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Stages/7\xD77Stage2.unity"
     guid: e5db75e00a2273d40b7cb885dee18c21
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/Stages/7\xD77Stage1.unity"
     guid: ba13579c623f7ef439b93c9b6e81b53b
   - enabled: 1
@@ -62,13 +62,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Futo/7x7EasyStage1.unity
     guid: bb2f7ec9538ca9941a04948671cb9add
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Futo/7x7EasyStage2-B.unity
     guid: bef95ddbd70bbcb41ab08fb3c06638ea
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Futo/7x7EasyStage3.unity
     guid: 55d6a051df162944c86adae559bdab87
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Futo/7x7EasyStage4.unity
     guid: bc0a3a2ffd30fe94888b9ea8353b3b3b
   - enabled: 1
