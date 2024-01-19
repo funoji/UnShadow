@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1342445703101717902}
   - component: {fileID: 442925666586682936}
   - component: {fileID: 3956493345723419633}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Yuka
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
-  Roles: 0
+  MoveBlockPrefab: {fileID: 0}
+  Roles: 1
   moveStatus: 0
   Shadowblock: 0

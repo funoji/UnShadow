@@ -36,6 +36,10 @@ public class testmove : MonoBehaviour
     public CameraRotation Rotation;
     void Start()
     {
+        Up = 0;
+        Right = 1;
+        Down = 2;
+        Left = 3;
         rb = GetComponent<Rigidbody>();
         mainCameraTransform = Camera.main.transform;
         animator = GetComponent<Animator>();
@@ -51,6 +55,10 @@ public class testmove : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Retry();
+        }
         if (!isMoving&&Time.timeScale==1)
         {
             // カメラの正面方向を取得
@@ -64,7 +72,10 @@ public class testmove : MonoBehaviour
             Vector3 moveVectorForward = cameraForward;
             Vector3 moveVectorRight = cameraRight;
 
-            if (Input.GetKeyDown(KeyCode.W))
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+
+            if (Input.GetKeyDown(KeyCode.W)/*|| verticalInput > 0*/)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Up).Item2;
@@ -75,15 +86,15 @@ public class testmove : MonoBehaviour
                     destinationPositionForward = transform.position + moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
-                    Debug.Log(destinationPositionForward);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
+                    //Debug.Log(destinationPositionForward);
                     TryMoveToPosition(destinationPositionForward);
                     PlaySwitchSound(); // 足音を再生
                 }
 
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            else if (Input.GetKeyDown(KeyCode.S)/*||verticalInput < 0*/)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Down).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Down).Item2;
@@ -94,14 +105,14 @@ public class testmove : MonoBehaviour
                     destinationPositionBag = transform.position - moveVectorForward;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionBag);
                     PlaySwitchSound(); // 足音を再生
                 }
 
             }
-            else if (Input.GetKeyDown(KeyCode.A))
+            else if (Input.GetKeyDown(KeyCode.A)/*||horizontalInput < 0*/)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Left).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Left).Item2;
@@ -113,13 +124,13 @@ public class testmove : MonoBehaviour
                     destinationPositionLeft = transform.position - moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionLeft);
                     PlaySwitchSound(); // 足音を再生
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.D))
+            else if (Input.GetKeyDown(KeyCode.D)/*||horizontalInput > 0*/)
             {
                 canmove = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Right).Item1;
                 PlayerPos = _floorController.CanMove(storedHi, storedVi, (FloorController.PlayerMovable)Right).Item2;
@@ -131,8 +142,8 @@ public class testmove : MonoBehaviour
                     destinationPositionRight = transform.position + moveVectorRight;
                     storedHi = PlayerPos.x;
                     storedVi = PlayerPos.y;
-                    Debug.Log(storedHi);
-                    Debug.Log(storedVi);
+                    //Debug.Log(storedHi);
+                    //Debug.Log(storedVi);
                     TryMoveToPosition(destinationPositionRight);
                     PlaySwitchSound(); // 足音を再生
                 }
@@ -142,7 +153,7 @@ public class testmove : MonoBehaviour
 
         if (Rotation.L == false)
         {
-            if (Input.GetKeyDown(KeyCode.E)&&Rotation.count==0)
+            if (Input.GetKeyDown(KeyCode.Q)&&Rotation.count==0)
             {
                 Up = Up + 1;
                 Right = Right + 1;
@@ -161,7 +172,7 @@ public class testmove : MonoBehaviour
         }
         if(Rotation.R==false)
         {
-            if(Input.GetKeyDown(KeyCode.Q) && Rotation.count == 0)
+            if(Input.GetKeyDown(KeyCode.E) && Rotation.count == 0)
             {
                 Up = Up - 1;
                 Right = Right - 1;
@@ -178,6 +189,11 @@ public class testmove : MonoBehaviour
                     Left = 3;
             }
         }
+    }
+    void Retry()
+    {
+        // 現在のシーンを再読み込み
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void TryMoveToPosition(Vector3 targetPosition)
@@ -205,6 +221,7 @@ public class testmove : MonoBehaviour
     {
         isMoving = true;
         // アニメーション再生開始
+        //animator.SetBool("Pushing", true);
         animator.SetBool("Walking", true);
         while (transform.position != targetPosition)
         {
@@ -212,11 +229,13 @@ public class testmove : MonoBehaviour
             yield return null;
         }
         // 移動が完了したらアニメーションを停止する
+        //animator.SetBool("Pushing", false);
         animator.SetBool("Walking", false);
+        animator.SetBool("Pushing", false);
 
         isMoving = false;
     }
-    public void TakeDamage(int damage)
+    public IEnumerator TakeDamage(int damage)
     {
         PlayerHP -= damage;
 
@@ -224,6 +243,7 @@ public class testmove : MonoBehaviour
         {
             // プレイヤーが死亡した場合の処理をここに記述する
             // 例えば、ゲームオーバー画面を表示するなど
+            yield return new WaitForSeconds(2f);
             SceneManager.LoadScene("Matsutake_Retry");
         }
     }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Data;
 
 public class FloorController : MonoBehaviour
 {
@@ -60,7 +61,8 @@ public class FloorController : MonoBehaviour
         int targetVer = playerVer + offset.x;
         Vector2Int FeaacherPos = new(targetHori, targetVer);
 
-        if (floorComponent[targetHori][targetVer] == null) return (false, FeaacherPos);
+        if (floorComponent[targetHori][targetVer].GetRoles() == Floor.FloorRoles.NULLOBJ) return (false, FeaacherPos);
+
         if (floorComponent[targetHori][targetVer].GetMoveStatus() == Floor.MoveStatus.CanStep)
         {
             Vector2Int PlayerPos = FeaacherPos;
@@ -107,6 +109,9 @@ public class FloorController : MonoBehaviour
             }
         }
        throw new Exception("there is none script");
-
+    }
+    public void SetTargetStaus(int playerHori, int playerVer, Floor.MoveStatus Newst)
+    {
+        floorComponent[playerHori][playerVer].SetMoveStatus(Newst);
     }
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1174377498501616693}
   - component: {fileID: 7928296906745387418}
   - component: {fileID: -3289719758737120895}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: second
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1313885608985846929}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.3808068, y: -0.4917159, z: -0.1790837}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5282883511974985903}
@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313885608985846929}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -3758573805739257388, guid: bf1ae02f783626349b34b79a73f1eeff, type: 3}
 --- !u!23 &3971051110047658957
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f3955c5ccd410f64b87522724ca9b00b, type: 2}
+  - {fileID: 2100000, guid: e894dc09c789579478c017208c2d44e9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,7 +106,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 100, y: 100, z: 100}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7928296906745387418
 MonoBehaviour:
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floorPrefabs: {fileID: 0}
+  MoveBlockPrefab: {fileID: 0}
   Roles: 5
   moveStatus: 1
   Shadowblock: 0
@@ -137,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShadowBox: {fileID: 2829569095005073391, guid: f5c50631bd524464abc4028ca2a98658, type: 3}
-  effectPrefab: {fileID: 6199060515860141735, guid: e2cd3ebe5700a874da6a5f20a3943469, type: 3}
+  effectPrefab: {fileID: 3904525485687990801, guid: edcf79062be2c674da24461107c271e0, type: 3}
   s: 2
 --- !u!1001 &4607296052569945962
 PrefabInstance:
@@ -147,17 +148,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1067499549986667517}
     m_Modifications:
+    - target: {fileID: 5582031871929490171, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7774458327205510226, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
       propertyPath: m_Name
       value: mummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774458327205510226, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8548102336880588741, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8548102336880588741, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548102336880588741, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.25
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548102336880588741, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8548102336880588741, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -165,7 +182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8548102336880588741, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8548102336880588741, guid: 48da78cc8b0288a4fb35af5765227bb0, type: 3}
       propertyPath: m_LocalPosition.z

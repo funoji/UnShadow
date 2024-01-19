@@ -6,10 +6,12 @@ using UnityEditor;
 public class Floor : MonoBehaviour
 {
     [SerializeField] FloorPrefabs floorPrefabs;
-    
+    [SerializeField] private GameObject MoveBlockPrefab;
+
+
     public enum FloorRoles
     {
-        NULL,
+        NULLOBJ,
         Normal,
         Start,
         Goal,
@@ -21,8 +23,9 @@ public class Floor : MonoBehaviour
         Barrier,
         Teleport,
         TeleportGoal,
+        MoveableBlock,
     }
-    [SerializeField] private FloorRoles Roles = FloorRoles.NULL;
+    [SerializeField] private FloorRoles Roles = FloorRoles.NULLOBJ;
 
     public enum MoveStatus
     { CanStep,CantStep }
@@ -41,11 +44,13 @@ public class Floor : MonoBehaviour
     }
     public MoveStatus GetMoveStatus()
     {
+
         return moveStatus;
     }
     public void SetRole(FloorRoles Newroles)
     {
-        Roles = Newroles;
+        Debug.Log("ここまできてる");
+        GetComponent<Floor>().Roles = Newroles;
     }
     public void SetMoveStatus(MoveStatus newSt)
     {
@@ -65,6 +70,7 @@ public class Floor : MonoBehaviour
         Floor floor;
         [SerializeField] GameObject CreateObj;
         private Dictionary<FloorRoles, GameObject> prefabDictionary = new Dictionary<FloorRoles, GameObject>();
+        [SerializeField] GameObject Moveblock;
 
         private void OnEnable()
         {
@@ -87,6 +93,9 @@ public class Floor : MonoBehaviour
             prefabDictionary.Add(FloorRoles.Barrier, floor.floorPrefabs.Bariier);
             prefabDictionary.Add(FloorRoles.Teleport, floor.floorPrefabs.Teleport);
             prefabDictionary.Add(FloorRoles.TeleportGoal, floor.floorPrefabs.TeleportGoal);
+            prefabDictionary.Add(FloorRoles.MoveableBlock, floor.floorPrefabs.MoveBlock);
+            prefabDictionary.Add(FloorRoles.NULLOBJ, floor.floorPrefabs.NULLOBJ);
+
         }
 
         void ChangeShape()
@@ -130,6 +139,19 @@ public class Floor : MonoBehaviour
         {
             serializedObject.Update();
             ChangeShape();
+            floor.MoveBlockPrefab = EditorGUILayout.ObjectField("Move Block Prefab", floor.MoveBlockPrefab, typeof(GameObject), false) as GameObject;
+            if (GUILayout.Button("なんかすごいボタン"))
+            {
+                // 現在の位置を取得
+                Vector3 currentPosition = floor.transform.position;
+
+                // Y+1の位置にPrefabを生成
+                GameObject newPrefab = PrefabUtility.InstantiatePrefab(floor.MoveBlockPrefab) as GameObject;
+                newPrefab.transform.position = currentPosition + Vector3.up;
+
+                newPrefab.transform.parent = floor.transform;
+            }
+
             if (target == null) return;
             serializedObject.ApplyModifiedProperties();
         }

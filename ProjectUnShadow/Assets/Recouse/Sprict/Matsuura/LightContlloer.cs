@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,15 +10,56 @@ public class LightContlloer : MonoBehaviour
     private AudioSource switchSound; // AudioSourceを格納する変数
     public float lightcount;
 
-    private int currentLightIndex = -1; // 現在有効なライトのインデックス
+    private int currentLightIndex; // 現在有効なライトのインデックス
+    public float animationSpeed = 0.5f; // アニメーションの速さ
+    public float minIntensity = 50.0f; // 最小の明るさ
+    public float maxIntensity = 200.0f; // 最大の明るさ
+    public float DestroyIntensity = 20.0f; // 死んだときの減少率
+    private bool Changflag = true;
 
     private void Start()
     {
         switchSound = GetComponent<AudioSource>(); // "SwitchSound"という名前のゲームオブジェクトからAudioSourceを取得
+        for (int i = 0; i < lights.Length; i++)
+        {
+            if (lights[i].enabled)
+            {
+                currentLightIndex = i;
+            }
+        }
     }
 
     private void Update()
     {
+        for (int i = 0; i < lights.Length; i++)
+        {
+            if (lights[currentLightIndex].enabled&&TestMove.PlayerHP!=0)
+            {
+                // 増加または減少の判定
+                if (Changflag)
+                {
+                    lights[currentLightIndex].intensity += Time.deltaTime * animationSpeed;
+                    if (lights[currentLightIndex].intensity >= maxIntensity)
+                    {
+                        lights[currentLightIndex].intensity = maxIntensity;
+                        Changflag = false;
+                    }
+                }
+                else
+                {
+                    lights[currentLightIndex].intensity -= Time.deltaTime * animationSpeed;
+                    if (lights[currentLightIndex].intensity <= minIntensity)
+                    {
+                        lights[currentLightIndex].intensity = minIntensity;
+                        Changflag = true;
+                    }
+                }
+            }
+            if (TestMove.PlayerHP == 0 && lights[i].intensity > 0)
+            {
+                lights[i].intensity -= Time.deltaTime * DestroyIntensity;
+            }
+        }
         if (lightcount > 0&&Time.timeScale==1)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
